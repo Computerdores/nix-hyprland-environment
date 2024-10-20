@@ -24,9 +24,12 @@
                 ];
                 input = {
                     kb_layout = "de";
-                    kb_modeal = "pc105";
+                    kb_model = "pc105";
                 };
             };
+            monitor = [
+                ",192x1080@60,0x0,1"
+            ];
         };
     };
 }
