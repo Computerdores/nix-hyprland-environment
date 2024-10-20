@@ -15,7 +15,7 @@
             systemd.enable = true;
 
             settings = {
-                "$terminal" = "kitty";
+                "$terminal" = "sh -c \"kitty &> out.log\"";
                 "$fileManager" = "nnn";
                 "$menu" = "wofi --show drun";
                 "$mainMod" = "SUPER";
@@ -33,7 +33,7 @@
                     "$mainMod, right, movefocus, r"
                     "$mainMod, up, movefocus, u"
                     "$mainMod, down, movefocus, d"
-                    
+
                     #todo
                 ];
                 
@@ -46,6 +46,11 @@
 
                 monitor = [
                     ",1920x1080@60,0x0,1"
+                ];
+
+                env = [
+                    "XCURSOR_SIZE,24"
+                    "QT_QPA_PLATFORMTHEME,qt5ct"
                 ];
                 debug.disable_logs = false;
             };
