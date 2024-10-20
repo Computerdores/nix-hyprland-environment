@@ -12,6 +12,8 @@
             enable = true;
             package = pkgs.hyprland;
             xwayland.enable = true;
+            systemd.enable = true;
+
             settings = {
                 "$terminal" = "kitty";
                 "$mainMod" = "SUPER";
