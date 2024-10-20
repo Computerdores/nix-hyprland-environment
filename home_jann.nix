@@ -53,6 +53,7 @@
                     "QT_QPA_PLATFORMTHEME,qt5ct"
                 ];
                 debug.disable_logs = false;
+                debug.enable_stdout_logs = true;
             };
         };
     };

@@ -32,6 +32,7 @@ in
 
     hardware.opengl.enable = true;
     security.polkit.enable = true;
+    services.dbus.enable = true;
     xdg.portal = {
         enable = true;
         extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
@@ -41,8 +42,17 @@ in
         ];
     };
 
+    programs.hyprland = {
+        enable = true;
+        xwayland.enable = true;
+    };
+
     environment.systemPackages = with pkgs; [
         git
+        hyprland
+        xdg-desktop-portal-hyprland
+        xdg-desktop-portal-gtk
+        xwayland
     ];
 
     # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
