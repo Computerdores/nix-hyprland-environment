@@ -2,13 +2,28 @@
 { config, pkgs, ... }:
 
 {
+    security.pam.services.hyprlock = {};
     home-manager.users.jann = {
         home = {
-            sessionVariables = {
-                TEST = "123asd";
-            };
+            stateVersion = "24.05";
         };
         programs.bash.enable = true;
-        home.stateVersion = "24.05";
+        programs.kitty.enable = true;
+        wayland.windowManager.hyprland = {
+            enable = true;
+            settings = {
+                "$terminal" = "kitty";
+                "$mainMod" = "SUPER";
+                bind = [
+                    "$mainMod, Q, exec, $terminal"
+                    "$mainMod, C, killactive"
+                    "$mainMod, M, exit"
+                ];
+                input = {
+                    kb_layout = "de";
+                    kb_modeal = "pc105";
+                };
+            };
+        };
     };
 }
