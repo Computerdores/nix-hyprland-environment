@@ -30,6 +30,7 @@ in
     # copy config to system
     system.copySystemConfiguration = true;
 
+    hardware.opengl.enable = true;
     security.polkit.enable = true;
     environment.systemPackages = with pkgs; [
         git
