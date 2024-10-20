@@ -2,7 +2,6 @@
 { config, pkgs, ... }:
 
 {
-    security.pam.services.hyprlock = {};
     home-manager.users.jann = {
         home = {
             stateVersion = "24.05";
@@ -11,6 +10,7 @@
         programs.kitty.enable = true;
         wayland.windowManager.hyprland = {
             enable = true;
+            package = pkgs.hyprland;
             settings = {
                 "$terminal" = "kitty";
                 "$mainMod" = "SUPER";
