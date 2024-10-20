@@ -1,8 +1,15 @@
 { config, lib, pkgs, ... }: 
 
+let home-manager = builtins.fetchTarball {
+        url = "https://github.com/nix-community/home-manager/archive/release-24.05.tar.gz";
+    };
+in
+
 {
     imports = [
         ./hardware-configuration.nix
+        "${home-manager}/nixos"
+        ./home_jann.nix
     ];
 
     # systemd-boot
