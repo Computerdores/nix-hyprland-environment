@@ -23,5 +23,10 @@
     # copy config to system
     system.copySystemConfiguration = true;
 
+    environment.systemPackages = with pkgs; [
+        git
+    ];
+
+    # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
     system.stateVersion = "24.05"; # don't touch
 }
