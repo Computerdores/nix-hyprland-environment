@@ -30,8 +30,7 @@ in
     # copy config to system
     system.copySystemConfiguration = true;
 
-    services.seatd.enable = true;
-
+    security.polkit.enable = true;
     environment.systemPackages = with pkgs; [
         git
     ];
