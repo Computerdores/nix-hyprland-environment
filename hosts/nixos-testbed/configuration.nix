@@ -9,8 +9,14 @@
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
 
+    networking.hostName = "nixos-testbed";
+    networking.networkmanager.enable = true;
     time.timeZone = "Europe/Berlin";
     i18n.defaultLocale = "en_GB.UTF-8";
+
+    console = {
+        keyMap = "de";
+    };
 
     # users
     users.users.jann = {
@@ -21,10 +27,11 @@
     };
 
     # copy config to system
-    system.copySystemConfiguration = true;
+    #system.copySystemConfiguration = true;
 
     environment.systemPackages = with pkgs; [
         git
+        tldr
     ];
 
     # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
