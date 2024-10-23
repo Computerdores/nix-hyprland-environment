@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }: 
+{ inputs, config, lib, pkgs, ... }: 
 
 {
     imports = [
@@ -29,9 +29,18 @@
     # copy config to system
     #system.copySystemConfiguration = true;
 
+    programs.hyprland = {
+        enable = true;
+        xwayland.enable = true;
+        package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+        portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+    };
+
     environment.systemPackages = with pkgs; [
         git
         tldr
+        kitty
+        xwayland
     ];
 
     # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
