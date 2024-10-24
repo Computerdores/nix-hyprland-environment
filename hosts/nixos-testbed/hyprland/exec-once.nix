@@ -1,0 +1,4 @@
+[
+    "waybar"
+    "hyprpaper"
+]
