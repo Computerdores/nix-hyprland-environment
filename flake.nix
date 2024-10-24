@@ -2,7 +2,11 @@
     description = "Test for a NixOS System with Home Manager via a flake, with everything in a single repo.";
 
     inputs = {
-        home-manager.url = "github:nix-community/home-manager";
+        nixpkgs.url = "github:nixos/nixpkgs/release-24.05";
+        home-manager = {
+            url = "github:nix-community/home-manager/release-24.05";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
         hyprland.url = "github:hyprwm/Hyprland";
     };
 
