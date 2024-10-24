@@ -1,7 +1,10 @@
 { config, pkgs, ... }:
 
 {
-    programs.bash.enable = true;
+    programs.bash = {
+        enable = true;
+        bashrcExtra = builtins.readFile ./.bashrc;
+    };
     home = {
         packages = with pkgs; [
             #git
