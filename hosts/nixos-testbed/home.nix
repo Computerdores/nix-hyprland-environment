@@ -29,8 +29,18 @@
     # Let Home Manager install and manage itself.
     programs.home-manager.enable = true;
 
-    # Hyprland
-    programs.kitty.enable = true;
+    # Desktop Environment
+    programs.kitty = {
+        enable = true;
+        shellIntegration.enableBashIntegration = true;
+        settings = {
+            #allow_remote_control = true;
+            background_opacity = "0.8";
+        };
+    };
+
+    programs.wofi.enable = true;
+    programs.nnn.enable = true;
     wayland.windowManager.hyprland = {
         enable = true;
         package = pkgs.hyprland;
@@ -39,7 +49,7 @@
 
         settings = {
             "$terminal" = "kitty";
-            "$fileManager" = "nnn";
+            "$fileManager" = "$terminal -e nnn";
             "$menu" = "wofi --show drun";
             "$mainMod" = "SUPER";
             bind = [

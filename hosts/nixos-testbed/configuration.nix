@@ -5,12 +5,17 @@
         ./hardware-configuration.nix
     ];
 
+    nixpkgs.config.allowUnfree = true;
+
     # systemd-boot
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
 
+    # networking
     networking.hostName = "nixos-testbed";
     networking.networkmanager.enable = true;
+
+    # area info
     time.timeZone = "Europe/Berlin";
     i18n.defaultLocale = "en_GB.UTF-8";
 
@@ -39,8 +44,7 @@
     environment.systemPackages = with pkgs; [
         git
         tldr
-        kitty
-        xwayland
+        vivaldi
     ];
 
     # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
