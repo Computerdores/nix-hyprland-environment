@@ -31,8 +31,12 @@
         uid = 1000;
     };
 
-    # copy config to system
-    #system.copySystemConfiguration = true;
+    xdg.portal = {
+        enable = true;
+        extraPortals = [
+            pkgs.xdg-desktop-portal-gtk
+        ];
+    };
 
     programs.hyprland = {
         enable = true;
