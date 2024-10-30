@@ -2,7 +2,7 @@
     # general binds
     "$mainMod, Q, exec, $terminal"
     "$mainMod, C, killactive"
-    "SUPER, M, exit"
+    "$mainMod, M, exit"
     "$mainMod, E, exec, $fileManager"
     "$mainMod, V, togglefloating"
     "$mainMod, R, exec, $menu"
