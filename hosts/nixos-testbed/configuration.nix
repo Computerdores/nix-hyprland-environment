@@ -38,6 +38,12 @@
         ];
     };
 
+    security.pam.services.hyprlock = {};
+    programs.hyprlock= {
+        enable = true;
+        package = pkgs.hyprlock;
+    };
+
     programs.hyprland = {
         enable = true;
         xwayland.enable = true;
@@ -49,6 +55,7 @@
         git
         tldr
         vivaldi
+        hyprlock
     ];
 
     # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion

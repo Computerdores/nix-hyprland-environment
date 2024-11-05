@@ -41,6 +41,10 @@
 
     programs.wofi.enable = true;
     programs.nnn.enable = true;
+    programs.hyprlock = {
+        enable = true;
+        settings = import ./hyprlock.nix;
+    };
     wayland.windowManager.hyprland = {
         enable = true;
         package = pkgs.hyprland;

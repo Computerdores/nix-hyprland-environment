@@ -2,6 +2,7 @@
     # general binds
     "$mainMod, Q, exec, $terminal"
     "$mainMod, C, killactive"
+    "$mainMod, L, exec, hyprlock --immediate"
     "$mainMod, M, exit"
     "$mainMod, E, exec, $fileManager"
     "$mainMod, V, togglefloating"
