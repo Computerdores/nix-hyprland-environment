@@ -1,4 +1,5 @@
 [
     "waybar"
     "hyprpaper"
+    "eww daemon"
 ]

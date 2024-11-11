@@ -24,6 +24,11 @@
         # the Home Manager release notes for a list of state version
         # changes in each release.
         stateVersion = "24.05";
+
+        file."${config.xdg.configHome}/eww" = {
+            source = ./eww;
+            recursive = true;
+        };
     };
 
     # Let Home Manager install and manage itself.
