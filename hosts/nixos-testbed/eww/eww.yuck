@@ -1,3 +1,6 @@
+(include "./widgets/workspaces.yuck")
+(include "./widgets/stats.yuck")
+
 (defwindow example
            :monitor 0
            :geometry (geometry :x "0%"
@@ -10,4 +13,21 @@
            :reserve (struts :distance "40px" :side "top")
            :windowtype "dock"
            :wm-ignore false
-  "test")
+  (box :orientation "h"
+       :hexpand true
+    (left_group :halign "start")
+    (center_group)
+    (right_group)))
+
+(defwidget left_group []
+  (box :halign "start" :class "left_group"
+    (cpu_stats)
+    (ram_stats)))
+
+(defwidget center_group []
+  (box :halign "center" :class "center_group"
+    (workspaceWidget :monitor 0)))
+
+(defwidget right_group []
+  (box :halign "end" :class "right_group"
+    "right"))
