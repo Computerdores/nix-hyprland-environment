@@ -31,6 +31,11 @@
         uid = 1000;
     };
 
+    services.openssh = {
+        enable = true;
+        settings.PasswordAuthentication = false;
+    };
+
     xdg.portal = {
         enable = true;
         extraPortals = [
