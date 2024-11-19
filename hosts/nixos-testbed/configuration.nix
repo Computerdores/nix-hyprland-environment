@@ -62,11 +62,12 @@
     };
 
     environment.systemPackages = with pkgs; [
+        hyprlock
+	hyprland-workspaces
+        eww
         git
         tldr
         vivaldi
-        hyprlock
-        eww
     ];
 
     # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
