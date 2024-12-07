@@ -1,0 +1,32 @@
+@import 'theme.scss';
+
+* {
+    font-family: 'Noto Sans Mono', 'Font Awesome 6 Free', 'Font Awesome 6 Brands', monospace;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+.background {
+    background: none;
+    color: $theme-text;
+}
+
+.workspaces {
+    border-radius: 2rem;
+    background-color: $theme-surface0;
+}
+
+.workspaces button {
+    border-radius: 2rem;
+    color: $theme-lavender;
+}
+
+.workspaces button:hover {
+    color: $theme-sapphire;
+}
+
+.workspaces button.active {
+    color: $theme-sky;
+}
