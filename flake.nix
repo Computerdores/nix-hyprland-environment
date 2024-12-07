@@ -24,5 +24,17 @@
                 }
             ];
         };
+        nixosConfigurations.LaptopA315 = nixpkgs.lib.nixosSystem {
+            system = "x86_64-linux";
+            specialArgs = { inherit inputs; };
+            modules = [
+                ./hosts/laptopA315/configuration.nix
+                home-manager.nixosModules.home-manager {
+                    home-manager.useGlobalPkgs = true;
+                    home-manager.useUserPackages = true;
+                    home-manager.users.jann = import ./hosts/laptopA315/home.nix;
+                }
+            ];
+        };
     };
 }
