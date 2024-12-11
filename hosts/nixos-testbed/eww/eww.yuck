@@ -22,7 +22,8 @@
 (defwidget left_group []
   (box :halign "start" :class "left_group"
     (cpu_stats)
-    (ram_stats)))
+    (ram_stats)
+    (drv_stats)))
 
 (defwidget center_group []
   (box :halign "center" :class "center_group"
