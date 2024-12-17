@@ -6,9 +6,7 @@
         bashrcExtra = builtins.readFile ./.bashrc;
     };
     home = {
-        packages = with pkgs; [
-            #git
-        ];
+        packages = with pkgs; [ ];
 
         # Home Manager needs a bit of information about you and the
         # paths it should manage.
@@ -57,5 +55,35 @@
         systemd.enable = true;
 
         settings = import ./hyprland/config.nix;
+    };
+
+    # other programs
+    programs.firefox = {
+        enable = true;
+        profiles.jann = {
+            id = 0;
+            name = "jann";
+            search.force = true;
+            search.default = "DuckDuckGo";
+            search.engines = {
+                "Nix Packages" = {
+                    urls = [{ template = "https://search.nixos.org/packages?query={searchTerms}"; }];
+                    icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+                    definedAliases = [ "@np" ];
+                };
+                "NixOS Wiki" = {
+                    urls = [{ template = "https://wiki.nixos.org/w/index.php?search={searchTerms}"; }];
+                    iconUpdateURL = "https://wiki.nixos.org/favicon.png";
+                    updateInterval = 24 * 60 * 60 * 1000;
+                    definedAliases = [ "@nw" ];
+                };
+            };
+        };
+        policies = {
+           Preferences = {
+                browser.backspace_action = 0;
+                browser.tabs.closeWindowWithLastTab = false;
+            };
+        };
     };
 }
