@@ -78,6 +78,10 @@
 
     nixpkgs.config.allowUnfree = true;
 
+    environment.variables = {
+        WP = "/etc/nixos/common/wallpapers";
+    };
+
     environment.systemPackages = with pkgs; [
         hyprlock
 	hyprland-workspaces

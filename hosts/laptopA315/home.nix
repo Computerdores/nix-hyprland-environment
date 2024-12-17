@@ -56,6 +56,10 @@
 
         settings = import ./hyprland/config.nix;
     };
+    services.hyprpaper = {
+        enable = true;
+        settings = import ./hyprpaper.nix;
+    };
 
     # other programs
     programs.firefox = {
