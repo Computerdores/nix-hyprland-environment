@@ -82,6 +82,7 @@
         WP = "/etc/nixos/common/wallpapers";
     };
 
+    # other software
     environment.systemPackages = with pkgs; [
         hyprlock
 	hyprland-workspaces
@@ -95,6 +96,11 @@
         font-awesome
         noto-fonts
     ];
+
+    programs.nano = {
+        enable = true;
+        nanorc = builtins.readFile ./.nanorc;
+    };
 
     # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
     system.stateVersion = "24.05"; # don't touch
