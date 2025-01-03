@@ -2,7 +2,8 @@
 
 {
     imports = [
-        ./firefox.nix
+        ./programs/firefox.nix
+        ./programs/vscode.nix
     ];
     programs.bash = {
         enable = true;
