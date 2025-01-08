@@ -1,7 +1,8 @@
 (include "./widgets/workspaces.yuck")
 (include "./widgets/stats.yuck")
+(include "./widgets/time.yuck")
 
-(defwindow example
+(defwindow bar
            :monitor 0
            :geometry (geometry :x "0%"
                                :y "0%"
@@ -30,4 +31,4 @@
 
 (defwidget right_group []
   (box :halign "end" :class "right_group"
-    "right"))
+    (time)))

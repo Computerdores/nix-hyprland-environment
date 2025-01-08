@@ -1,0 +1,2 @@
+(defwidget time []
+  (label :text {formattime('${EWW_TIME}', "%H:%M:%S")}))
