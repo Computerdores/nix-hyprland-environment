@@ -10,7 +10,10 @@
         hyprland.url = "github:hyprwm/Hyprland";
     };
 
-    outputs = inputs@{ self, nixpkgs, home-manager, ... }: {
+    outputs = inputs@{ self, nixpkgs, home-manager, ... }:
+    let
+        specialArgs = { inherit inputs; };
+    in {
         nixosConfigurations.nixos-testbed = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
             specialArgs = { inherit inputs; };
@@ -32,6 +35,7 @@
                 home-manager.nixosModules.home-manager {
                     home-manager.useGlobalPkgs = true;
                     home-manager.useUserPackages = true;
+                    home-manager.extraSpecialArgs = specialArgs;
                     home-manager.users.jann = import ./hosts/laptopA315/home.nix;
                 }
             ];
