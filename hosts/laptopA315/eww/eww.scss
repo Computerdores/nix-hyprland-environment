@@ -13,9 +13,37 @@
     color: $theme-text;
 }
 
-.workspaces {
-    border-radius: 2rem;
+.group {
     background-color: $theme-surface0;
+}
+
+.group > * {
+    margin: 0 5px;
+}
+
+.left_group {
+    border-radius: 0 0 0.75rem 0;
+    padding: 0 5px;
+}
+
+.stats {
+    min-width: 3.75em;
+}
+
+.bat_stats.Charging > *, .bat_stats.Full > *, .bat_stats.Critical > * {
+    text-shadow: 0 0 10px rgb(0,255,0);
+}
+
+.bat_stats.Charging, .bat_stats.Full {
+    color: rgb(0,255,0);
+}
+
+.bat_stats.Critical {
+    color: rgb(255,0,0);
+}
+
+.center_group {
+    border-radius: 2rem;
 }
 
 .workspaces button {
@@ -29,4 +57,9 @@
 
 .workspaces button.active {
     color: $theme-sky;
+}
+
+.right_group {
+    border-radius: 0 0 0 0.75rem;
+    padding: 0 5px;
 }

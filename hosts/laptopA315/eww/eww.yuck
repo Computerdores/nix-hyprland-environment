@@ -21,14 +21,15 @@
     (right_group)))
 
 (defwidget left_group []
-  (box :halign "start" :class "left_group"
+  (box :halign "start" :class "left_group group" :space-evenly false
     (cpu_stats)
-    (ram_stats)))
+    (ram_stats)
+    (bat_stats)))
 
 (defwidget center_group []
-  (box :halign "center" :class "center_group"
+  (box :halign "center" :class "center_group group"
     (workspaceWidget :monitor 0)))
 
 (defwidget right_group []
-  (box :halign "end" :class "right_group"
+  (box :halign "end" :class "right_group group"
     (time)))
