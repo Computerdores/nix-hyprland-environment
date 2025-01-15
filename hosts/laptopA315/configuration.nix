@@ -80,12 +80,12 @@
 
     environment.variables = {
         WP = "/etc/nixos/common/wallpapers";
-        HYPRCURSOR_SIZE = 32;
     };
 
     # other software
     environment.systemPackages = with pkgs; [
         inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
+        rose-pine-cursor
         hyprlock
         hyprland-workspaces
         eww

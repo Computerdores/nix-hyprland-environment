@@ -17,6 +17,13 @@
         username = "jann";
         homeDirectory = "/home/jann";
 
+        pointerCursor = {
+            name = "BreezeX-RosePine-Linux";
+            package = pkgs.rose-pine-cursor;
+            size = 24;
+            gtk.enable = true;
+        };
+
         # This value determines the Home Manager release that your
         # configuration is compatible with. This helps avoid breakage
         # when a new Home Manager release introduces backwards
