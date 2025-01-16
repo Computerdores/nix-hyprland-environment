@@ -93,6 +93,7 @@
         tldr
         vivaldi
         tree
+        btop
     ];
 
     fonts.packages = with pkgs; [
