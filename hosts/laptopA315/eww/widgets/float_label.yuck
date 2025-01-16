@@ -1,0 +1,5 @@
+(defwidget float_label [value ?unit ?class ?hexpand ?halign]
+  (label :text "${captures('${value}', '^(\\d+)(?:$|\\.\\d+$)')[0][1]}${unit ?: ''}"
+         :class {class ?: ""}
+         :hexpand {hexpand ?: false}
+         :halign {halign ?: "start"}))

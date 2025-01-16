@@ -8,6 +8,11 @@
     text-shadow: none;
 }
 
+.tooltip {
+    border-radius: 0.75rem;
+    background: $theme-surface0;
+}
+
 .background {
     background: none;
     color: $theme-text;

@@ -1,7 +1,9 @@
+(include "./widgets/table.yuck")
+(include "./widgets/float_label.yuck")
 (defwidget stats_widget [icon value ?unit ?class ?gravity]
   (box :halign "start" :space-evenly false :class {"${class} stats" ?: "stats"}
     (label :text {icon ?: ""} :gravity {gravity ?: "south"} :class "icon" :halign "start")
-    (label :text "${captures('${value}', '^(\\d+)(?:$|\\.\\d+$)')[0][1]}${unit ?: '%'}" :class "text" :halign "end" :hexpand true)))
+    (float_label :value {value} :unit "%" :class "text" :halign "end" :hexpand true)))
 (defwidget cpu_stats []
   (stats_widget :icon "\\uF2DB" :value {EWW_CPU.avg} :class "cpu_stats"))
 (defwidget ram_stats []
@@ -14,4 +16,6 @@
 (defwidget bat_stats []
   (bat_widget :value {EWW_BATTERY["BAT1"].capacity} :status {EWW_BATTERY["BAT1"].status} :class "bat_stats")) 
 (defwidget disk_stats []
-  (stats_widget :icon "\\uF0A0" :value {EWW_DISK["/"].used_perc} :class "disk_stats"))
+  (tooltip
+    (table :class "tooltip" :rows {jq(EWW_DISK, "to_entries | map([.key, .value.used_perc])")} )
+    (stats_widget :icon "\\uF0A0" :value {EWW_DISK["/"].used_perc} :class "disk_stats")))
