@@ -13,3 +13,5 @@
                 :gravity "east"))
 (defwidget bat_stats []
   (bat_widget :value {EWW_BATTERY["BAT1"].capacity} :status {EWW_BATTERY["BAT1"].status} :class "bat_stats")) 
+(defwidget disk_stats []
+  (stats_widget :icon "\\uF0A0" :value {EWW_DISK["/"].used_perc} :class "disk_stats"))
