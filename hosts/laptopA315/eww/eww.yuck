@@ -25,6 +25,7 @@
     (cpu_stats)
     (ram_stats)
     (disk_stats)
+    (temp_stats)
     (bat_stats)))
 
 (defwidget center_group []
