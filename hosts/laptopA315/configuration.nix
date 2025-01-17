@@ -78,6 +78,15 @@
 
     nixpkgs.config.allowUnfree = true;
 
+    # adds a list of installed system packages at /etc/current-system-packages
+    # from https://www.reddit.com/r/NixOS/comments/fsummx/comment/kt9fb74/
+    environment.etc."current-system-packages".text =
+    let
+        packages = builtins.map (p: "${p.name}") config.environment.systemPackages;
+        sortedUnique = builtins.sort builtins.lessThan (pkgs.lib.lists.unique packages);
+        formatted = builtins.concatStringsSep "\n" sortedUnique;
+    in formatted;
+
     environment.variables = {
         WP = "/etc/nixos/common/wallpapers";
     };
