@@ -17,7 +17,6 @@
         placeholder_text = "Password...";
         halign = "center";
         valign = "center";
-        fade_on_empty = false;
         inner_color = "rgba(49,50,68,0.5)";
         outer_color = "rgba(69,71,90,0.5)";
         check_color = "rgba(20,10,100,1)";
