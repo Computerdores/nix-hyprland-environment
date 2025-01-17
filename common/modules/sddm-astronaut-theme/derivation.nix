@@ -1,5 +1,5 @@
 # see also: https://github.com/xhos/nixdots/blob/main/derivs/sddm-astronaut-theme.nix
-{ pkgs, subtheme ? "astronaut" }:
+{ pkgs, lib, subtheme ? "astronaut" }:
 
 pkgs.stdenv.mkDerivation rec {
     pname = "sddm-astronaut-theme";
@@ -14,14 +14,11 @@ pkgs.stdenv.mkDerivation rec {
     };
 
     dontWrapQtApps = true;
-    propagatedBuildInputs = [
-        pkgs.kdePackages.qtsvg
-        pkgs.kdePackages.qtmultimedia
-        pkgs.kdePackages.qtvirtualkeyboard
-    ];
 
     patchPhase = ''
-    '';
+        cp "${./escaping-the-well.conf}" Themes/escaping-the-well.conf
+        cp "${../../wallpapers/escaping_the_well.jpg}" Backgrounds/escaping_the_well.jpg
+    ''; # to remove my additional custom theme just remove this patchPase
 
     buildPhase = ''
         runHook preBuild
@@ -32,7 +29,7 @@ pkgs.stdenv.mkDerivation rec {
         runHook preInstall
 
         mkdir -p $out/share/sddm/themes
-        cp -r $src $out/share/sddm/themes/astronaut
+        cp -r . $out/share/sddm/themes/astronaut
 
         mkdir -p $out/share/fonts
         cp -r $out/share/sddm/themes/astronaut/Fonts/. $out/share/fonts
@@ -42,4 +39,11 @@ pkgs.stdenv.mkDerivation rec {
 
         runHook postInstall
     '';
+
+    meta = with lib; {
+        description = "Series of modern looking themes for SDDM.";
+        homepage = "https://github.com/Keyitdev/sddm-astronaut-theme";
+        license = licenses.gpl3;
+        platforms = platforms.linux;
+    };
 }

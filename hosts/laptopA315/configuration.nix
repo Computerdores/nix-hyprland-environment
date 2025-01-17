@@ -7,7 +7,7 @@
 
     sddmAstronautTheme = {
         enable = true;
-        subtheme = "astronaut";
+        subtheme = "escaping-the-well";
     };
 
     # systemd-boot

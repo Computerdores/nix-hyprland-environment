@@ -2,7 +2,7 @@
 
 let
     cfg = config.sddmAstronautTheme or {};
-    sddm-astronaut-theme = import ./derivation.nix { pkgs = pkgs; subtheme = cfg.subtheme; };
+    sddm-astronaut-theme = import ./derivation.nix { pkgs = pkgs; lib = lib; subtheme = cfg.subtheme; };
 in {
     options.sddmAstronautTheme = {
         enable = lib.mkEnableOption "sddm astronaut theme";
@@ -19,8 +19,10 @@ in {
             sddm-astronaut-theme
         ];
 
-        services.displayManager.sddm.extraPackages = [
-            sddm-astronaut-theme
+        services.displayManager.sddm.extraPackages = with pkgs.kdePackages; [
+            qtsvg
+            qtmultimedia
+            qtvirtualkeyboard
         ];
     };
 }
