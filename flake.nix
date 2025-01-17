@@ -26,6 +26,7 @@
                     home-manager.extraSpecialArgs = specialArgs;
                     home-manager.users.jann = import ./hosts/laptopA315/home.nix;
                 }
+                ./common/modules
             ];
         };
     };

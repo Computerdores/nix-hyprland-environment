@@ -5,6 +5,11 @@
         ./hardware-configuration.nix
     ];
 
+    sddmAstronautTheme = {
+        enable = true;
+        subtheme = "astronaut";
+    };
+
     # systemd-boot
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
@@ -67,6 +72,8 @@
     services.displayManager.sddm = {
         enable = true;
         wayland.enable = true;
+        package = pkgs.kdePackages.sddm;
+        theme = "astronaut";
     };
 
     programs.hyprland = {
