@@ -1,8 +1,0 @@
-(defwidget stats_widget [icon value ?unit ?class]
-  (label :text "${icon} ${captures('${value}', '^(\\d+)(?:$|\\.\\d+$)')[0][1]}${unit ?: '%'}" :class {class ?: ""}))
-(defwidget cpu_stats []
-  (stats_widget :icon "\\uF2DB" :value {EWW_CPU.avg} :class "cpu_stats"))
-(defwidget ram_stats []
-  (stats_widget :icon "\\uF538" :value {EWW_RAM.used_mem_perc} :class "ram_stats"))
-(defwidget drv_stats []
-  (stats_widget :icon "\\uF1C0" :value "${EWW_DISK['/'].used_perc}" :class "drv_stats"))
