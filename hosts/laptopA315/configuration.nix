@@ -51,6 +51,7 @@
         uid = 1000;
     };
 
+    programs.ssh.startAgent = true;
     services.openssh = {
         enable = true;
         settings.PasswordAuthentication = false;
