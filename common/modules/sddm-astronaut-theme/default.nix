@@ -1,8 +1,11 @@
-{ config, lib, pkgs, ... }:
+args@{ config, lib, pkgs, ... }:
 
 let
     cfg = config.sddmAstronautTheme or {};
-    sddm-astronaut-theme = import ./derivation.nix { pkgs = pkgs; lib = lib; subtheme = cfg.subtheme; };
+    sddm-astronaut-theme = import ./derivation.nix (args // {
+        theme = cfg.subtheme;
+        themeOverrides = cfg.themeOverrides;
+    });
 in {
     options.sddmAstronautTheme = {
         enable = lib.mkEnableOption "sddm astronaut theme";
@@ -10,6 +13,11 @@ in {
             type = lib.types.str;
             default = "astronaut";
             description = "Which subtheme of the sddm astronaut theme to use.";
+        };
+        themeOverrides = lib.mkOption {
+            type = lib.types.attrsOf lib.types.string;
+            default = {};
+            description = "Overrides for options specified in the selected theme.conf.";
         };
     };
 

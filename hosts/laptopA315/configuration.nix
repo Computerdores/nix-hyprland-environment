@@ -7,7 +7,11 @@
 
     sddmAstronautTheme = {
         enable = true;
-        subtheme = "escaping-the-well";
+        subtheme = "astronaut";
+        themeOverrides = {
+            Background = "${../../common/wallpapers/escaping_the_well.jpg}";
+            PartialBlur = "false";
+        };
     };
 
     # systemd-boot
