@@ -10,11 +10,11 @@
           (label :text "\\uF0E2")))
       (tooltip
         (label :text "Hibernate" :class "tooltip")
-        (button :onclick "systemctl hibernate"
+        (button :onclick "hyprlock --immediate & systemctl hibernate"
           (label :text "\\uF019")))
       (tooltip
         (label :text "Suspend" :class "tooltip")
-        (button :onclick "systemctl suspend"
+        (button :onclick "hyprlock --immediate & systemctl suspend"
           (label :text "\\uF186")))
       (tooltip
         (label :text "Logout" :class "tooltip")
