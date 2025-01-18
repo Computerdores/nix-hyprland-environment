@@ -11,7 +11,7 @@
 (defwidget bat_widget [value status ?class]
   (stats_widget :icon {status == "Charging" ? "\\uF1E6" : (value > 95 ? "\\uF240" : (value > 75 ? "\\uF241" : (value > 50 ? "\\uF242" : (value > 25 ? "\\uF243" : "\\uF244"))))}
                 :value value
-                :class "${class} ${status}${value <= 10 ? " Critical" : ""}"
+                :class "${class} ${value <= 10 ? "Critical" : status}"
                 :gravity "east"))
 (defwidget bat_stats []
   (bat_widget :value {EWW_BATTERY["BAT1"].capacity} :status {EWW_BATTERY["BAT1"].status} :class "bat_stats")) 
