@@ -42,11 +42,11 @@
     text-shadow: 0 0 10px;
 }
 
-.bat_stats.Charging, .bat_stats.Full {
+.bat_stats.Charging > *, .bat_stats.Full > * {
     color: rgb(0,255,0);
 }
 
-.bat_stats.Critical {
+.bat_stats.Critical > * {
     color: rgb(255,0,0);
 }
 
