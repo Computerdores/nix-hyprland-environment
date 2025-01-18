@@ -88,6 +88,8 @@
         portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
     };
 
+    nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
     nixpkgs.config.allowUnfree = true;
 
     # adds a list of installed system packages at /etc/current-system-packages
