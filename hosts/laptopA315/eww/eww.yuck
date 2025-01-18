@@ -42,6 +42,7 @@
 
 
 (include "./widgets/window_closer.yuck")
+(include "./widgets/power_menu.yuck")
 (defwindow menu
            :monitor 0
            :geometry (geometry :x "5px"
@@ -52,7 +53,7 @@
            :exclusive false
            :windowtype "dialog"
   (box :orientation "v"
-    (label :text "test3")))
+    (power_menu)))
 
 (defwindow menu-closer
            :monitor 0
