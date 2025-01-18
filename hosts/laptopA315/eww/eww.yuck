@@ -1,6 +1,7 @@
 (include "./widgets/workspaces.yuck")
 (include "./widgets/stats.yuck")
 (include "./widgets/time.yuck")
+(include "./widgets/menu_button.yuck")
 
 (defwindow bar
            :monitor 0
@@ -33,5 +34,10 @@
     (workspaceWidget :monitor 0)))
 
 (defwidget right_group []
-  (box :halign "end" :class "right_group group"
-    (time)))
+  (box :halign "end" :class "right_group group" :space-evenly false
+    (time)
+    (menu_button)))
+
+(defwindow menu
+           :monitor 0
+  (label :text "test"))

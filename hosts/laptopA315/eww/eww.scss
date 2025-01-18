@@ -6,6 +6,7 @@
     border: none;
     box-shadow: none;
     text-shadow: none;
+    color: $theme-text;
 }
 
 .tooltip {
@@ -15,11 +16,12 @@
 
 .background {
     background: none;
-    color: $theme-text;
 }
 
 .group {
     background-color: $theme-surface0;
+    border-color: $theme-blue;
+    border-width: 1px;
 }
 
 .group > * {
@@ -28,6 +30,7 @@
 
 .left_group {
     border-radius: 0 0 0.75rem 0;
+    border-style: none solid solid none;
     padding: 0 5px;
 }
 
@@ -48,7 +51,8 @@
 }
 
 .center_group {
-    border-radius: 2rem;
+    border-radius: 0 0 0.75rem 0.75rem;
+    border-style: none solid solid solid;
 }
 
 .workspaces button {
@@ -67,4 +71,9 @@
 .right_group {
     border-radius: 0 0 0 0.75rem;
     padding: 0 5px;
+    border-style: none none solid solid;
+}
+
+.menu_button {
+    padding: 0;
 }
