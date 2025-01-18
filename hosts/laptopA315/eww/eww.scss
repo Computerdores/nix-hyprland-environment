@@ -77,3 +77,11 @@
 .menu_button {
     padding: 0;
 }
+
+
+
+.background.menu {
+    background: $theme-surface0;
+    border-radius: 0.75rem;
+    border: 1px solid $theme-blue;
+}

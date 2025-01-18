@@ -1,0 +1,2 @@
+(defwidget window_closer [window]
+    (eventbox :onclick "${EWW_CMD} close ${window}; ${EWW_CMD} close ${window}-closer"))
