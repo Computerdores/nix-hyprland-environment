@@ -16,26 +16,21 @@ in pkgs.stdenv.mkDerivation rec {
 
     dontWrapQtApps = true;
 
-    buildPhase = ''
-        runHook preBuild
-        runHook postBuild
-    '';
-    
     installPhase = ''
         runHook preInstall
 
-        mkdir -p $out/share/sddm/themes
-        cp -r . $out/share/sddm/themes/astronaut
+        themeDir="$out/share/sddm/themes/astronaut"
+        mkdir -p "$themeDir"
+        cp -r "." "$themeDir"
 
-        mkdir -p $out/share/fonts
-        cp -r $out/share/sddm/themes/astronaut/Fonts/. $out/share/fonts
+        mkdir -p "$out/share/fonts"
+        cp -r "$themeDir/Fonts/." "$out/share/fonts"
 
-        substituteInPlace $out/share/sddm/themes/astronaut/metadata.desktop \
+        substituteInPlace "$themeDir/metadata.desktop" \
             --replace "ConfigFile=Themes/astronaut.conf" "ConfigFile=Themes/${theme}.conf"
 
         ${lib.optionalString (lib.isAttrs themeOverrides) ''
-            #install -dm755 $out/share/sddm/themes/astronaut/Themes
-            cp ${overwriteConfig} $out/share/sddm/themes/astronaut/Themes/${theme}.conf.user
+            cp ${overwriteConfig} "$themeDir/Themes/${theme}.conf.user"
         ''}
 
         runHook postInstall
