@@ -2,8 +2,12 @@
 
 {
     imports = [
+        ./hyprland
+        ./hyprlock.nix
+        ./hyprpaper.nix
         ./programs/firefox.nix
         ./programs/vscode.nix
+        ./programs/nnn.nix
     ];
     programs.bash = {
         enable = true;
@@ -54,21 +58,4 @@
     };
 
     programs.wofi.enable = true;
-    programs.nnn.enable = true;
-    programs.hyprlock = {
-        enable = true;
-        settings = import ./hyprlock.nix;
-    };
-    wayland.windowManager.hyprland = {
-        enable = true;
-        package = pkgs.hyprland;
-        xwayland.enable = true;
-        systemd.enable = true;
-
-        settings = import ./hyprland/config.nix;
-    };
-    services.hyprpaper = {
-        enable = true;
-        settings = import ./hyprpaper.nix;
-    };
 }
