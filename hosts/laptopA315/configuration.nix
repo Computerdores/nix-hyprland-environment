@@ -112,7 +112,6 @@
         hyprlock
         hyprland-workspaces
         eww
-        git
         tldr
         vivaldi
         tree
@@ -123,6 +122,11 @@
         font-awesome
         noto-fonts
     ];
+
+    programs.git = {
+        enable = true;
+        lfs.enable = true;
+    };
 
     programs.nano = {
         enable = true;
