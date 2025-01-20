@@ -7,7 +7,7 @@
 
         settings = {
             "$terminal" = "kitty";
-            "$fileManager" = "$terminal -e nnn";
+            "$fileManager" = "$terminal -e nnn -a";
             "$menu" = "wofi --show drun";
             "$mainMod" = "SUPER";
 

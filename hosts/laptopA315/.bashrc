@@ -4,3 +4,5 @@ function go-nix-config() {
     sudo -s
     cd "$p"
 }
+
+alias nnn='nnn -a'

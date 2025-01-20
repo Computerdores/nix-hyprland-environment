@@ -5,6 +5,7 @@
         ./hyprland
         ./hyprlock.nix
         ./hyprpaper.nix
+        ./programs/kitty.nix
         ./programs/firefox.nix
         ./programs/vscode.nix
         ./programs/nnn.nix
@@ -46,16 +47,6 @@
 
     # Let Home Manager install and manage itself.
     programs.home-manager.enable = true;
-
-    # Desktop Environment
-    programs.kitty = {
-        enable = true;
-        shellIntegration.enableBashIntegration = true;
-        settings = {
-            #allow_remote_control = true;
-            background_opacity = "0.8";
-        };
-    };
 
     programs.wofi.enable = true;
 }
