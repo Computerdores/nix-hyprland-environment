@@ -15,7 +15,7 @@ in {
             description = "Which subtheme of the sddm astronaut theme to use.";
         };
         themeOverrides = lib.mkOption {
-            type = lib.types.attrsOf lib.types.string;
+            type = lib.types.attrsOf lib.types.str;
             default = {};
             description = "Overrides for options specified in the selected theme.conf.";
         };
