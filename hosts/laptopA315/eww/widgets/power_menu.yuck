@@ -2,7 +2,7 @@
     (box
       (tooltip
         (label :text "Shutdown" :class "tooltip")
-        (button :onclick "systemctl shutdown"
+        (button :onclick "systemctl poweroff"
           (label :text "\\uF011")))
       (tooltip
         (label :text "Restart" :class "tooltip")
