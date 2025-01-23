@@ -1,0 +1,11 @@
+(defpoll charge_full  :initial "0" :interval "24h"
+  `cat /sys/class/power_supply/BAT1/charge_full`)
+(defpoll charge_now  :initial "0" :interval "10s"
+  `cat /sys/class/power_supply/BAT1/charge_now`)
+(defpoll current_now :initial "0" :interval "10s"
+  `cat /sys/class/power_supply/BAT1/current_now`)
+(defwidget charge_time [?class]
+  (box :class {class ?: ""} :space-evenly false
+    (float_label :value {charge_now/current_now} :unit "h" :visible {EWW_BATTERY["BAT1"].status != "Charging"})
+    (float_label :value {60.0*charge_now/current_now % 60.0} :unit "min" :visible {EWW_BATTERY["BAT1"].status != "Charging"})
+    (label :text "Charging" :visible {EWW_BATTERY["BAT1"].status == "Charging"})))

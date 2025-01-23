@@ -1,5 +1,6 @@
-(defwidget float_label [value ?unit ?class ?hexpand ?halign]
-  (label :text "${captures('${value}', '^(\\d+)(?:$|\\.\\d+$)')[0][1]}${unit ?: ''}"
+(defwidget float_label [value ?unit ?class ?hexpand ?halign ?visible]
+  (label :text "${round(value,0)}${unit ?: ''}"
          :class {class ?: ""}
          :hexpand {hexpand ?: false}
-         :halign {halign ?: "start"}))
+         :halign {halign ?: "start"}
+         :visible {visible ?: true}))

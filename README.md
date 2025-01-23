@@ -1,5 +1,4 @@
 # ToDo
-- [ ] EWW: battery indicator time estimate tooltip
 - [ ] nano syntax highlighting for: eww
 - [ ] List of packages
 
@@ -13,6 +12,7 @@
 <details>
 <summary>Done</summary>
 
+- [x] EWW: battery indicator time estimate tooltip
 - [x] Credits section
 </details>
 

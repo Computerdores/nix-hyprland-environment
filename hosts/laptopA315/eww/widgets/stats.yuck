@@ -1,24 +1,33 @@
 (include "./widgets/table.yuck")
 (include "./widgets/float_label.yuck")
+
 (defwidget stats_widget [icon value ?unit ?class ?gravity]
   (box :halign "start" :space-evenly false :class {"${class} stats" ?: "stats"}
     (label :text {icon ?: ""} :gravity {gravity ?: "south"} :class "icon" :halign "start")
     (float_label :value {value} :unit {unit ?: "%"} :class "text" :halign "end" :hexpand true)))
+
 (defwidget cpu_stats []
   (stats_widget :icon "\\uF2DB" :value {EWW_CPU.avg} :class "cpu_stats"))
+
 (defwidget ram_stats []
   (stats_widget :icon "\\uF538" :value {EWW_RAM.used_mem_perc} :class "ram_stats")) 
+
+(include "./widgets/charge_time.yuck")
 (defwidget bat_widget [value status ?class]
   (stats_widget :icon {status == "Charging" ? "\\uF1E6" : (value > 95 ? "\\uF240" : (value > 75 ? "\\uF241" : (value > 50 ? "\\uF242" : (value > 25 ? "\\uF243" : "\\uF244"))))}
                 :value value
                 :class "${class} ${value <= 10 ? "Critical" : status}"
                 :gravity "east"))
 (defwidget bat_stats []
-  (bat_widget :value {EWW_BATTERY["BAT1"].capacity} :status {EWW_BATTERY["BAT1"].status} :class "bat_stats")) 
+  (tooltip
+    (charge_time :class "tooltip")
+    (bat_widget :value {EWW_BATTERY["BAT1"].capacity} :status {EWW_BATTERY["BAT1"].status} :class "bat_stats")))
+
 (defwidget disk_stats []
   (tooltip
     (table :class "tooltip" :rows {jq(EWW_DISK, "to_entries | map([.key, .value.used_perc])")} :unit "%")
     (stats_widget :icon "\\uF0A0" :value {EWW_DISK["/"].used_perc} :class "disk_stats")))
+
 (defwidget temp_stats []
   (tooltip
     (table :class "tooltip" :rows {jq(EWW_TEMPS, "to_entries | map([.key, .value])")} :unit "°C")
