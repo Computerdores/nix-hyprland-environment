@@ -1,9 +1,14 @@
 # ToDo
-
 - [ ] EWW: battery indicator time estimate tooltip
-- [ ] Ghidra
-- [ ] Thunderbird
 - [ ] List of packages
+
+## Packages
+- [ ] Thunderbird
+- [ ] Ghidra
+- [ ] ImHex
+- [ ] pwndbg
+
+## Done
 <details>
 <summary>Done</summary>
   
