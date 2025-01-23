@@ -1,5 +1,6 @@
 # ToDo
 - [ ] EWW: battery indicator time estimate tooltip
+- [ ] nano syntax highlighting for: eww
 - [ ] List of packages
 
 ## Packages
@@ -11,7 +12,7 @@
 ## Done
 <details>
 <summary>Done</summary>
-  
+
 - [x] Credits section
 </details>
 
@@ -33,8 +34,8 @@ The Wallpapers at `common/wallpapers/**` are from various people around the web,
 
 |               Path               |                                   Artist                                   |
 |----------------------------------|----------------------------------------------------------------------------|
-| `aenami/*`                       |[Aenami](https://www.artstation.com/aenamiart)                              |
-| `abandoned_satellite_dishes.jpg` |[Isaac Yeram Kim](https://www.artstation.com/isaacyeramkim)                 |
+| `aenami/*`                       | [Aenami](https://www.artstation.com/aenamiart)                             |
+| `abandoned_satellite_dishes.jpg` | [Isaac Yeram Kim](https://www.artstation.com/isaacyeramkim)                |
 | `escaping_the_well.jpg`          | N/A                                                                        |
 | `fedex_cargo_ship.jpg`           | [Plumm](https://www.humanart.cz/portfolio/Plumm)                           |
 | `ghost_in_the_shell.jpg`         | N/A                                                                        |
