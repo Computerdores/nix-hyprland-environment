@@ -1,14 +1,15 @@
-# ToDo
+# Computerdores' NixOS Flake
+## ToDo
 - [ ] nano syntax highlighting for: eww
 - [ ] List of packages
 
-## Packages
+### Packages
 - [ ] Thunderbird
 - [ ] Ghidra
 - [ ] ImHex
 - [ ] pwndbg
 
-## Done
+### Done
 <details>
 <summary>Done</summary>
 
@@ -16,19 +17,19 @@
 - [x] Credits section
 </details>
 
-# FAQ
+## FAQ
 > The `nixos-rebuild` complains that home-manager couldn't start and that certain files should be removed or the backup file extension set, but it doesn't say which files are the problem. How do I find those files?
 
 Run this to see the full log and findout where the conflict is occuring:
 `journalctl --unit home-manager-<user>.service`
 
-# Packages
+## Packages
 - [sddm-astronaut-theme](https://github.com/Keyitdev/sddm-astronaut-theme) (a series of SDDM themes by [KeyitDev](https://github.com/Keyitdev); self packaged)
 
-# Credits
+## Credits
 - various posts on [r/unixporn](https://www.reddit.com/r/unixporn/) for great amounts of inspiration
 
-## Wallpapers
+### Wallpapers
 The Wallpapers at `common/wallpapers/**` are from various people around the web, most notably [Aenami](https://www.artstation.com/aenamiart)
 <details>
 
