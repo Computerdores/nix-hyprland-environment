@@ -6,7 +6,7 @@
           (label :text "\\uF011")))
       (tooltip
         (label :text "Restart" :class "tooltip")
-        (button :onclick "systemctl restart"
+        (button :onclick "systemctl reboot"
           (label :text "\\uF0E2")))
       (tooltip
         (label :text "Hibernate" :class "tooltip")
