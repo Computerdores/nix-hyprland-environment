@@ -1,6 +1,7 @@
 { inputs, config, pkgs, ... }:
-
-{
+let
+    utiltool = inputs.utiltool.packages.${pkgs.system}.default;
+in {
     imports = [
         ./hyprland
         ./hyprlock.nix
@@ -15,7 +16,9 @@
         bashrcExtra = builtins.readFile ./.bashrc;
     };
     home = {
-        packages = with pkgs; [ ];
+        packages = with pkgs; [
+            utiltool
+        ];
 
         # Home Manager needs a bit of information about you and the
         # paths it should manage.

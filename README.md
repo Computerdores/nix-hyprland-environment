@@ -25,6 +25,7 @@ Run this to see the full log and findout where the conflict is occuring:
 
 ## Packages
 - [sddm-astronaut-theme](https://github.com/Keyitdev/sddm-astronaut-theme) (a series of SDDM themes by [KeyitDev](https://github.com/Keyitdev); self packaged)
+- [utiltool](https://github.com/Computerdores/utiltool) (a collection of utilities written for this flake)
 
 ## Credits
 - various posts on [r/unixporn](https://www.reddit.com/r/unixporn/) for great amounts of inspiration
