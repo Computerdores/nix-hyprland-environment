@@ -3,11 +3,13 @@
 - [ ] nano syntax highlighting for: eww
 - [ ] List of packages
 
-### Packages
+### Software
 - [ ] Thunderbird
+- [ ] calculator
 - [ ] Ghidra
 - [ ] ImHex
 - [ ] pwndbg
+
 
 ### Done
 <details>
