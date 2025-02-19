@@ -1,6 +1,7 @@
 # Computerdores' NixOS Flake
 ## ToDo
 - [ ] nano syntax highlighting for: eww
+- [ ] `alias ssh=kitten ssh`
 - [ ] List of packages
 
 ### Software
