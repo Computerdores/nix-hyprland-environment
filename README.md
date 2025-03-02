@@ -10,7 +10,7 @@
 - [ ] Ghidra
 - [ ] ImHex
 - [ ] pwndbg
-
+- [ ] hypridle
 
 ### Done
 <details>
