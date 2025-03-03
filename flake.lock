@@ -557,6 +557,27 @@
         "type": "github"
       }
     },
+    "rust-overlay": {
+      "inputs": {
+        "nixpkgs": [
+          "utiltool",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1740104932,
+        "narHash": "sha256-FaN+HBAhOW1wAjxPI/Ko1DX0ax4ucHCZoMJ0dGMxm8o=",
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "rev": "c932b3873a5d56126bc1f1416fb8a58315f86c17",
+        "type": "github"
+      },
+      "original": {
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "type": "github"
+      }
+    },
     "systems": {
       "locked": {
         "lastModified": 1689347949,
@@ -638,14 +659,15 @@
     "utiltool": {
       "inputs": {
         "flake-utils": "flake-utils",
-        "nixpkgs": "nixpkgs_4"
+        "nixpkgs": "nixpkgs_4",
+        "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1737828486,
-        "narHash": "sha256-2XC0zqoRzlPH4kjFjWHPSNF8k5jF8ydF9hSuqKpJKh0=",
+        "lastModified": 1740147467,
+        "narHash": "sha256-uH+BbDH0RNu0RtyL+sK/FKfisJsHTrJP38frHjBl3cQ=",
         "owner": "Computerdores",
         "repo": "utiltool",
-        "rev": "03fe1b4a37729cb66d8b363b6dae3b6ea8225811",
+        "rev": "5ef85891483cf95a9f46939eea559f1fc9f194d8",
         "type": "github"
       },
       "original": {
