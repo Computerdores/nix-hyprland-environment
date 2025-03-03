@@ -11,6 +11,7 @@
 - [ ] ImHex
 - [ ] pwndbg
 - [ ] hypridle
+- [ ] Signal Desktop
 
 ### Done
 <details>
