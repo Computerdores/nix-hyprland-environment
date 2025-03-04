@@ -1,5 +1,6 @@
 # Computerdores' NixOS Flake
 ## ToDo
+- [ ] nnn file picker integration for firefox
 - [ ] nano syntax highlighting for: eww
 - [ ] `alias ssh=kitten ssh`
 - [ ] List of packages

@@ -47,10 +47,11 @@
     console.keyMap = "de";
 
     # users
+    users.groups.nixos-config = {};
     users.users.jann = {
         isNormalUser = true;
         description = "Jann Stute";
-        extraGroups = [ "networkmanager" "wheel" ]; # wheel is for enabling sudo
+        extraGroups = [ "networkmanager" "wheel" "nixos-config" ]; # wheel is for enabling sudo
         initialPassword = "1";
         uid = 1000;
     };
