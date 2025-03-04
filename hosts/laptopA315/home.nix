@@ -10,6 +10,7 @@ in {
         ./programs/firefox.nix
         ./programs/vscode.nix
         ./programs/nnn.nix
+	./programs/neovim.nix
     ];
     programs.bash = {
         enable = true;
