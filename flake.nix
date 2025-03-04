@@ -7,9 +7,18 @@
             url = "github:nix-community/home-manager/release-24.11";
             inputs.nixpkgs.follows = "nixpkgs";
         };
-        hyprland.url = "github:hyprwm/Hyprland";
-        rose-pine-hyprcursor.url = "github:ndom91/rose-pine-hyprcursor";
-        utiltool.url = "github:Computerdores/utiltool?ref=main";
+        hyprland = {
+            url = "github:hyprwm/Hyprland";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
+        rose-pine-hyprcursor = {
+            url = "github:ndom91/rose-pine-hyprcursor";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
+        utiltool = {
+            url = "github:Computerdores/utiltool?ref=main";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
     };
 
     outputs = inputs@{ self, nixpkgs, home-manager, ... }:
