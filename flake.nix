@@ -27,7 +27,7 @@
     in {
         nixosConfigurations.LaptopA315 = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
-            specialArgs = { inherit inputs; };
+            specialArgs = specialArgs;
             modules = [
                 ./hosts/laptopA315/configuration.nix
                 home-manager.nixosModules.home-manager {
