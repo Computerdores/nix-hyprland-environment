@@ -117,6 +117,7 @@
         vivaldi
         tree
         btop
+        fastfetch
     ];
 
     fonts.packages = with pkgs; [
