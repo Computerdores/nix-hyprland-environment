@@ -15,6 +15,7 @@
             exec-once    = import ./exec-once.nix;
             env          = import ./env.nix;
             input        = import ./input.nix;
+            device       = import ./device.nix;
             general      = import ./general.nix;
             decoration   = import ./decoration.nix;
             animations   = import ./animations.nix;
