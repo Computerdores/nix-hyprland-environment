@@ -47,6 +47,10 @@ in {
             source = ./eww;
             recursive = true;
         };
+        file."${config.xdg.configHome}/hypr/event_handler.sh" = {
+            source = ./hyprland/event_handler.sh;
+            executable = true;
+        };
     };
 
     # Let Home Manager install and manage itself.

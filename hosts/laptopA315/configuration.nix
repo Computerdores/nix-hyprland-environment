@@ -118,6 +118,7 @@
         tree
         btop
         fastfetch
+        socat # needed for hyprland event handler script
     ];
 
     fonts.packages = with pkgs; [

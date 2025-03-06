@@ -4,6 +4,7 @@
 - [ ] nano syntax highlighting for: eww
 - [ ] `alias ssh=kitten ssh`
 - [ ] List of packages
+- [ ] eww: fix the workspaces widget?
 
 ### Software
 - [ ] Thunderbird
