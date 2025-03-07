@@ -15,7 +15,6 @@
 - [ ] Thunderbird
 - [ ] calculator
 - [ ] Ghidra
-- [ ] pwndbg
 - [ ] hypridle
   - [ ] eww button to toggle
 - [ ] Signal Desktop
@@ -27,6 +26,7 @@
 - [x] EWW: battery indicator time estimate tooltip
 - [x] Credits section
 - [x] ImHex
+- [x] pwndbg
 </details>
 
 ## FAQ

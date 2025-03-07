@@ -119,6 +119,7 @@
         btop
         fastfetch
         socat # needed for hyprland event handler script
+        pwndbg
     ];
 
     fonts.packages = with pkgs; [
