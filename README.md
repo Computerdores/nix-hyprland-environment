@@ -5,6 +5,11 @@
 - [ ] `alias ssh=kitten ssh`
 - [ ] List of packages
 - [ ] eww: fix the workspaces widget?
+- [ ] sound control
+- [ ] network control
+- [ ] bluetooth control
+- [ ] eww: backlight control
+- [ ] eww: tray icons
 
 ### Software
 - [ ] Thunderbird
@@ -13,6 +18,7 @@
 - [ ] ImHex
 - [ ] pwndbg
 - [ ] hypridle
+  - [ ] eww button to toggle
 - [ ] Signal Desktop
 
 ### Done
