@@ -15,7 +15,6 @@
 - [ ] Thunderbird
 - [ ] calculator
 - [ ] Ghidra
-- [ ] ImHex
 - [ ] pwndbg
 - [ ] hypridle
   - [ ] eww button to toggle
@@ -27,6 +26,7 @@
 
 - [x] EWW: battery indicator time estimate tooltip
 - [x] Credits section
+- [x] ImHex
 </details>
 
 ## FAQ
