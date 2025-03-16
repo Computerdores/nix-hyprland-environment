@@ -13,6 +13,7 @@
             PartialBlur = "false";
         };
     };
+    hardware.ckb-next.enable = true;
 
     # systemd-boot
     boot.loader.systemd-boot.enable = true;
