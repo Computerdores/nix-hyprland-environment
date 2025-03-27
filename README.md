@@ -10,6 +10,7 @@
 - [ ] bluetooth control
 - [ ] eww: backlight control
 - [ ] eww: tray icons
+- [ ] eww: pressing button in power menu should close the power menu
 
 ### Software
 - [ ] Thunderbird
