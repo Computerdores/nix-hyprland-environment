@@ -126,6 +126,7 @@
     fonts.packages = with pkgs; [
         font-awesome
         noto-fonts
+        jetbrains-mono
     ];
 
     programs.git = {

@@ -6,6 +6,8 @@ in {
         ./hyprland
         ./hyprlock.nix
         ./hyprpaper.nix
+        ./core/i3bar-river
+        ./core/i3status-rust
         ./programs/kitty.nix
         ./programs/firefox.nix
         ./programs/vscode.nix
