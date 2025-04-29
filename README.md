@@ -3,27 +3,26 @@
   - i3bar-river with i3status-rust seems promising
 - maybe gruvbox color scheme with aenami\_at\_last.jpg as BG?
 - maybe hyprland-virtual-desktops addon?
+- Old Bar Laayout: CPU MEM DSK TMP BAT        WORKSPACES        TIME SHUTDOWN
 
 # Computerdores' NixOS Flake
 ## ToDo
 - [ ] nnn file picker integration for firefox
-- [ ] nano syntax highlighting for: eww
 - [ ] `alias ssh=kitten ssh`
 - [ ] List of packages
-- [ ] eww: fix the workspaces widget?
-- [ ] sound control
-- [ ] network control
-- [ ] bluetooth control
-- [ ] eww: backlight control
-- [ ] eww: tray icons
-- [ ] eww: pressing button in power menu should close the power menu
+- [ ] bar
+  - [ ] backlight control
+  - [ ] tray icons
+  - [ ] sound control
+  - [ ] network control
+  - [ ] bluetooth control
+  - [ ] hypridle toggle
 
 ### Software
 - [ ] Thunderbird
 - [ ] calculator
 - [ ] Ghidra
 - [ ] hypridle
-  - [ ] eww button to toggle
 - [ ] Signal Desktop
 
 ### Done
