@@ -2,6 +2,7 @@
 - planning to redo the bar setup
   - i3bar-river with i3status-rust seems promising
 - maybe gruvbox color scheme with aenami\_at\_last.jpg as BG?
+- maybe hyprland-virtual-desktops addon?
 
 # Computerdores' NixOS Flake
 ## ToDo
