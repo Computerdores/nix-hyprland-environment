@@ -1,9 +1,8 @@
 # Branch Info: bar-redo
 - planning to redo the bar setup
   - i3bar-river with i3status-rust seems promising
-- maybe gruvbox color scheme with aenami\_at\_last.jpg as BG?
-- maybe hyprland-virtual-desktops addon?
-- Old Bar Laayout: CPU MEM DSK TMP BAT        WORKSPACES        TIME SHUTDOWN
+- maybe gruvbox-dark color scheme with aenami\_at\_last.jpg as BG?
+- todo: various bg colors are wrong atm
 
 # Computerdores' NixOS Flake
 ## ToDo
@@ -17,6 +16,7 @@
   - [ ] backlight control
   - [ ] sound control
   - [ ] tray icons
+- [ ] hyprland-virtual-desktops addon
 
 ### Software
 - [ ] Thunderbird
