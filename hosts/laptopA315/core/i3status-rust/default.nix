@@ -15,6 +15,41 @@
                         };
                     };
                 };
+                blocks = [
+                    {
+                        block = "cpu";
+                        format = " $icon  $utilization ";
+                    }
+                    {
+                        block = "memory";
+                        format = " $icon  $mem_used_percents ";
+                    }
+                    {
+                        block = "disk_space";
+                        format = " $icon  $used / $total ";
+                    }
+                    { block = "temperature"; }
+                    {
+                        block = "net";
+                        format = " $icon {$ssid|Wired Connection} ";
+                        format_alt = " ^icon_net_down $speed_down.eng(prefix:K) ^icon_net_up $speed_up.eng(prefix:K) ";
+                    }
+                    {
+                        block = "time";
+                        timezone = "Europe/Berlin";
+                        interval = 1;
+                        format = " $icon $timestamp.datetime(f:'%d. %B %H:%M:%S', l:de_DE) ";
+                    }
+                    { block = "sound"; }  # todo
+                    {
+                        block = "battery";
+                        full_format         = " $icon $percentage ";
+                        charging_format     = " $icon $percentage ";
+                        not_charging_format = " $icon $percentage ";
+                        empty_format        = " $icon $percentage ";
+                    }
+                    { block = "custom"; command = "echo PWR"; }  # todo
+                ];
             };
         };
     };

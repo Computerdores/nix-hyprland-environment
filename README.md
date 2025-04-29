@@ -10,13 +10,13 @@
 - [ ] nnn file picker integration for firefox
 - [ ] `alias ssh=kitten ssh`
 - [ ] List of packages
+- [ ] network control
+- [ ] bluetooth control
 - [ ] bar
-  - [ ] backlight control
-  - [ ] tray icons
-  - [ ] sound control
-  - [ ] network control
-  - [ ] bluetooth control
   - [ ] hypridle toggle
+  - [ ] backlight control
+  - [ ] sound control
+  - [ ] tray icons
 
 ### Software
 - [ ] Thunderbird
