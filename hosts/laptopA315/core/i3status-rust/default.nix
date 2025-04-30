@@ -40,12 +40,6 @@
                         format = " $icon {$ssid|Wired Connection} ";
                         format_alt = " ^icon_net_down $speed_down.eng(prefix:K) ^icon_net_up $speed_up.eng(prefix:K) ";
                     }
-                    {
-                        block = "time";
-                        timezone = "Europe/Berlin";
-                        interval = 1;
-                        format = " $icon $timestamp.datetime(f:'%d. %B %H:%M:%S', l:de_DE) ";
-                    }
                     { block = "sound"; }  # todo
                     {
                         block = "battery";
@@ -53,6 +47,12 @@
                         charging_format     = " $icon $percentage ";
                         not_charging_format = " $icon $percentage ";
                         empty_format        = " $icon $percentage ";
+                    }
+                    {
+                        block = "time";
+                        timezone = "Europe/Berlin";
+                        interval = 1;
+                        format = " $icon $timestamp.datetime(f:'%d. %B %H:%M:%S', l:de_DE) ";
                     }
                     { block = "custom"; command = "echo PWR"; }  # todo
                 ];
