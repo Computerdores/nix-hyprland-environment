@@ -1,9 +1,3 @@
-# Branch Info: bar-redo
-- planning to redo the bar setup
-  - i3bar-river with i3status-rust seems promising
-- maybe gruvbox-dark color scheme with aenami\_at\_last.jpg as BG?
-- todo: various bg colors are wrong atm
-
 # Computerdores' NixOS Flake
 ## ToDo
 - [ ] nnn file picker integration for firefox
