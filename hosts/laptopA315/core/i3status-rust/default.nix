@@ -4,8 +4,14 @@
         enable = true;
         bars = {
             default = {
-                theme = "gruvbox-dark";
                 settings = {
+                    theme = {
+                        theme = "gruvbox-dark";
+                        overrides = {
+                            alternating_tint_bg = "#111111";
+                            alternating_tint_fd = "#111111";
+                        };
+                    };
                     icons = {
                         icons = "material-nf";
                         overrides = {
