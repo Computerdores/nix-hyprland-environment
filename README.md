@@ -1,3 +1,5 @@
+# Bar Redo
+
 # Computerdores' NixOS Flake
 ## ToDo
 - [ ] nnn file picker integration for firefox
@@ -11,7 +13,7 @@
   - [ ] sound control
   - [ ] tray icons
 - [ ] hyprland-virtual-desktops addon
-- [ ] nix-shell prompt color
+- [ ] sddm: login failed text is wrong color
 
 ### Software
 - [ ] Thunderbird

@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 {
     programs.i3status-rust = {
         enable = true;
@@ -54,7 +54,39 @@
                         interval = 1;
                         format = " $icon $timestamp.datetime(f:'%d. %B %H:%M:%S', l:de_DE) ";
                     }
-                    { block = "custom"; command = "echo PWR"; }  # todo
+                    {
+                        block = "menu";
+                        text = " POWR ";
+                        items = [
+                            {   # shutdown
+                                display = "     ";
+                                cmd = "systemctl poweroff";
+                                confirm_msg = " U sure? ";
+                            }
+                            {   # reboot
+                                display = "     ";
+                                cmd = "systemctl reboot";
+                                confirm_msg = " U sure? ";
+                            }
+                            {   # hibernate
+                                display = "     ";
+                                cmd = "hyprlock --immediate & systemctl hibernate";
+                            }
+                            {   # suspend
+                                display = "     ";
+                                cmd = "hyprlock --immediate & systemctl suspend";
+                            }
+                            {   # logout
+                                display = "     ";
+                                cmd = "hyprctl dispatch exit"; # TODO: graceful logout using uwsm or similar
+                                confirm_msg = " U sure? ";
+                            }
+                            {   # lock
+                                display = "     ";
+                                cmd = "hyprlock --immediate &";
+                            }
+                        ];
+                    }
                 ];
             };
         };
