@@ -11,6 +11,7 @@
   - [ ] sound control
   - [ ] tray icons
 - [ ] hyprland-virtual-desktops addon
+- [ ] nix-shell prompt color
 
 ### Software
 - [ ] Thunderbird
@@ -18,6 +19,7 @@
 - [ ] Ghidra
 - [ ] hypridle
 - [ ] Signal Desktop
+- [ ] yazi instead of nnn?
 
 ### Done
 <details>
