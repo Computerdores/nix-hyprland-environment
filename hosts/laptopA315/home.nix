@@ -3,11 +3,11 @@ let
     utiltool = inputs.utiltool.packages.${pkgs.system}.default;
 in {
     imports = [
-        ./hyprland
-        ./hyprlock.nix
-        ./hyprpaper.nix
+        ./core/hyprland
+        ./core/hyprlock.nix
+        ./core/hyprpaper.nix
         ./core/i3bar-river
-        ./core/i3status-rust
+        ./core/i3status-rust.nix
         ./programs/kitty.nix
         ./programs/firefox.nix
         ./programs/vscode.nix
@@ -46,11 +46,6 @@ in {
         # the Home Manager release notes for a list of state version
         # changes in each release.
         stateVersion = "24.05";
-
-        file."${config.xdg.configHome}/hypr/event_handler.sh" = {
-            source = ./hyprland/event_handler.sh;
-            executable = true;
-        };
     };
 
     # Let Home Manager install and manage itself.
