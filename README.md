@@ -1,8 +1,6 @@
-# Bar Redo
-
 # Computerdores' NixOS Flake
 ## ToDo
-- [ ] nnn file picker integration for firefox
+- [ ] file picker integration for firefox
 - [ ] `alias ssh=kitten ssh`
 - [ ] List of packages
 - [ ] network control
@@ -22,16 +20,6 @@
 - [ ] hypridle
 - [ ] Signal Desktop
 - [ ] yazi instead of nnn?
-
-### Done
-<details>
-<summary>Done</summary>
-
-- [x] EWW: battery indicator time estimate tooltip
-- [x] Credits section
-- [x] ImHex
-- [x] pwndbg
-</details>
 
 ## FAQ
 > The `nixos-rebuild` complains that home-manager couldn't start and that certain files should be removed or the backup file extension set, but it doesn't say which files are the problem. How do I find those files?
