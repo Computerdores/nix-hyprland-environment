@@ -1,34 +1,25 @@
 # Computerdores' NixOS Flake
 ## ToDo
-- [ ] nnn file picker integration for firefox
-- [ ] nano syntax highlighting for: eww
+- [ ] file picker integration for firefox
 - [ ] `alias ssh=kitten ssh`
 - [ ] List of packages
-- [ ] eww: fix the workspaces widget?
-- [ ] sound control
 - [ ] network control
 - [ ] bluetooth control
-- [ ] eww: backlight control
-- [ ] eww: tray icons
-- [ ] eww: pressing button in power menu should close the power menu
+- [ ] bar
+  - [ ] hypridle toggle
+  - [ ] backlight control
+  - [ ] sound control
+  - [ ] tray icons
+- [ ] hyprland-virtual-desktops addon
+- [ ] sddm: login failed text is wrong color
 
 ### Software
 - [ ] Thunderbird
 - [ ] calculator
 - [ ] Ghidra
 - [ ] hypridle
-  - [ ] eww button to toggle
 - [ ] Signal Desktop
-
-### Done
-<details>
-<summary>Done</summary>
-
-- [x] EWW: battery indicator time estimate tooltip
-- [x] Credits section
-- [x] ImHex
-- [x] pwndbg
-</details>
+- [ ] yazi instead of nnn?
 
 ## FAQ
 > The `nixos-rebuild` complains that home-manager couldn't start and that certain files should be removed or the backup file extension set, but it doesn't say which files are the problem. How do I find those files?

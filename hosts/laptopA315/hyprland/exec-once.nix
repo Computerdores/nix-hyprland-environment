@@ -1,8 +1,6 @@
 [
     "waybar"
     "hyprpaper"
-    "eww daemon"
-    "eww open bar0"
-    "eww open bar1"
+    "i3bar-river"
     "/home/jann/.config/hypr/event_handler.sh"
 ]

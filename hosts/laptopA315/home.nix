@@ -6,6 +6,8 @@ in {
         ./hyprland
         ./hyprlock.nix
         ./hyprpaper.nix
+        ./core/i3bar-river
+        ./core/i3status-rust
         ./programs/kitty.nix
         ./programs/firefox.nix
         ./programs/vscode.nix
@@ -45,10 +47,6 @@ in {
         # changes in each release.
         stateVersion = "24.05";
 
-        file."${config.xdg.configHome}/eww" = {
-            source = ./eww;
-            recursive = true;
-        };
         file."${config.xdg.configHome}/hypr/event_handler.sh" = {
             source = ./hyprland/event_handler.sh;
             executable = true;

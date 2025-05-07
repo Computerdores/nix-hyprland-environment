@@ -113,7 +113,6 @@
         rose-pine-cursor
         hyprlock
         hyprland-workspaces
-        eww
         tldr
         vivaldi
         tree
@@ -126,6 +125,7 @@
     fonts.packages = with pkgs; [
         font-awesome
         noto-fonts
+        (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     ];
 
     programs.git = {
