@@ -13,6 +13,7 @@ in {
         ./programs/vscode.nix
         ./programs/nnn.nix
         ./programs/neovim.nix
+        ./programs/clion.nix
     ];
     programs.bash = {
         enable = true;
