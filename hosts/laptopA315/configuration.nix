@@ -115,7 +115,6 @@
         hyprlock
         hyprland-workspaces
         tldr
-        vivaldi
         tree
         btop
         fastfetch
