@@ -11,7 +11,6 @@
   - [ ] sound control
   - [ ] tray icons
 - [ ] hyprland-virtual-desktops addon
-- [ ] sddm: login failed text is wrong color
 
 ### Software
 - [ ] Thunderbird

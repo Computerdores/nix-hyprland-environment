@@ -11,6 +11,7 @@
         themeOverrides = {
             Background = "${../../common/wallpapers/escaping_the_well.jpg}";
             PartialBlur = "false";
+            WarningColor = "#ffffff";
         };
     };
     hardware.ckb-next.enable = true;
