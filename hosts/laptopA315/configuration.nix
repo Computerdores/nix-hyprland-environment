@@ -21,8 +21,10 @@
     boot.loader.efi.canTouchEfiVariables = true;
 
     # networking
-    networking.hostName = "LaptopA315";
-    networking.networkmanager.enable = true;
+    networking = {
+        hostName = "LaptopA315";
+        networkmanager.enable = true;
+    };
 
     # area info
     time.timeZone = "Europe/Berlin";
@@ -91,7 +93,11 @@
         portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
     };
 
-    nix.settings.experimental-features = [ "nix-command" "flakes" ];
+    nix.settings = {
+        experimental-features = [ "nix-command" "flakes" ];
+        substituters = ["https://hyprland.cachix.org"];
+        trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
+    };
 
     nixpkgs.config.allowUnfree = true;
 
@@ -113,7 +119,6 @@
         inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
         rose-pine-cursor
         hyprlock
-        hyprland-workspaces
         tldr
         tree
         btop
