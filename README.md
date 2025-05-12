@@ -11,7 +11,6 @@
   - [ ] sound control
   - [ ] tray icons
 - [ ] hyprland-virtual-desktops addon
-- [ ] bar: get more than 3 workspaces working
 
 ### Software
 - [ ] Thunderbird

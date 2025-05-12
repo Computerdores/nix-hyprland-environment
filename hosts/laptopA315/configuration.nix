@@ -118,7 +118,6 @@
     environment.systemPackages = with pkgs; [
         inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
         rose-pine-cursor
-        hyprlock
         tldr
         tree
         btop
