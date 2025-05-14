@@ -11,7 +11,7 @@
 
         settings = {
             "$terminal" = "kitty";
-            "$fileManager" = "$terminal -e nnn -a";
+            "$fileManager" = "$terminal -e yazi";
             "$menu" = "wofi --show drun";
             "$mainMod" = "SUPER";
 

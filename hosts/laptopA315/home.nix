@@ -11,9 +11,9 @@ in {
         ./programs/kitty.nix
         ./programs/firefox.nix
         ./programs/vscode.nix
-        ./programs/nnn.nix
         ./programs/neovim.nix
         ./programs/clion.nix
+        ./programs/yazi.nix
     ];
     programs.bash = {
         enable = true;
