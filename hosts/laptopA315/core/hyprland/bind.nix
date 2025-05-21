@@ -41,8 +41,8 @@
     "$mainMod SHIFT, 0, movetoworkspace, r~10"
 
     # Scratch Workspace
-    "$mainMod, S, togglespecialworkspace, magic"
-    "$mainMod SHIFT, s, movetoworkspace, special:magic"
+    "$mainMod, S, togglespecialworkspace"
+    "$mainMod SHIFT, s, movetoworkspace, special"
 
     # Scroll through workspaces with mainMod + Scroll
     "$mainMod, mouse_down, workspace, e+1"
