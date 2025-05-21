@@ -8,6 +8,7 @@ in {
         ./core/hyprpaper.nix
         ./core/i3bar-river
         ./core/i3status-rust.nix
+        ./core/wofi.nix
         ./programs/kitty.nix
         ./programs/firefox.nix
         ./programs/vscode.nix
@@ -51,6 +52,4 @@ in {
 
     # Let Home Manager install and manage itself.
     programs.home-manager.enable = true;
-
-    programs.wofi.enable = true;
 }

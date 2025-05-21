@@ -2,7 +2,6 @@
 ## ToDo
 - [ ] file picker integration for firefox
 - [ ] `alias ssh=kitten ssh`
-- [ ] List of packages
 - [ ] network control
 - [ ] bluetooth control
 - [ ] bar
