@@ -123,13 +123,13 @@
         btop
         fastfetch
         socat # needed for hyprland event handler script
-        pwndbg
+        inputs.pwndbg.packages.${pkgs.system}.default
     ];
 
     fonts.packages = with pkgs; [
         font-awesome
         noto-fonts
-        (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+        nerd-fonts.jetbrains-mono
     ];
 
     programs.git = {

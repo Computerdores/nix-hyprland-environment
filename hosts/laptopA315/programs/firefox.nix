@@ -6,7 +6,7 @@
             id = 0;
             name = "jann";
             search.force = true;
-            search.default = "DuckDuckGo";
+            search.default = "ddg";
             search.engines = {
                 "Nix Packages" = {
                     urls = [{ template = "https://search.nixos.org/packages?query={searchTerms}"; }];
@@ -19,14 +19,14 @@
                     definedAliases = [ "@no" ];
                 };
                 "Home Manager Options" = {
-                    urls = [{ template = "https://home-manager-options.extranix.com/?query={searchTerms}&release=release-24.11"; }];
+                    urls = [{ template = "https://home-manager-options.extranix.com/?query={searchTerms}&release=release-25.05"; }];
                     definedAliases = [ "@hm" ];
-                    iconUpdateURL = "https://home-manager-options.extranix.com/images/favicon.png";
+                    icon = "https://home-manager-options.extranix.com/images/favicon.png";
                     updateInterval = 24 * 60 * 60 * 1000;
                 };
                 "NixOS Wiki" = {
                     urls = [{ template = "https://wiki.nixos.org/w/index.php?search={searchTerms}"; }];
-                    iconUpdateURL = "https://wiki.nixos.org/favicon.png";
+                    icon = "https://wiki.nixos.org/favicon.png";
                     updateInterval = 24 * 60 * 60 * 1000;
                     definedAliases = [ "@nw" ];
                 };
