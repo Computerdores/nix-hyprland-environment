@@ -15,6 +15,7 @@
         };
     };
     hardware.ckb-next.enable = true;
+    hardware.bluetooth.enable = true;
 
     # systemd-boot
     boot.loader.systemd-boot.enable = true;
