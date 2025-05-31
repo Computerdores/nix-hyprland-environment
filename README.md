@@ -1,3 +1,5 @@
+- change hyprland binds to start stuff via uwsm
+
 # Computerdores' NixOS Flake
 ## ToDo
 - [ ] file picker integration for firefox
