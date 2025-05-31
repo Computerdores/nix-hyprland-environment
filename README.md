@@ -3,7 +3,6 @@
 # Computerdores' NixOS Flake
 ## ToDo
 - [ ] file picker integration for firefox
-- [ ] `alias ssh=kitten ssh`
 - [ ] network control
 - [ ] bluetooth control
 - [ ] bar
