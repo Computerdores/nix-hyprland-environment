@@ -30,6 +30,7 @@
 
             gestures     = import ./gestures.nix;
             misc         = import ./misc.nix;
+            workspace    = import ./workspace.nix;
             windowrulev2 = import ./windowrulev2.nix;
             bind         = import ./bind.nix;
             bindm        = import ./bindm.nix;
