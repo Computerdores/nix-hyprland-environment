@@ -1,5 +1,5 @@
 {
-    description = "Test for a NixOS System with Home Manager via a flake, with everything in a single repo.";
+    description = "My NixOS System Flake using Home-Manager and Hyprland.";
 
     inputs = {
         nixpkgs.url = "github:nixos/nixpkgs/release-25.05";
@@ -7,9 +7,7 @@
             url = "github:nix-community/home-manager/release-25.05";
             inputs.nixpkgs.follows = "nixpkgs";
         };
-        hyprland = {
-            url = "github:hyprwm/Hyprland";
-        };
+        hyprland.url = "github:hyprwm/Hyprland";
         rose-pine-hyprcursor = {
             url = "github:ndom91/rose-pine-hyprcursor";
             inputs.nixpkgs.follows = "nixpkgs";
@@ -28,22 +26,28 @@
         };
     };
 
-    outputs = inputs@{ self, nixpkgs, home-manager, ... }:
+    outputs = inputs@{ self, nixpkgs, home-manager, utiltool, ... }:
     let
+        system = "x86_64-linux";
         specialArgs = { inherit inputs; };
     in {
         nixosConfigurations.LaptopA315 = nixpkgs.lib.nixosSystem {
-            system = "x86_64-linux";
-            specialArgs = specialArgs;
+            inherit system specialArgs;
             modules = [
                 ./hosts/laptopA315/configuration.nix
-                home-manager.nixosModules.home-manager {
-                    home-manager.useGlobalPkgs = true;
-                    home-manager.useUserPackages = true;
-                    home-manager.extraSpecialArgs = specialArgs;
-                    home-manager.users.jann = import ./hosts/laptopA315/home.nix;
-                }
                 ./common/modules
+                home-manager.nixosModules.home-manager
+                {
+                    home-manager = {
+                        useGlobalPkgs = true;
+                        useUserPackages = true;
+                        extraSpecialArgs = specialArgs;
+                        users.jann.imports = [
+                            (utiltool.homeManagerModules.default system)
+                            ./hosts/laptopA315/home.nix
+                        ];
+                    };
+                }
             ];
         };
     };

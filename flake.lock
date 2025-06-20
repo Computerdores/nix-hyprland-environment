@@ -804,11 +804,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1740147467,
-        "narHash": "sha256-uH+BbDH0RNu0RtyL+sK/FKfisJsHTrJP38frHjBl3cQ=",
+        "lastModified": 1750404939,
+        "narHash": "sha256-3ARVLOZbGZWj0qpSmpNZG+Q61KuC+hKPhP2XVjrJnKU=",
         "owner": "Computerdores",
         "repo": "utiltool",
-        "rev": "5ef85891483cf95a9f46939eea559f1fc9f194d8",
+        "rev": "680e6bc16a7933894e9fa033cd99cb776485426f",
         "type": "github"
       },
       "original": {

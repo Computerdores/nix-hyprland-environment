@@ -20,9 +20,11 @@ in {
         enable = true;
         bashrcExtra = builtins.readFile ./.bashrc;
     };
+    programs.utiltool = {
+        enable = true;
+    };
     home = {
         packages = with pkgs; [
-            utiltool
             imhex
             ghidra
         ];
