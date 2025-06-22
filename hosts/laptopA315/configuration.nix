@@ -67,12 +67,17 @@
         settings.PasswordAuthentication = false;
     };
 
-    xdg.portal = {
+    xdg.portal = { # TODO: change portal fallback away from GTK
         enable = true;
         extraPortals = [
             pkgs.xdg-desktop-portal-gtk
         ];
+        config.hyprland.default = [
+            "hyprland"
+            "gtk"
+        ];
     };
+    xdg-desktop-portal-termfilechooser.enable = true;
 
     security.pam.services.hyprlock = {};
     programs.hyprlock= {
@@ -91,8 +96,8 @@
         enable = true;
         withUWSM = true;
         xwayland.enable = true;
-        package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-        portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+        package = inputs.hyprland.packages.${pkgs.system}.hyprland;
+        portalPackage = inputs.hyprland.packages.${pkgs.system}.xdg-desktop-portal-hyprland;
     };
 
     nix.settings = {
