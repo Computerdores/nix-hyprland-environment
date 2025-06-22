@@ -144,6 +144,11 @@
         nanorc = builtins.readFile ./.nanorc;
     };
 
+    programs.ghidra = {
+        enable = true;
+        gdb = true;
+    };
+
     # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
     system.stateVersion = "24.05"; # don't touch
 }

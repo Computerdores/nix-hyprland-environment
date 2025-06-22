@@ -1,8 +1,7 @@
-- change hyprland binds to start stuff via uwsm
-
 # Computerdores' NixOS Flake
 ## ToDo
-- [ ] file picker integration for firefox
+- [ ] file picker
+  - [ ] firefox integration
 - [ ] network control
 - [ ] bluetooth control
 - [ ] bar
@@ -12,14 +11,17 @@
   - [ ] tray icons
 - [ ] hyprland-virtual-desktops addon
 - [ ] yazi: gruvbox
+- [ ] i3bar-river: fix workspaces stuff
 
 ### Software
 - [ ] Thunderbird
 - [ ] calculator
 - [ ] Ghidra
+  - [ ] Debugger
 - [ ] hypridle
 - [ ] Signal Desktop
 - [ ] spicetify
+- [ ] hyprshot
 
 ## FAQ
 > The `nixos-rebuild` complains that home-manager couldn't start and that certain files should be removed or the backup file extension set, but it doesn't say which files are the problem. How do I find those files?

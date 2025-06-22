@@ -10,9 +10,9 @@
         systemd.enable = false;
 
         settings = {
-            "$terminal" = "kitty";
-            "$fileManager" = "$terminal -e yazi";
-            "$menu" = "wofi --show drun";
+            "$terminal" = "uwsm app -- kitty";
+            "$fileManager" = "uwsm app -T -- yazi";
+            "$menu" = "uwsm app -- wofi --show drun";
             "$mainMod" = "SUPER";
 
             monitor      = import ./monitor.nix;

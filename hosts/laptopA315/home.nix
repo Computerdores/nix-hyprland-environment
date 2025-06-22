@@ -26,7 +26,6 @@ in {
     home = {
         packages = with pkgs; [
             imhex
-            ghidra
         ];
 
         # Home Manager needs a bit of information about you and the
