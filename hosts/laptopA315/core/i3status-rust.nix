@@ -60,30 +60,30 @@
                         items = [
                             {   # shutdown
                                 display = "     ";
-                                cmd = "systemctl poweroff";
+                                cmd = "utiltool system shutdown";
                                 confirm_msg = " U sure? ";
                             }
                             {   # reboot
                                 display = "     ";
-                                cmd = "systemctl reboot";
+                                cmd = "utiltool system reboot";
                                 confirm_msg = " U sure? ";
                             }
                             {   # hibernate
                                 display = "     ";
-                                cmd = "hyprlock --immediate & systemctl hibernate";
+                                cmd = "utiltool system hibernate";
                             }
                             {   # suspend
                                 display = "     ";
-                                cmd = "hyprlock --immediate & systemctl suspend";
+                                cmd = "utiltool system suspend";
                             }
                             {   # logout
                                 display = "     ";
-                                cmd = "hyprctl dispatch exit"; # TODO: graceful logout using uwsm or similar
+                                cmd = "utiltool system logout";
                                 confirm_msg = " U sure? ";
                             }
                             {   # lock
                                 display = "     ";
-                                cmd = "hyprlock --immediate &";
+                                cmd = "utiltool system lock";
                             }
                         ];
                     }
