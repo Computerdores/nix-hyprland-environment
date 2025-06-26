@@ -3,6 +3,7 @@ function go-nix-config() {
 }
 
 alias ssh="kitten ssh"
+alias open=xdg-open
 
 function update-bootctl-default() {
     sudo bootctl set-default @current
