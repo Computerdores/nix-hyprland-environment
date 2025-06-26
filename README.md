@@ -22,6 +22,8 @@
 - [ ] Signal Desktop
 - [ ] spicetify
 - [ ] hyprshot
+- [ ] Telegram Desktop
+- [ ] KDE Connect
 
 ## FAQ
 > The `nixos-rebuild` complains that home-manager couldn't start and that certain files should be removed or the backup file extension set, but it doesn't say which files are the problem. How do I find those files?
