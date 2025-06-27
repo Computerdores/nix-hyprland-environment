@@ -20,9 +20,9 @@
                 };
                 "Home Manager Options" = {
                     urls = [{ template = "https://home-manager-options.extranix.com/?query={searchTerms}&release=release-25.05"; }];
-                    definedAliases = [ "@hm" ];
                     icon = "https://home-manager-options.extranix.com/images/favicon.png";
                     updateInterval = 24 * 60 * 60 * 1000;
+                    definedAliases = [ "@hm" ];
                 };
                 "NixOS Wiki" = {
                     urls = [{ template = "https://wiki.nixos.org/w/index.php?search={searchTerms}"; }];

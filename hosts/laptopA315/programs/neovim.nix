@@ -17,6 +17,8 @@
             set shiftwidth=4
             set expandtab
             highlight Normal guibg=none ctermbg=none
+            noremap : .
+            noremap . :
         '';
     };
 }
