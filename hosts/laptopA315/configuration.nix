@@ -67,17 +67,17 @@
         settings.PasswordAuthentication = false;
     };
 
-    xdg.portal = { # TODO: change portal fallback away from GTK
+    xdg.portal = {
         enable = true;
         extraPortals = [
-            pkgs.xdg-desktop-portal-gtk
+            pkgs.kdePackages.xdg-desktop-portal-kde
         ];
         config.hyprland.default = [
             "hyprland"
-            "gtk"
+            "kde"
         ];
     };
-    xdg-desktop-portal-termfilechooser.enable = true;
+    xdg-desktop-portal-termfilechooser.enable = false;
 
     security.pam.services.hyprlock = {};
     programs.hyprlock= {
