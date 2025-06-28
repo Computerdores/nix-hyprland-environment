@@ -12,7 +12,7 @@ in {
         ./programs/kitty.nix
         ./programs/firefox.nix
         ./programs/vscode.nix
-        ./programs/neovim.nix
+        ./programs/neovim
         ./programs/clion.nix
         ./programs/yazi.nix
     ];
