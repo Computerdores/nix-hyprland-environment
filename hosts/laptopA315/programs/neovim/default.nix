@@ -8,6 +8,8 @@
     programs.nixvim = {
         imports = [
             ./keymaps.nix
+            ./plugins/barbar.nix
+            ./plugins/gitsigns.nix
             ./plugins/fterm.nix
         ];
 
@@ -20,6 +22,8 @@
             tabstop = 4;
             shiftwidth = 4;
             expandtab = true;
+            number = true;
+            relativenumber = true;
         };
 
         colorschemes.gruvbox = {
@@ -27,13 +31,11 @@
             settings.transparent_mode = true;
         };
 
-        # TODO: explore config options for these plugins and potentially move them to separate .nix files
         plugins.lualine.enable = true;
-        plugins.barbar.enable = true;
         plugins.web-devicons.enable = true;
+        # TODO: explore config options for these plugins and potentially move them to separate .nix files
         plugins.which-key.enable = true;
         plugins.treesitter.enable = true;
         plugins.nvim-tree.enable = true;
-        plugins.gitsigns.enable = true;
     };
 }
