@@ -9,6 +9,7 @@
         imports = [
             ./keymaps.nix
             ./plugins/barbar.nix
+            ./plugins/nvim-tree.nix
             ./plugins/gitsigns.nix
             ./plugins/fterm.nix
         ];
@@ -17,6 +18,8 @@
         defaultEditor = true;
         viAlias = true;
         vimAlias = true;
+
+        globals.mapleader = " ";
 
         opts = {
             tabstop = 4;
