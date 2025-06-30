@@ -54,39 +54,39 @@
                         interval = 1;
                         format = " $icon $timestamp.datetime(f:'%d. %B %H:%M:%S', l:de_DE) ";
                     }
-                    {
-                        block = "menu";
-                        text = " POWR ";
-                        items = [
-                            {   # shutdown
-                                display = "     ";
-                                cmd = "utiltool system shutdown";
-                                confirm_msg = " U sure? ";
-                            }
-                            {   # reboot
-                                display = "     ";
-                                cmd = "utiltool system reboot";
-                                confirm_msg = " U sure? ";
-                            }
-                            {   # hibernate
-                                display = "     ";
-                                cmd = "utiltool system hibernate";
-                            }
-                            {   # suspend
-                                display = "     ";
-                                cmd = "utiltool system suspend";
-                            }
-                            {   # logout
-                                display = "     ";
-                                cmd = "utiltool system logout";
-                                confirm_msg = " U sure? ";
-                            }
-                            {   # lock
-                                display = "     ";
-                                cmd = "utiltool system lock";
-                            }
-                        ];
-                    }
+                    # {
+                    #     block = "menu";
+                    #     text = " POWR ";
+                    #     items = [
+                    #         {   # shutdown
+                    #             display = "     ";
+                    #             cmd = "utiltool system shutdown";
+                    #             confirm_msg = " U sure? ";
+                    #         }
+                    #         {   # reboot
+                    #             display = "     ";
+                    #             cmd = "utiltool system reboot";
+                    #             confirm_msg = " U sure? ";
+                    #         }
+                    #         {   # hibernate
+                    #             display = "     ";
+                    #             cmd = "utiltool system hibernate";
+                    #         }
+                    #         {   # suspend
+                    #             display = "     ";
+                    #             cmd = "utiltool system suspend";
+                    #         }
+                    #         {   # logout
+                    #             display = "     ";
+                    #             cmd = "utiltool system logout";
+                    #             confirm_msg = " U sure? ";
+                    #         }
+                    #         {   # lock
+                    #             display = "     ";
+                    #             cmd = "utiltool system lock";
+                    #         }
+                    #     ];
+                    # }
                 ];
             };
         };
