@@ -131,6 +131,7 @@
         fastfetch
         socat # needed for hyprland event handler script
         inputs.pwndbg.packages.${pkgs.system}.default
+        hyprshot
     ];
 
     fonts.packages = with pkgs; [

@@ -9,6 +9,7 @@
     "$mainMod, R, exec, $menu"
     "$mainMod, P, pseudo"           # dwindle
     "$mainMod, J, togglesplit"      # dwindle
+    "$mainMod, Y, exec, hyprshot -m region"
 
     # Move focus with mainMod + arrow keys
     "$mainMod, left, movefocus, l"

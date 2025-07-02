@@ -21,7 +21,6 @@
 - [ ] hypridle
 - [ ] Signal Desktop
 - [ ] spicetify
-- [ ] hyprshot
 - [ ] Telegram Desktop
 - [ ] KDE Connect
 
