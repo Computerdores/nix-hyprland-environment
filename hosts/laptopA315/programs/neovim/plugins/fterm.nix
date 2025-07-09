@@ -1,16 +1,25 @@
 { pkgs, ... }:
 
 {
+    extraPlugins = [
+        pkgs.vimPlugins.FTerm-nvim
+    ];
+
+    extraPackages = with pkgs; [
+        bashInteractive
+    ];
+
     keymaps = [
         {
             mode = "n";
             key = "<A-i>";
             action = "<CMD>lua require('FTerm').toggle()<CR>";
         }
-    ];
-
-    extraPlugins = [
-        pkgs.vimPlugins.FTerm-nvim
+        {
+            mode = "t";
+            key = "<A-i>";
+            action = "<CMD>lua require('FTerm').toggle()<CR>";
+        }
     ];
 
     extraConfigLua = ''
@@ -19,6 +28,7 @@
                 width = 0.85,
                 height = 0.85,
             },
+            cmd = 'env -u SHELL bash',
         })
     '';
 }
