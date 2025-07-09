@@ -2,8 +2,7 @@
 ## ToDo
 - [ ] file picker
   - [ ] firefox integration
-- [ ] network control
-- [ ] bluetooth control
+- [ ] nmtui theming (e.g. `NEWT_COLORS='root=white,default' nmtui`)
 - [ ] bar
   - [ ] hypridle toggle
   - [ ] backlight control

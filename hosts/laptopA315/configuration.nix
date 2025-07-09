@@ -132,6 +132,7 @@
         socat # needed for hyprland event handler script
         inputs.pwndbg.packages.${pkgs.system}.default
         hyprshot
+        bluetuith
     ];
 
     fonts.packages = with pkgs; [
