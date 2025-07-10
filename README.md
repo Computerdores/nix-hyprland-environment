@@ -1,27 +1,26 @@
 # Computerdores' NixOS Flake
 ## ToDo
-- [ ] file picker
-  - [ ] firefox integration
-- [ ] nmtui theming (e.g. `NEWT_COLORS='root=white,default' nmtui`)
-- [ ] bar
-  - [ ] hypridle toggle
-  - [ ] backlight control
-  - [ ] sound control
-  - [ ] tray icons
-- [ ] hyprland-virtual-desktops addon
-- [ ] yazi: gruvbox
-- [ ] i3bar-river: fix workspaces stuff
+- file picker
+  - firefox integration
+- nmtui theming (e.g. `NEWT_COLORS='root=white,default' nmtui`)
+- bar
+  - hypridle toggle
+  - backlight control
+  - tray icons
+- hyprland-virtual-desktops addon
+- yazi: gruvbox
+- i3bar-river: fix workspaces stuff
 
 ### Software
-- [ ] Thunderbird
-- [ ] calculator
-- [ ] Ghidra
-  - [ ] Debugger
-- [ ] hypridle
-- [ ] Signal Desktop
-- [ ] spicetify
-- [ ] Telegram Desktop
-- [ ] KDE Connect
+- Thunderbird
+- calculator
+- Ghidra
+  - Debugger
+- hypridle
+- Signal Desktop
+- spicetify
+- Telegram Desktop
+- KDE Connect
 
 ## FAQ
 > The `nixos-rebuild` complains that home-manager couldn't start and that certain files should be removed or the backup file extension set, but it doesn't say which files are the problem. How do I find those files?
