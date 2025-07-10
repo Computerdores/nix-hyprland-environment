@@ -15,11 +15,9 @@ in {
         ./programs/neovim
         ./programs/clion.nix
         ./programs/yazi.nix
+        ./programs/bash
+        ./programs/fastfetch.nix
     ];
-    programs.bash = {
-        enable = true;
-        bashrcExtra = builtins.readFile ./.bashrc;
-    };
     programs.utiltool = {
         enable = true;
     };
