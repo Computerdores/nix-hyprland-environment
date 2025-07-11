@@ -12,6 +12,8 @@
             ./plugins/nvim-tree.nix
             ./plugins/gitsigns.nix
             ./plugins/fterm.nix
+            ./plugins/render-markdown.nix
+            ./plugins/treesitter.nix
         ];
 
         enable = true;
@@ -38,7 +40,5 @@
         plugins.web-devicons.enable = true;
         # TODO: explore config options for these plugins and potentially move them to separate .nix files
         plugins.which-key.enable = true;
-        plugins.treesitter.enable = true;
-        plugins.nvim-tree.enable = true;
     };
 }
