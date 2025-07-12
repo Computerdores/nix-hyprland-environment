@@ -7,9 +7,7 @@
   - hypridle toggle
   - backlight control
   - tray icons
-- hyprland-virtual-desktops addon
 - yazi: gruvbox
-- i3bar-river: fix workspaces stuff
 - \` typing without double press of the key
 
 ### Software
