@@ -1,4 +1,9 @@
 # Computerdores' NixOS Flake
+## PRs to get back to
+- [MaxVerevkin/i3bar-river#47](https://github.com/MaxVerevkin/i3bar-river/pull/47)
+- [MaxVerevkin/i3bar-river#48](https://github.com/MaxVerevkin/i3bar-river/pull/48)
+- [MaxVerevkin/i3bar-river#49](https://github.com/MaxVerevkin/i3bar-river/pull/49)
+
 ## ToDo
 - file picker
   - firefox integration
@@ -8,7 +13,6 @@
   - backlight control
   - tray icons
 - yazi: gruvbox
-- \` typing without double press of the key
 
 ### Software
 - Thunderbird
