@@ -3,6 +3,7 @@
 
     inputs = {
         nixpkgs.url = "github:nixos/nixpkgs/release-25.05";
+        nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
         home-manager = {
             url = "github:nix-community/home-manager/release-25.05";
             inputs.nixpkgs.follows = "nixpkgs";
@@ -23,6 +24,10 @@
         pwndbg = {
             url = "github:pwndbg/pwndbg";
             inputs.nixpkgs.follows = "nixpkgs";
+        };
+        i3bar-river = {
+            url = "github:Computerdores/i3bar-river?ref=workspaces-fix";    # TODO: point to master once #47, #48, #49 are merged
+            inputs.nixpkgs.follows = "nixpkgs-unstable";
         };
     };
 

@@ -8,3 +8,6 @@ tag_focused_bg = "#ebdbb2"  # gruvbox-fg
 tag_focused_fg = "#282828"  # gruvbox-bg
 tag_urgent_bg = "#cc241d"   # gruvbox-red
 tag_urgent_fg = "#282828"   # gruvbox-bg
+
+[wm.hyprland]
+show_empty = false
