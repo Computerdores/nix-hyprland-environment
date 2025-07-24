@@ -9,10 +9,11 @@
   - firefox integration
 - nmtui theming (e.g. `NEWT_COLORS='root=white,default' nmtui`)
 - bar
-  - hypridle toggle
-  - backlight control
   - tray icons
 - yazi: gruvbox
+- vim: CAPS as ESC
+- fix backlight control for external monitors
+- drun script for `nix run nixpkgs#<name>`
 
 ### Software
 - Thunderbird

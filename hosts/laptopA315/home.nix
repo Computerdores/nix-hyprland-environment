@@ -9,6 +9,7 @@ in {
         ./core/i3bar-river
         ./core/i3status-rust.nix
         ./core/wofi.nix
+        ./core/hypridle.nix
         ./programs/kitty.nix
         ./programs/firefox.nix
         ./programs/vscode.nix
@@ -20,6 +21,9 @@ in {
     ];
     programs.utiltool = {
         enable = true;
+        system = {
+            lock_script = "loginctl lock-session";
+        };
     };
     home = {
         packages = with pkgs; [

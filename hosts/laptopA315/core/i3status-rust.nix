@@ -18,21 +18,36 @@
                             memory_mem = "";
                             cpu = "";
                             disk_drive = "";
+                            eye = "󰈈";      # nf-md-eye
+                            eye-off = "󰈉";  # nf-md-eye-off
                         };
                     };
                 };
                 blocks = [
                     {
+                        block = "toggle";
+                        command_on = ''
+                            exec systemd-inhibit --what=idle sleep infinity </dev/null >/dev/null 2>/dev/null & disown
+                            echo $! > /tmp/idle-inhibit.pid
+                        '';
+                        command_off = ''
+                            kill $(cat /tmp/idle-inhibit.pid)
+                            echo > /tmp/idle-inhibit.pid
+                        '';
+                        command_state = "cat /tmp/idle-inhibit.pid";
+                        interval = 1;
+                        format = " $icon ";
+                        icon_on = "eye";
+                        icon_off = "eye-off";
+                        state_on = "warning";
+                    }
+                    {
+                        block = "backlight";
+                        minimum = 0;
+                    }
+                    {
                         block = "cpu";
                         format = " $icon  $utilization ";
-                    }
-                    {
-                        block = "memory";
-                        format = " $icon  $mem_used_percents ";
-                    }
-                    {
-                        block = "disk_space";
-                        format = " $icon  $used / $total ";
                     }
                     { block = "temperature"; }
                     {
@@ -54,39 +69,6 @@
                         interval = 1;
                         format = " $icon $timestamp.datetime(f:'%d. %B %H:%M:%S', l:de_DE) ";
                     }
-                    # {
-                    #     block = "menu";
-                    #     text = " POWR ";
-                    #     items = [
-                    #         {   # shutdown
-                    #             display = "     ";
-                    #             cmd = "utiltool system shutdown";
-                    #             confirm_msg = " U sure? ";
-                    #         }
-                    #         {   # reboot
-                    #             display = "     ";
-                    #             cmd = "utiltool system reboot";
-                    #             confirm_msg = " U sure? ";
-                    #         }
-                    #         {   # hibernate
-                    #             display = "     ";
-                    #             cmd = "utiltool system hibernate";
-                    #         }
-                    #         {   # suspend
-                    #             display = "     ";
-                    #             cmd = "utiltool system suspend";
-                    #         }
-                    #         {   # logout
-                    #             display = "     ";
-                    #             cmd = "utiltool system logout";
-                    #             confirm_msg = " U sure? ";
-                    #         }
-                    #         {   # lock
-                    #             display = "     ";
-                    #             cmd = "utiltool system lock";
-                    #         }
-                    #     ];
-                    # }
                 ];
             };
         };

@@ -1,8 +1,4 @@
 { pkgs, config, ... }: {
-    home.file."${config.xdg.configHome}/hypr/event_handler.sh" = {
-        source = ./event_handler.sh;
-        executable = true;
-    };
     wayland.windowManager.hyprland = {
         enable = true;
         package = pkgs.hyprland;
