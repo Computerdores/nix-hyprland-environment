@@ -912,11 +912,11 @@
         "rust-overlay": "rust-overlay_2"
       },
       "locked": {
-        "lastModified": 1752266198,
-        "narHash": "sha256-w+3UxIecBOheo+ewWLVZkD57KID7/lPmOAzYLffXa7A=",
+        "lastModified": 1753362183,
+        "narHash": "sha256-uksK9W0jE8WxSKhM4/c6gkcUbneGGk5a205yG948+ZU=",
         "owner": "Computerdores",
         "repo": "utiltool",
-        "rev": "334e97347b02eec74b16a5cfc6be2047b401394b",
+        "rev": "6631491357efd485c0e1c46c961f1e7797afdefd",
         "type": "github"
       },
       "original": {

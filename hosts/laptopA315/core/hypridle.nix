@@ -1,13 +1,11 @@
 { inputs, pkgs, ... }:
 
 let
-    utiltool_pkg = inputs.utiltool.packages.${pkgs.system}.default;
     brightness_cmd = "${pkgs.brightnessctl}/bin/brightnessctl";
-    utiltool_cmd = "${utiltool_pkg}/bin/utiltool";
 in {
     services.hypridle = {
         enable = true;
-        package = (pkgs.hypridle.overrideAttrs (oldAttrs: { buildInputs = (oldAttrs.buildInputs or []) ++ [ utiltool_pkg pkgs.brightnessctl ]; }));
+        package = (pkgs.hypridle.overrideAttrs (oldAttrs: { buildInputs = (oldAttrs.buildInputs or []) ++ [ pkgs.brightnessctl ]; }));
         settings = {
             general = {
                 lock_cmd = "pidof hyprlock || hyprlock --immediate";
@@ -31,7 +29,7 @@ in {
                 }
                 {
                     timeout = 1200;                             # 20min
-                    on-timeout = "${utiltool_cmd} system hibernate";
+                    on-timeout = "systemctl hibernate";
                 }
             ];
         };
