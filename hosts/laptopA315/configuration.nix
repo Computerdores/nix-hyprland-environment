@@ -67,8 +67,6 @@
         settings.PasswordAuthentication = false;
     };
 
-    xdg-desktop-portal-termfilechooser.enable = false;
-
     security.pam.services.hyprlock = {};
     programs.hyprlock= {
         enable = true;

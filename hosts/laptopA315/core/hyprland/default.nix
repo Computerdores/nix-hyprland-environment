@@ -8,7 +8,6 @@
         configPackages = [ config.wayland.windowManager.hyprland.package ];
         config.hyprland = {
             default = [ "hyprland" "kde" ];
-            "org.freedesktop.impl.portal.FileChooser" = "kde";
         };
     };
     wayland.windowManager.hyprland = {
