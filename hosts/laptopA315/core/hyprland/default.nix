@@ -1,7 +1,20 @@
-{ pkgs, config, ... }: {
+{ pkgs, config, hyprland-pkgs, ... }: {
+    xdg.portal = {
+        enable = true;
+        extraPortals = [
+            pkgs.kdePackages.xdg-desktop-portal-kde
+            config.wayland.windowManager.hyprland.portalPackage
+        ];
+        configPackages = [ config.wayland.windowManager.hyprland.package ];
+        config.hyprland = {
+            default = [ "hyprland" "kde" ];
+            "org.freedesktop.impl.portal.FileChooser" = "kde";
+        };
+    };
     wayland.windowManager.hyprland = {
         enable = true;
-        package = pkgs.hyprland;
+        package = hyprland-pkgs.hyprland;
+        portalPackage = hyprland-pkgs.xdg-desktop-portal-hyprland;
         xwayland.enable = true;   
         systemd.enable = false;
 

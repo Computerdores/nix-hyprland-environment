@@ -1,4 +1,4 @@
-{ inputs, config, lib, pkgs, ... }: 
+{ inputs, config, lib, pkgs, hyprland-pkgs, ... }:
 
 {
     imports = [
@@ -67,19 +67,6 @@
         settings.PasswordAuthentication = false;
     };
 
-    xdg.portal = {
-        enable = true;
-        extraPortals = [
-            pkgs.kdePackages.xdg-desktop-portal-kde
-        ];
-        config.hyprland = {
-            default = [
-                "hyprland"
-                "kde"
-            ];
-            "org.freedesktop.impl.portal.FileChooser" = [ "gtk" ];
-        };
-    };
     xdg-desktop-portal-termfilechooser.enable = false;
 
     security.pam.services.hyprlock = {};
@@ -99,8 +86,8 @@
         enable = true;
         withUWSM = true;
         xwayland.enable = true;
-        package = inputs.hyprland.packages.${pkgs.system}.hyprland;
-        portalPackage = inputs.hyprland.packages.${pkgs.system}.xdg-desktop-portal-hyprland;
+        package = hyprland-pkgs.hyprland;
+        portalPackage = hyprland-pkgs.xdg-desktop-portal-hyprland;
     };
 
     nix.settings = {

@@ -42,6 +42,7 @@
             Preferences = {
                browser.backspace_action = 0;
                browser.tabs.closeWindowWithLastTab = false;
+               widget.use-xdg-desktop-portal.file-picker = 1;   # 1 = true; 2 = false
             };
         };
     };
