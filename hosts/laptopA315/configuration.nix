@@ -5,6 +5,8 @@
         ./hardware-configuration.nix
     ];
 
+    documentation.man.generateCaches = true;
+
     sddmAstronautTheme = {
         enable = true;
         subtheme = "astronaut";

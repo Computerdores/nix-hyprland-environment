@@ -12,6 +12,7 @@
 - yazi: gruvbox
 - fix backlight control for external monitors
 - drun script for `nix run nixpkgs#<name>`
+- fn keys
 
 ### Software
 - Thunderbird
