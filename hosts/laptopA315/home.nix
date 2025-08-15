@@ -1,14 +1,12 @@
 { inputs, config, pkgs, ... }:
-let
-    utiltool = inputs.utiltool.packages.${pkgs.system}.default;
-in {
+{
     imports = [
         ./core/hyprland
         ./core/hyprlock.nix
         ./core/hyprpaper.nix
         ./core/i3bar-river
         ./core/i3status-rust.nix
-        ./core/wofi.nix
+        ./core/wofi
         ./core/hypridle.nix
         ./programs/kitty.nix
         ./programs/firefox.nix
@@ -19,12 +17,6 @@ in {
         ./programs/bash
         ./programs/fastfetch.nix
     ];
-    programs.utiltool = {
-        enable = true;
-        system = {
-            lock_script = "loginctl lock-session";
-        };
-    };
     home = {
         packages = with pkgs; [
             imhex

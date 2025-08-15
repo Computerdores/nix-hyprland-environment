@@ -13,10 +13,6 @@
             url = "github:ndom91/rose-pine-hyprcursor";
             inputs.nixpkgs.follows = "nixpkgs";
         };
-        utiltool = {
-            url = "github:Computerdores/utiltool?ref=main";
-            inputs.nixpkgs.follows = "nixpkgs";
-        };
         nixvim = {
             url = "github:nix-community/nixvim/nixos-25.05";
             inputs.nixpkgs.follows = "nixpkgs";
@@ -31,7 +27,7 @@
         };
     };
 
-    outputs = inputs@{ self, nixpkgs, home-manager, utiltool, ... }:
+    outputs = inputs@{ self, nixpkgs, home-manager, ... }:
     let
         system = "x86_64-linux";
         specialArgs = { inherit inputs; hyprland-pkgs = inputs.hyprland.packages.${system}; };
@@ -48,7 +44,6 @@
                         useUserPackages = true;
                         extraSpecialArgs = specialArgs;
                         users.jann.imports = [
-                            (utiltool.homeManagerModules.default system)
                             ./hosts/laptopA315/home.nix
                         ];
                     };

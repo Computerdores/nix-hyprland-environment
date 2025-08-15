@@ -1,5 +1,19 @@
-{ ... }:
-{
+{ pkgs, ... }:
+let
+    utils = pkgs.runCommand "utils" {} ''
+        mkdir -p $out
+        cp -r ${./.}/utils.sh ${./.}/lib.sh ${./.}/scripts/ $out/
+        chmod +x $out/utils.sh
+    '';
+in {
+    xdg.desktopEntries.utils = {
+        name = "Utils";
+        exec = "${utils}/utils.sh";
+        categories = [ "Application" ];
+        settings = {
+            Path = "${utils}";
+        };
+    };
     programs.wofi = {
         enable = true;
         settings = {
