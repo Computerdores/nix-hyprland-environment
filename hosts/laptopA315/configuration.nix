@@ -63,6 +63,10 @@
         uid = 1000;
     };
 
+    services.tailscale = {
+        enable = true;
+    };
+
     programs.ssh.startAgent = true;
     services.openssh = {
         enable = true;

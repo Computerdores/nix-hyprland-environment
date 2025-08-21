@@ -5,7 +5,7 @@
 - [MaxVerevkin/i3bar-river#49](https://github.com/MaxVerevkin/i3bar-river/pull/49)
 
 ## ToDo
-- terminal file picker (one of the [termfilechooser forks](https://github.com/hunkyburrito/xdg-desktop-portal-termfilechooser) maybe
+- terminal file picker (one of the [termfilechooser forks](https://github.com/hunkyburrito/xdg-desktop-portal-termfilechooser) maybe)
 - nmtui theming (e.g. `NEWT_COLORS='root=white,default' nmtui`)
 - bar
   - tray icons
