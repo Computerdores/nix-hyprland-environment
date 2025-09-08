@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+exec &>> /tmp/wofi-utils-$(date +%Y%m%d_%H%M%S).log
+
 function pick_script() {
     selection=$({
         # list directories as `dirname/`
@@ -13,7 +15,7 @@ function pick_script() {
     elif [[ "$selection" == */ ]]; then
         pick_script "$1/$selection"
     else
-        path="$1/$selection.sh"
+        path=$(realpath "$1/$selection.sh")
         if [[ -f "$path" ]]; then
             exec "$path"
         else
