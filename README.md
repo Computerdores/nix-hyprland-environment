@@ -13,6 +13,7 @@
 - fix backlight control for external monitors
 - drun script for `nix run nixpkgs#<name>`
 - fn keys
+- nvim full IDE
 
 ### Software
 - Thunderbird

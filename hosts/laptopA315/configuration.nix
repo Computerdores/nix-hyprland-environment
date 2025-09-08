@@ -7,6 +7,11 @@
 
     documentation.man.generateCaches = true;
 
+    swapDevices = [{
+       device = "/var/lib/swapfile";
+       size = 8*1024;
+    }];
+
     sddmAstronautTheme = {
         enable = true;
         subtheme = "astronaut";
