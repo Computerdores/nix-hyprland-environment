@@ -1,3 +1,4 @@
+
 # Computerdores' NixOS Flake
 ## PRs to get back to
 - [MaxVerevkin/i3bar-river#47](https://github.com/MaxVerevkin/i3bar-river/pull/47)
@@ -14,6 +15,12 @@
 - drun script for `nix run nixpkgs#<name>`
 - fn keys
 - nvim full IDE
+- nvim: investigate lazy git plugin
+- nvim: macro for stage_hunk
+- investigate nix profiles
+- https://nixos.wiki/wiki/flakes#Pinning_the_registry_to_the_system_pkgs_on_NixOS
+- add to FAQ: https://nixos.wiki/wiki/flakes#Getting_Instant_System_Flakes_Repl
+- clock on lockscreen
 
 ### Software
 - Thunderbird
