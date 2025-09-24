@@ -1,4 +1,4 @@
-{ inputs, config, lib, pkgs, hyprland-pkgs, ... }:
+{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, ... }:
 
 {
     imports = [
@@ -32,6 +32,7 @@
     networking = {
         hostName = "LaptopA315";
         networkmanager.enable = true;
+        wg-quick.interfaces = import (flakeDir + "/common/wg-quick");
     };
 
     # area info

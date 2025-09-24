@@ -30,7 +30,11 @@
     outputs = inputs@{ self, nixpkgs, home-manager, ... }:
     let
         system = "x86_64-linux";
-        specialArgs = { inherit inputs; hyprland-pkgs = inputs.hyprland.packages.${system}; };
+        specialArgs = {
+            inherit inputs self;
+            flakeDir = ./.;
+            hyprland-pkgs = inputs.hyprland.packages.${system};
+        };
     in {
         nixosConfigurations.LaptopA315 = nixpkgs.lib.nixosSystem {
             inherit system specialArgs;
