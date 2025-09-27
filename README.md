@@ -17,7 +17,6 @@
 - nvim: investigate lazy git plugin
 - nvim: macro for stage_hunk
 - https://nixos.wiki/wiki/flakes#Pinning_the_registry_to_the_system_pkgs_on_NixOS
-- fix: nixos-rebuild switch should set default boot option (this is a bug, see docs; `--install-bootloader` doesn't fix it)
 - pywal16?
 
 ### Software
@@ -25,7 +24,6 @@
 - calculator
 - Ghidra
   - Debugger
-- hypridle
 - Signal Desktop
 - spicetify
 - Telegram Desktop
@@ -40,6 +38,12 @@ Run this to see the full log and findout where the conflict is occuring:
 > How to inspect the output of the flake?
 
 Either `nixos-rebuild repl` or `nix repl` + `:lf /etc/nixos`.
+
+> `nixos-rebuild switch` isn't setting the default boot entry anymore
+
+I believe this is caused by pressing 'd' on boot to set the default boot entry.
+To fix: Go into `/boot/loader/loader.conf` and remove the line starting with `default `; rerun `nixos-rebuild switch`.
+It should now be set to the latest generation and should automatically be set in the future.
 
 ## Packages
 - [sddm-astronaut-theme](https://github.com/Keyitdev/sddm-astronaut-theme) (a series of SDDM themes by [KeyitDev](https://github.com/Keyitdev); self packaged)
