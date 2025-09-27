@@ -20,7 +20,6 @@
 - investigate nix profiles
 - https://nixos.wiki/wiki/flakes#Pinning_the_registry_to_the_system_pkgs_on_NixOS
 - add to FAQ: https://nixos.wiki/wiki/flakes#Getting_Instant_System_Flakes_Repl (see `nixos-rebuild repl`)
-- clock on lockscreen
 - fix: nixos-rebuild switch should set default boot option (this is a bug, see docs; `--install-bootloader` doesn't fix it)
 
 ### Software
