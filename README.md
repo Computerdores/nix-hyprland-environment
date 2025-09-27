@@ -19,7 +19,6 @@
 - nvim: macro for stage_hunk
 - investigate nix profiles
 - https://nixos.wiki/wiki/flakes#Pinning_the_registry_to_the_system_pkgs_on_NixOS
-- add to FAQ: https://nixos.wiki/wiki/flakes#Getting_Instant_System_Flakes_Repl (see `nixos-rebuild repl`)
 - fix: nixos-rebuild switch should set default boot option (this is a bug, see docs; `--install-bootloader` doesn't fix it)
 
 ### Software
@@ -38,6 +37,10 @@
 
 Run this to see the full log and findout where the conflict is occuring:
 `journalctl --unit home-manager-<user>.service`
+
+> How to inspect the output of the flake?
+
+Either `nixos-rebuild repl` or `nix repl` + `:lf /etc/nixos`.
 
 ## Packages
 - [sddm-astronaut-theme](https://github.com/Keyitdev/sddm-astronaut-theme) (a series of SDDM themes by [KeyitDev](https://github.com/Keyitdev); self packaged)
