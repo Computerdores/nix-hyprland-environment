@@ -3,6 +3,7 @@
 {
     imports = [
         ./hardware-configuration.nix
+        ./programs/nmtui-themed.nix
     ];
 
     documentation.man.generateCaches = true;
@@ -129,7 +130,6 @@
         tree
         btop
         fastfetch
-        socat # needed for hyprland event handler script
         inputs.pwndbg.packages.${pkgs.system}.default
         hyprshot
         bluetuith

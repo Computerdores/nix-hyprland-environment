@@ -7,7 +7,6 @@
 
 ## ToDo
 - terminal file picker (one of the [termfilechooser forks](https://github.com/hunkyburrito/xdg-desktop-portal-termfilechooser) maybe)
-- nmtui theming (e.g. `NEWT_COLORS='root=white,default' nmtui`)
 - bar
   - tray icons
 - yazi: gruvbox
@@ -17,9 +16,9 @@
 - nvim full IDE
 - nvim: investigate lazy git plugin
 - nvim: macro for stage_hunk
-- investigate nix profiles
 - https://nixos.wiki/wiki/flakes#Pinning_the_registry_to_the_system_pkgs_on_NixOS
 - fix: nixos-rebuild switch should set default boot option (this is a bug, see docs; `--install-bootloader` doesn't fix it)
+- pywal16?
 
 ### Software
 - Thunderbird
