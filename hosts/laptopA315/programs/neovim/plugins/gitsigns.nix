@@ -11,4 +11,12 @@
             };
         };
     };
+
+    keymaps = [
+        {
+            mode = "n";
+            key = "<leader>s";
+            action = "<CMD>Gitsigns stage_hunk<CR>";
+        }
+    ];
 }

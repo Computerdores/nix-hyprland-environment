@@ -6,9 +6,6 @@
 - [MaxVerevkin/i3bar-river#49](https://github.com/MaxVerevkin/i3bar-river/pull/49)
 
 ## ToDo
-- terminal file picker (one of the [termfilechooser forks](https://github.com/hunkyburrito/xdg-desktop-portal-termfilechooser) maybe)
-- bar
-  - tray icons
 - yazi: gruvbox
 - fix backlight control for external monitors
 - drun script for `nix run nixpkgs#<name>`
@@ -18,6 +15,10 @@
 - nvim: macro for stage_hunk
 - https://nixos.wiki/wiki/flakes#Pinning_the_registry_to_the_system_pkgs_on_NixOS
 - pywal16?
+
+### High Effort / Wait Required
+- terminal file picker (one of the [termfilechooser forks](https://github.com/hunkyburrito/xdg-desktop-portal-termfilechooser) maybe)
+- tray icons in bar
 
 ### Software
 - Thunderbird
