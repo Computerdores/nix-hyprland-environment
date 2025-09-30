@@ -15,6 +15,9 @@
 - nvim: macro for stage_hunk
 - https://nixos.wiki/wiki/flakes#Pinning_the_registry_to_the_system_pkgs_on_NixOS
 - pywal16?
+- sddm virtual keyboard doesn't do anything
+- localsend: file picker is gnome
+- localsend: sending from laptop to phone is broken in weird way (tries to connect to NAS IP for some fkn reason)
 
 ### High Effort / Wait Required
 - terminal file picker (one of the [termfilechooser forks](https://github.com/hunkyburrito/xdg-desktop-portal-termfilechooser) maybe)
