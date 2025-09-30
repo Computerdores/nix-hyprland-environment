@@ -35,11 +35,10 @@
             flakeDir = ./.;
             hyprland-pkgs = inputs.hyprland.packages.${system};
         };
-    in {
-        nixosConfigurations.LaptopA315 = nixpkgs.lib.nixosSystem {
+        mkSystem = path: nixpkgs.lib.nixosSystem {
             inherit system specialArgs;
             modules = [
-                ./hosts/laptopA315/configuration.nix
+                ./hosts/${path}/configuration.nix
                 ./common/modules
                 home-manager.nixosModules.home-manager
                 {
@@ -48,11 +47,13 @@
                         useUserPackages = true;
                         extraSpecialArgs = specialArgs;
                         users.jann.imports = [
-                            ./hosts/laptopA315/home.nix
+                            ./hosts/${path}/home.nix
                         ];
                     };
                 }
             ];
         };
+    in {
+        nixosConfigurations.LaptopA315 = mkSystem "laptopA315";
     };
 }
