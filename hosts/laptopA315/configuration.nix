@@ -4,6 +4,7 @@
     imports = [
         ./hardware-configuration.nix
         ../../common/programs/nmtui-themed.nix
+        ../../common/core/sddm.nix
     ];
 
     documentation.man.generateCaches = true;
@@ -13,15 +14,6 @@
        size = 8*1024;
     }];
 
-    sddmAstronautTheme = {
-        enable = true;
-        subtheme = "astronaut";
-        themeOverrides = {
-            Background = "${../../common/wallpapers/escaping_the_well.jpg}";
-            PartialBlur = "false";
-            WarningColor = "#ffffff";
-        };
-    };
     hardware.ckb-next.enable = true;
     hardware.bluetooth.enable = true;
 
@@ -84,13 +76,6 @@
     programs.hyprlock= {
         enable = true;
         package = pkgs.hyprlock;
-    };
-
-    services.displayManager.sddm = {
-        enable = true;
-        wayland.enable = true;
-        package = pkgs.kdePackages.sddm;
-        theme = "astronaut";
     };
 
     programs.hyprland = {
