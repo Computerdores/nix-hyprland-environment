@@ -55,5 +55,6 @@
         };
     in {
         nixosConfigurations.LaptopA315 = mkSystem "laptopA315";
+        nixosConfigurations.tower = mkSystem "tower";
     };
 }

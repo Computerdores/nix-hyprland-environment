@@ -31,7 +31,7 @@
 
     # networking
     networking = {
-        hostName = "LaptopA315";
+        hostName = "tower";
         networkmanager.enable = true;
         wg-quick.interfaces = import (flakeDir + "/common/wg-quick");
     };
@@ -154,5 +154,5 @@
     programs.localsend.enable = true;
 
     # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
-    system.stateVersion = "24.05"; # don't touch
+    system.stateVersion = "25.05"; # don't touch
 }
