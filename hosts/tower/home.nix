@@ -8,14 +8,14 @@
         ./core/i3status-rust.nix
         ./core/wofi
         ./core/hypridle.nix
-        ./programs/kitty.nix
-        ./programs/firefox.nix
-        ./programs/vscode.nix
-        ./programs/neovim
-        ./programs/clion.nix
-        ./programs/yazi.nix
-        ./programs/bash
-        ./programs/fastfetch.nix
+        ../../common/programs/kitty.nix
+        ../../common/programs/firefox.nix
+        ../../common/programs/vscode.nix
+        ../../common/programs/neovim
+        ../../common/programs/clion.nix
+        ../../common/programs/yazi.nix
+        ../../common/programs/bash
+        ../../common/programs/fastfetch.nix
     ];
     home = {
         packages = with pkgs; [

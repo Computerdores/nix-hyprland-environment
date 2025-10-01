@@ -3,7 +3,7 @@
 {
     imports = [
         ./hardware-configuration.nix
-        ./programs/nmtui-themed.nix
+        ../../common/programs/nmtui-themed.nix
     ];
 
     documentation.man.generateCaches = true;
