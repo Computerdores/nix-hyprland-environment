@@ -3,6 +3,7 @@
 {
     imports = [
         ./hardware-configuration.nix
+        ./nvidia.nix
         ../../common/programs/nmtui-themed.nix
         ../../common/core/sddm.nix
     ];
