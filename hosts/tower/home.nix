@@ -1,7 +1,13 @@
 { inputs, config, pkgs, ... }:
 {
     imports = [
-        ./core/hyprland
+        (import ../../common/core/hyprland {
+            monitors = [
+                "DP-3,1920x1080@60,0x0,1"
+                "HDMI-A-1,1920x1080@60,1920x0,1"
+                ",preferred,auto,1"
+            ];
+        })
         ./core/hyprlock.nix
         ./core/hyprpaper.nix
         ./core/i3bar-river

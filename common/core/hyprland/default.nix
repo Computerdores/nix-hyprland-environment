@@ -1,3 +1,4 @@
+{ monitors }:
 { pkgs, config, hyprland-pkgs, ... }: {
     xdg.portal = {
         enable = true;
@@ -23,7 +24,7 @@
             "$menu" = "uwsm app -- wofi --show drun";
             "$mainMod" = "SUPER";
 
-            monitor      = import ./monitor.nix;
+            monitor      = monitors;
             exec-once    = import ./exec-once.nix;
             env          = import ./env.nix;
             input        = import ./input.nix;

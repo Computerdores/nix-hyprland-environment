@@ -1,6 +1,6 @@
 # https://wiki.hypr.land/Configuring/Workspace-Rules/
 let
-    i = import ../../../../common/invisible_characters.nix;
+    i = import ../../invisible_characters.nix;
     i0 = (builtins.elemAt i 0);
     i1 = (builtins.elemAt i 1);
 in [
