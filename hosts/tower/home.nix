@@ -2,11 +2,14 @@
 {
     imports = [
         (import ../../common/core/hyprland {
-            monitors = [
-                "DP-3,1920x1080@60,0x0,1"
-                "HDMI-A-1,1920x1080@60,1920x0,1"
-                ",preferred,auto,1"
-            ];
+            overrides = {
+                monitor = [
+                    "DP-3,preferred,0x0,1"
+                    "HDMI-A-1,preferred,auto-right,1"
+                    ",preferred,auto-left,1"
+                ];
+                cursor.no_hardware_cursors = 1;
+            };
         })
         ./core/hyprlock.nix
         ./core/hyprpaper.nix

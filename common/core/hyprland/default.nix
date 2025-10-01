@@ -1,5 +1,8 @@
-{ monitors }:
-{ pkgs, config, hyprland-pkgs, ... }: {
+args':
+{ lib, pkgs, config, hyprland-pkgs, ... }:
+let
+    args = lib.applySchema (import ./schema.nix lib) args';
+in {
     xdg.portal = {
         enable = true;
         extraPortals = [
@@ -18,13 +21,12 @@
         xwayland.enable = true;   
         systemd.enable = false;
 
-        settings = {
+        settings = lib.recursiveUpdate {
             "$terminal" = "uwsm app -- kitty";
             "$fileManager" = "uwsm app -T -- yazi";
             "$menu" = "uwsm app -- wofi --show drun";
             "$mainMod" = "SUPER";
 
-            monitor      = monitors;
             exec-once    = import ./exec-once.nix;
             env          = import ./env.nix;
             input        = import ./input.nix;
@@ -43,6 +45,6 @@
             windowrulev2 = import ./windowrulev2.nix;
             bind         = import ./bind.nix;
             bindm        = import ./bindm.nix;
-        };
+        } args.overrides;
     };
 }
