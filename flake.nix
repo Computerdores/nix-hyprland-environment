@@ -29,9 +29,10 @@
 
     outputs = inputs@{ self, nixpkgs, home-manager, ... }:
     let
+        lib = import ./lib.nix (nixpkgs.lib.extend (_: _: home-manager.lib));
         system = "x86_64-linux";
         specialArgs = {
-            inherit inputs self;
+            inherit inputs self lib;
             flakeDir = ./.;
             hyprland-pkgs = inputs.hyprland.packages.${system};
         };
