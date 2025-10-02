@@ -7,12 +7,12 @@
                 ",preferred,auto-right,1"
             ];
         })
-        ./core/hyprlock.nix
-        ./core/hyprpaper.nix
-        ./core/i3bar-river
+        ../../common/core/hyprlock.nix
+        ../../common/core/hyprpaper.nix
+        ../../common/core/i3bar-river
         ./core/i3status-rust.nix
-        ./core/wofi
-        ./core/hypridle.nix
+        ../../common/core/wofi
+        ../../common/core/hypridle.nix
         ../../common/programs/kitty.nix
         ../../common/programs/firefox.nix
         ../../common/programs/vscode.nix
