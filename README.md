@@ -12,7 +12,6 @@
 - fn keys
 - nvim full IDE
 - nvim: investigate lazy git plugin
-- nvim: macro for stage_hunk
 - https://nixos.wiki/wiki/flakes#Pinning_the_registry_to_the_system_pkgs_on_NixOS
 - pywal16?
 - sddm virtual keyboard doesn't do anything
