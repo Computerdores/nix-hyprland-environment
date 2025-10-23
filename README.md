@@ -17,6 +17,7 @@
 - sddm virtual keyboard doesn't do anything
 - localsend: file picker is gnome
 - localsend: sending from laptop to phone is broken in weird way (tries to connect to NAS IP for some fkn reason)
+- devshells, templates?
 
 ### High Effort / Wait Required
 - terminal file picker (one of the [termfilechooser forks](https://github.com/hunkyburrito/xdg-desktop-portal-termfilechooser) maybe)
