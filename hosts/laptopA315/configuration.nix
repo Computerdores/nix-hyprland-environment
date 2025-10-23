@@ -5,6 +5,7 @@
         ./hardware-configuration.nix
         ../../common/programs/nmtui-themed.nix
         ../../common/core/sddm.nix
+        ../../common/programs/android-studio.nix
     ];
 
     documentation.man.generateCaches = true;
