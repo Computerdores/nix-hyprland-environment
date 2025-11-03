@@ -13,6 +13,7 @@
         ./core/i3status-rust.nix
         ../../common/core/wofi
         ../../common/core/hypridle.nix
+        ../../common/core/dunst.nix
         ../../common/programs/kitty.nix
         ../../common/programs/firefox.nix
         ../../common/programs/vscode.nix
