@@ -9,6 +9,6 @@
         spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.hostPlatform.system};
     in {
         enable = true;
-        theme = spicePkgs.themes.catppuccin;
+        theme = spicePkgs.themes.onepunch;
     };
 }
