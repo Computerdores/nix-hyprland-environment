@@ -15,6 +15,8 @@
        size = 16*1024;
     }];
 
+    virtualisation.docker.enable = true;
+
     hardware.ckb-next.enable = true;
     hardware.bluetooth.enable = true;
 

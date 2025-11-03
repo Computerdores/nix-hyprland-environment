@@ -21,6 +21,7 @@
         ../../common/programs/yazi.nix
         ../../common/programs/bash
         ../../common/programs/fastfetch.nix
+        ./spicetify.nix
     ];
     home = {
         packages = with pkgs; [

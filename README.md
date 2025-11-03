@@ -49,6 +49,18 @@ I believe this is caused by pressing 'd' on boot to set the default boot entry.
 To fix: Go into `/boot/loader/loader.conf` and remove the line starting with `default `; rerun `nixos-rebuild switch`.
 It should now be set to the latest generation and should automatically be set in the future.
 
+> I want to execute some stuff in the same environment as another program
+
+(This process is quite complicated; there is probably an easier way PLEASE let me know if you know how)
+
+Open top/htop/btop/etc. and look for the program.
+Its parent process should be `bwrap`, copy/remember the pid of that process.
+Run `cat /proc/<pid>/cmdline | tr '\0' ' '`; this will print the command to execute that process.
+Typically the last param will be the path to a script, copy that script.
+At the end of that script there should be an `exec` command that references the program binary, replace the program binary path with bash.
+Now take the bwrap command and replace the path to the original script with the absolute path of your modified script and execute it.
+You are now in the same environment.
+
 ## Packages
 - [sddm-astronaut-theme](https://github.com/Keyitdev/sddm-astronaut-theme) (a series of SDDM themes by [KeyitDev](https://github.com/Keyitdev); self packaged)
 - [utiltool](https://github.com/Computerdores/utiltool) (a collection of utilities written for this flake)
