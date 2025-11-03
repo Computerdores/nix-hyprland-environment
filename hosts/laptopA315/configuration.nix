@@ -121,6 +121,7 @@
         inputs.pwndbg.packages.${pkgs.system}.default
         hyprshot
         bluetuith
+        discord
     ];
 
     fonts.packages = with pkgs; [
