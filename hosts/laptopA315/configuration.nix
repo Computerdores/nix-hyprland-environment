@@ -26,7 +26,7 @@
 
     # networking
     networking = {
-        hostName = "LaptopA315";
+        hostName = "laptopA315";
         networkmanager.enable = true;
         wg-quick.interfaces = import (flakeDir + "/common/wg-quick");
     };
