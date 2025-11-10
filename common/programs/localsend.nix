@@ -3,14 +3,13 @@
 {
     environment.systemPackages = [
         (pkgs.symlinkJoin {
-            name = "nmtui";
-            paths = [ pkgs.networkmanager ];
+            name = "localsend";
+            paths = [ pkgs.localsend ];
             buildInputs = [ pkgs.makeWrapper ];
             postBuild = ''
-                wrapProgram $out/bin/nmtui \
-                    --set NEWT_COLORS "root=white,default"
+                wrapProgram $out/bin/localsend_app \
+                    --set GTK_USE_PORTAL "1"
             '';
         })
     ];
 }
-

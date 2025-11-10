@@ -6,6 +6,7 @@
         ./nvidia.nix
         ../../common/programs/nmtui-themed.nix
         ../../common/core/sddm.nix
+        ../../common/programs/localsend.nix
     ];
 
     documentation.man.generateCaches = true;
@@ -136,8 +137,6 @@
         enable = true;
         gdb = true;
     };
-
-    programs.localsend.enable = true;
 
     # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
     system.stateVersion = "25.05"; # don't touch
