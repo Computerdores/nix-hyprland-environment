@@ -37,6 +37,7 @@
             flakeDir = ./.;
             hyprland-pkgs = inputs.hyprland.packages.${system};
         };
+        fullArgs = specialArgs // { pkgs = import nixpkgs { inherit system; }; };
         mkSystem = path: nixpkgs.lib.nixosSystem {
             inherit system specialArgs;
             modules = [
@@ -58,5 +59,5 @@
     in {
         nixosConfigurations.laptopA315 = mkSystem "laptopA315";
         nixosConfigurations.tower = mkSystem "tower";
-    };
+    } // (import ./shells fullArgs);
 }
