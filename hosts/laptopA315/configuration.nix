@@ -7,6 +7,7 @@
         ../../common/core/sddm.nix
         ../../common/programs/android-studio.nix
         ../../common/programs/localsend.nix
+        ../../common/programs/thunderbird.nix
     ];
 
     documentation.man.generateCaches = true;

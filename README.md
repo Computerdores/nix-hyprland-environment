@@ -16,18 +16,17 @@
 - pywal16?
 - sddm virtual keyboard doesn't do anything
 - localsend: sending from laptop to phone is broken in weird way (tries to connect to NAS IP for some fkn reason)
+- util function for disabling GTK shit
 
 ### High Effort / Wait Required
 - terminal file picker (one of the [termfilechooser forks](https://github.com/hunkyburrito/xdg-desktop-portal-termfilechooser) maybe)
 - tray icons in bar
 
 ### Software
-- Thunderbird
 - calculator
 - Ghidra
   - Debugger
 - Signal Desktop
-- spicetify
 - Telegram Desktop
 - KDE Connect
 
