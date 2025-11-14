@@ -5,6 +5,7 @@
         ./hardware-configuration.nix
         ../../common/programs/nmtui-themed.nix
         ../../common/core/sddm.nix
+        ../../common/core/plymouth.nix
         ../../common/programs/android-studio.nix
         ../../common/programs/localsend.nix
         ../../common/programs/thunderbird.nix

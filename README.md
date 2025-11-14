@@ -17,11 +17,13 @@
 - sddm virtual keyboard doesn't do anything
 - localsend: sending from laptop to phone is broken in weird way (tries to connect to NAS IP for some fkn reason)
 - util function for disabling GTK shit
+- add coreutils
 
 ### High Effort / Wait Required
 - terminal file picker (one of the [termfilechooser forks](https://github.com/hunkyburrito/xdg-desktop-portal-termfilechooser) maybe)
 - tray icons in bar
 - matugen for material-you color gen / theming
+- themed luks unlock (wait required; see `common/core/plymouth.nix`)
 
 ### Software
 - calculator
