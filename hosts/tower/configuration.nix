@@ -7,6 +7,7 @@
         ../../common/programs/nmtui-themed.nix
         ../../common/core/sddm.nix
         ../../common/programs/localsend.nix
+        ../../common/programs/thunderbird.nix
     ];
 
     documentation.man.generateCaches = true;
@@ -120,6 +121,7 @@
         inputs.pwndbg.packages.${pkgs.system}.default
         hyprshot
         bluetuith
+        discord
     ];
 
     fonts.packages = with pkgs; [
