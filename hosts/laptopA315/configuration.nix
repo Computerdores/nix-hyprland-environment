@@ -1,4 +1,4 @@
-{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, ... }:
+args@{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, ... }:
 
 {
     imports = [
@@ -125,6 +125,7 @@
         hyprshot
         bluetuith
         discord
+        (import ../../common/derivations/sleep-inhibit.nix args)
     ];
 
     fonts.packages = with pkgs; [

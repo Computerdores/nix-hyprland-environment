@@ -1,4 +1,4 @@
-{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, ... }:
+args@{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, ... }:
 
 {
     imports = [
@@ -120,6 +120,7 @@
         inputs.pwndbg.packages.${pkgs.system}.default
         hyprshot
         bluetuith
+        (import ../../common/derivations/sleep-inhibit.nix args)
     ];
 
     fonts.packages = with pkgs; [

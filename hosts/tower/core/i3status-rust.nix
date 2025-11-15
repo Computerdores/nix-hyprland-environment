@@ -27,14 +27,12 @@
                     {
                         block = "toggle";
                         command_on = ''
-                            exec systemd-inhibit --what=idle sleep infinity </dev/null >/dev/null 2>/dev/null & disown
-                            echo $! > /tmp/idle-inhibit.pid
+                            sleep-inhibit true
                         '';
                         command_off = ''
-                            kill $(cat /tmp/idle-inhibit.pid)
-                            echo > /tmp/idle-inhibit.pid
+                            sleep-inhibit false
                         '';
-                        command_state = "cat /tmp/idle-inhibit.pid";
+                        command_state = "sleep-inhibit status";
                         interval = 1;
                         format = " $icon ";
                         icon_on = "eye";
