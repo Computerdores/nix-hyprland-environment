@@ -8,7 +8,6 @@
 ## ToDo
 - yazi: gruvbox
 - fix backlight control for external monitors
-- drun script for `nix run nixpkgs#<name>`
 - fn keys
 - nvim full IDE
 - nvim: investigate lazy git plugin
@@ -24,6 +23,7 @@
 - tray icons in bar
 - matugen for material-you color gen / theming
 - themed luks unlock (wait required; see `common/core/plymouth.nix`)
+- nix-run helper: provide all nixpkgs as options in dmenu chooser (wait/work required; wofi is too slow)
 
 ### Software
 - calculator
