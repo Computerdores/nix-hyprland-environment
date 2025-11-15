@@ -1,7 +1,7 @@
-args':
-{ lib, pkgs, config, hyprland-pkgs, ... }:
+extra_args':
+args@{ lib, pkgs, config, hyprland-pkgs, ... }:
 let
-    args = lib.applySchema (import ./schema.nix lib) args';
+    extra_args = lib.applySchema (import ./schema.nix lib) extra_args';
 in {
     xdg.portal = {
         enable = true;
@@ -43,8 +43,8 @@ in {
             misc         = import ./misc.nix;
             workspace    = import ./workspace.nix;
             windowrulev2 = import ./windowrulev2.nix;
-            bind         = import ./bind.nix;
+            bind         = import ./bind.nix args;
             bindm        = import ./bindm.nix;
-        } args.overrides;
+        } extra_args.overrides;
     };
 }

@@ -1,3 +1,4 @@
+{ config, lib, ... }:
 [
     # general binds
     "$mainMod, Q, exec, $terminal"
@@ -7,6 +8,7 @@
     "$mainMod, E, exec, $fileManager"
     "$mainMod, V, togglefloating"
     "$mainMod, R, exec, $menu"
+    "$mainMod, T, exec, ${lib.openDesktopEntryCommand config.xdg.desktopEntries.utils}"
     "$mainMod, P, pseudo"           # dwindle
     "$mainMod, J, togglesplit"      # dwindle
     "$mainMod, Y, exec, hyprshot -m region"
