@@ -8,7 +8,7 @@ in {
             enable = true;
             logo = "${pkgs.nixos-icons}/share/icons/hicolor/128x128/apps/nix-snowflake.png";
             theme = "figlet";
-            themePackages = [ (import ../modules/plymouth-figlet/derivation.nix (args // {
+            themePackages = [ (import ../derivations/plymouth-figlet/derivation.nix (args // {
                 message = "Computerdores";
                 show_logo = false;
             })) ];

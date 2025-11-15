@@ -17,6 +17,7 @@
 - localsend: sending from laptop to phone is broken in weird way (tries to connect to NAS IP for some fkn reason)
 - util function for disabling GTK shit
 - add coreutils
+- make plymouth-figlet derivation into module that adds theme package to `boot.plymouth.themePackages` and configures derivation when `boot.plymouth.theme == "figlet"`
 
 ### High Effort / Wait Required
 - terminal file picker (one of the [termfilechooser forks](https://github.com/hunkyburrito/xdg-desktop-portal-termfilechooser) maybe)
