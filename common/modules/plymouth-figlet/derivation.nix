@@ -20,9 +20,9 @@ in pkgs.stdenv.mkDerivation rec {
         cp -r ${pkgs.plymouth}/share/plymouth/themes/spinner/*.png $out/share/plymouth/themes/figlet
         rm $out/share/plymouth/themes/figlet/animation-*
         rm $out/share/plymouth/themes/figlet/throbber-*
-        ${if show_logo then ''cp "${config.boot.plymouth.logo}" "$out/share/plymouth/themes/figlet/watermark.png"'' else ""}
-        cp -r src/* $out/share/plymouth/themes/figlet
+        cp figlet.plymouth $out/share/plymouth/themes/figlet
         cp header-image.png $out/share/plymouth/themes/figlet
+        ${if show_logo then ''cp "${config.boot.plymouth.logo}" "$out/share/plymouth/themes/figlet/watermark.png"'' else ""}
         find $out/share/plymouth/themes/ -name \*.plymouth -exec sed -i "s@\/usr\/@$out\/@" {} \;
     '';
 }
