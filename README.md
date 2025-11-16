@@ -17,7 +17,6 @@
 - localsend: sending from laptop to phone is broken in weird way (tries to connect to NAS IP for some fkn reason)
 - util function for disabling GTK shit
 - make plymouth-figlet derivation into module that adds theme package to `boot.plymouth.themePackages` and configures derivation when `boot.plymouth.theme == "figlet"`
-- neovim clipboard access, remove weird dialog
 - ghidra: window rule to auto tile certain windows
 - ghidra: fix debugger
 
