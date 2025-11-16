@@ -5,5 +5,4 @@
     kb_options = "caps:escape";
     follow_mouse = 1;
     touchpad.natural_scroll = true;
-    sensitivity = 0.8;
 }
