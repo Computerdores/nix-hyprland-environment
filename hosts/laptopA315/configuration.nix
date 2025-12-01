@@ -1,6 +1,8 @@
-args@{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, ... }:
+args@{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, system, ... }:
 
-{
+let
+    portal-escape = inputs.portal-escape.packages.${system}.default;
+in {
     imports = [
         ./hardware-configuration.nix
         ../../common/programs/nmtui-themed.nix
@@ -30,7 +32,17 @@ args@{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, ... }:
     # networking
     networking = {
         hostName = "laptopA315";
-        networkmanager.enable = true;
+        networkmanager = {
+            enable = true;
+            settings.connectivity = {
+                uri = "http://detectportal.firefox.com/canonical.html";
+                response = ''<meta http-equiv="refresh" content="0;url=https://support.mozilla.org/kb/captive-portal"/>'';
+            };
+            dispatcherScripts = [{
+                type = "basic";
+                source = "${portal-escape}/bin/portal-escape";
+            }];
+        };
         wg-quick.interfaces = import (flakeDir + "/common/wg-quick");
     };
 

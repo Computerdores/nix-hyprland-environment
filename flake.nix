@@ -26,6 +26,10 @@
             inputs.nixpkgs.follows = "nixpkgs-unstable";
         };
         spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+        portal-escape = {
+            url = "github:Computerdores/portal-escape";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
     };
 
     outputs = inputs@{ self, nixpkgs, home-manager, ... }:
@@ -33,7 +37,7 @@
         lib = import ./lib.nix (nixpkgs.lib.extend (_: _: home-manager.lib));
         system = "x86_64-linux";
         specialArgs = {
-            inherit inputs self lib;
+            inherit inputs self lib system;
             flakeDir = ./.;
             hyprland-pkgs = inputs.hyprland.packages.${system};
         };
