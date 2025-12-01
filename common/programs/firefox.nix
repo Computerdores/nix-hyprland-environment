@@ -36,13 +36,10 @@
                 "browser.startup.homepage" = "about:home";
                 "signon.rememberSignons" = false;
                 "browser.search.isUS" = false;
-            };
-        };
-        policies = {
-            Preferences = {
-               browser.backspace_action = 0;
-               browser.tabs.closeWindowWithLastTab = false;
-               widget.use-xdg-desktop-portal.file-picker = 1;   # 1 = true; 2 = false
+                "browser.backspace_action" = 0;
+                "browser.tabs.closeWindowWithLastTab" = false;
+                "widget.use-xdg-desktop-portal.file-picker" = 1;   # 1 = true; 2 = false
+                "security.default_personal_cert" = "Select Automatically";
             };
         };
     };

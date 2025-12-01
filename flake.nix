@@ -12,6 +12,7 @@
         rose-pine-hyprcursor = {
             url = "github:ndom91/rose-pine-hyprcursor";
             inputs.nixpkgs.follows = "nixpkgs";
+            inputs.hyprlang.follows = "hyprland/hyprlang";
         };
         nixvim = {
             url = "github:nix-community/nixvim/nixos-25.05";

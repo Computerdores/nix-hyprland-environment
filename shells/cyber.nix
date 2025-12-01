@@ -12,7 +12,7 @@
         jadx
         (python3.withPackages (python-pkgs: with python-pkgs; [
             pwntools
-            pycrypto
+            pycryptodome
             ipykernel
             jupyter
             pytest

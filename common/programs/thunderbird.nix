@@ -19,6 +19,7 @@
             "mailnews.start_page.enabled" = false;
             "mailnews.default_sort_type"  = 18;
             "mailnews.default_sort_order" =  1;
+            "security.default_personal_cert" = "Select Automatically";
         };
     };
 }
