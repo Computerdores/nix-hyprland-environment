@@ -6,7 +6,6 @@ args@{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, ... }:
         ./nvidia.nix
         ../../common/programs/nmtui-themed.nix
         ../../common/core/sddm.nix
-        ../../common/programs/localsend.nix
     ];
 
     documentation.man.generateCaches = true;
@@ -121,6 +120,7 @@ args@{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, ... }:
         hyprshot
         bluetuith
         (import ../../common/derivations/sleep-inhibit.nix args)
+        (lib.gtkEnablePortals pkgs pkgs.localsend)
     ];
 
     fonts.packages = with pkgs; [

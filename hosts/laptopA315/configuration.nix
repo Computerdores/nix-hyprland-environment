@@ -9,7 +9,6 @@ in {
         ../../common/core/sddm.nix
         ../../common/core/plymouth.nix
         ../../common/programs/android-studio.nix
-        ../../common/programs/localsend.nix
         ../../common/programs/thunderbird.nix
     ];
 
@@ -104,6 +103,7 @@ in {
         portalPackage = hyprland-pkgs.xdg-desktop-portal-hyprland;
     };
 
+    nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
     nix.settings = {
         experimental-features = [ "nix-command" "flakes" ];
         substituters = ["https://hyprland.cachix.org"];
@@ -138,6 +138,7 @@ in {
         bluetuith
         discord
         (import ../../common/derivations/sleep-inhibit.nix args)
+        (lib.gtkEnablePortals pkgs pkgs.localsend)
     ];
 
     fonts.packages = with pkgs; [
