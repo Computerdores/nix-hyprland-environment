@@ -8,8 +8,6 @@ args@{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, username, ... }:
         ../../common/core/sddm.nix
     ];
 
-    documentation.man.generateCaches = true;
-
     swapDevices = [{
        device = "/var/lib/swapfile";
        size = 8*1024;

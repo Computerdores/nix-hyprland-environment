@@ -13,8 +13,6 @@ in {
         ../../common/programs/wireshark.nix
     ];
 
-    documentation.man.generateCaches = true;
-
     swapDevices = [{
        device = "/var/lib/swapfile";
        size = 16*1024;
