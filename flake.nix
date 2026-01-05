@@ -41,6 +41,7 @@
             inherit inputs self lib system;
             flakeDir = ./.;
             hyprland-pkgs = inputs.hyprland.packages.${system};
+            username = "jann";
         };
         fullArgs = specialArgs // { pkgs = import nixpkgs { inherit system; }; };
         mkSystem = path: nixpkgs.lib.nixosSystem {

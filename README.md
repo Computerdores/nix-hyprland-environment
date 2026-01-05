@@ -11,7 +11,6 @@
 - fn keys
 - nvim full IDE
 - nvim: investigate lazy git plugin
-- https://nixos.wiki/wiki/flakes#Pinning_the_registry_to_the_system_pkgs_on_NixOS
 - pywal16?
 - sddm virtual keyboard doesn't do anything
 - localsend: sending from laptop to phone is broken in weird way (tries to connect to NAS IP for some fkn reason)

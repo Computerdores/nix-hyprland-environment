@@ -1,4 +1,4 @@
-args@{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, system, ... }:
+args@{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, system, username, ... }:
 
 let
     portal-escape = inputs.portal-escape.packages.${system}.default;
@@ -10,6 +10,7 @@ in {
         ../../common/core/plymouth.nix
         ../../common/programs/android-studio.nix
         ../../common/programs/thunderbird.nix
+        ../../common/programs/wireshark.nix
     ];
 
     documentation.man.generateCaches = true;
@@ -71,7 +72,7 @@ in {
 
     # users
     users.groups.nixos-config = {};
-    users.users.jann = {
+    users.users."${username}" = {
         isNormalUser = true;
         description = "Jann Stute";
         extraGroups = [ "networkmanager" "wheel" "nixos-config" ]; # wheel is for enabling sudo

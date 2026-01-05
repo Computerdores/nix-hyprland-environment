@@ -1,4 +1,4 @@
-args@{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, ... }:
+args@{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, username, ... }:
 
 {
     imports = [
@@ -55,7 +55,7 @@ args@{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, ... }:
 
     # users
     users.groups.nixos-config = {};
-    users.users.jann = {
+    users.users."${username}" = {
         isNormalUser = true;
         description = "Jann Stute";
         extraGroups = [ "networkmanager" "wheel" "nixos-config" ]; # wheel is for enabling sudo

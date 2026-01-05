@@ -1,10 +1,10 @@
-{ pkgs, ... }:
+{ pkgs, username, ... }:
 {
     programs.firefox = {
         enable = true;
-        profiles.jann = {
+        profiles."${username}" = {
             id = 0;
-            name = "jann";
+            name = username;
             search.force = true;
             search.default = "ddg";
             search.engines = {

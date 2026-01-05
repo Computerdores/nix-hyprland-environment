@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, ... }:
+{ inputs, config, pkgs, username, ... }:
 {
     imports = [
         (import ../../common/core/hyprland {
@@ -31,8 +31,8 @@
 
         # Home Manager needs a bit of information about you and the
         # paths it should manage.
-        username = "jann";
-        homeDirectory = "/home/jann";
+        inherit username;
+        homeDirectory = "/home/${username}";
 
         pointerCursor = {
             name = "BreezeX-RosePine-Linux";
