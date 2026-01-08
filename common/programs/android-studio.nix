@@ -2,6 +2,8 @@
 # When uninstalling, delete:
 # - ~/Android
 # - ~/.gradle
+# - ~/.config/.android
+# - "~/.config/Android Open Source Project"
 {
     environment.systemPackages = with pkgs; [
         android-studio

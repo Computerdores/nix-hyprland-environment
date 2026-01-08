@@ -18,6 +18,7 @@
 - make plymouth-figlet derivation into module that adds theme package to `boot.plymouth.themePackages` and configures derivation when `boot.plymouth.theme == "figlet"`
 - ghidra: window rule to auto tile certain windows
 - ghidra: fix debugger
+- nwg-displays?
 
 ### High Effort / Wait Required
 - terminal file picker (one of the [termfilechooser forks](https://github.com/hunkyburrito/xdg-desktop-portal-termfilechooser) maybe)
@@ -32,6 +33,7 @@
 - Telegram Desktop
 - KDE Connect
 - KDE Wallet
+- zip/unzip
 
 ## FAQ
 > The `nixos-rebuild` complains that home-manager couldn't start and that certain files should be removed or the backup file extension set, but it doesn't say which files are the problem. How do I find those files?

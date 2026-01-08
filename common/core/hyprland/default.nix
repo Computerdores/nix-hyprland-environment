@@ -42,7 +42,7 @@ in {
             gestures     = import ./gestures.nix;
             misc         = import ./misc.nix;
             workspace    = import ./workspace.nix;
-            windowrulev2 = import ./windowrulev2.nix;
+            windowrule   = import ./windowrule.nix;
             bind         = import ./bind.nix args;
             bindm        = import ./bindm.nix;
         } extra_args.overrides;
