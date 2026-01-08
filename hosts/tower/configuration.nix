@@ -1,4 +1,4 @@
-args@{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, username, ... }:
+args@{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, system, username, ... }:
 
 {
     imports = [
@@ -14,6 +14,9 @@ args@{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, username, ... }:
     }];
 
     hardware.ckb-next.enable = true;
+    hardware.ckb-next.package = pkgs.ckb-next.overrideAttrs (old: {
+        cmakeFlags = (old.cmakeFlags or [ ]) ++ [ "-DUSE_DBUS_MENU=0" ];
+    }); # workaround for https://github.com/NixOS/nixpkgs/issues/444209
     hardware.bluetooth.enable = true;
 
     # systemd-boot
@@ -108,13 +111,13 @@ args@{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, username, ... }:
 
     # other software
     environment.systemPackages = with pkgs; [
-        inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
+        inputs.rose-pine-hyprcursor.packages.${system}.default
         rose-pine-cursor
         tldr
         tree
         btop
         fastfetch
-        inputs.pwndbg.packages.${pkgs.system}.default
+        inputs.pwndbg.packages.${system}.default
         hyprshot
         bluetuith
         (import ../../common/derivations/sleep-inhibit.nix args)

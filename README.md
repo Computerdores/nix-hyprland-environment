@@ -19,6 +19,7 @@
 - ghidra: window rule to auto tile certain windows
 - ghidra: fix debugger
 - nwg-displays?
+- nix profiles?
 
 ### High Effort / Wait Required
 - terminal file picker (one of the [termfilechooser forks](https://github.com/hunkyburrito/xdg-desktop-portal-termfilechooser) maybe)
