@@ -690,6 +690,21 @@
         "type": "github"
       }
     },
+    "private-overlay": {
+      "locked": {
+        "lastModified": 1767918294,
+        "narHash": "sha256-cxaPXOBmY+74iTEyEdsjtd7bC1fzhgf23JUfuBSmALo=",
+        "ref": "refs/heads/main",
+        "rev": "9edaea6c23e315df97cc400db8496ab2ce7309c9",
+        "revCount": 1,
+        "type": "git",
+        "url": "ssh://git@github.com/Computerdores/nixos-private.git"
+      },
+      "original": {
+        "type": "git",
+        "url": "ssh://git@github.com/Computerdores/nixos-private.git"
+      }
+    },
     "pwndbg": {
       "inputs": {
         "nixpkgs": [
@@ -772,6 +787,7 @@
         "nixpkgs-unstable": "nixpkgs-unstable",
         "nixvim": "nixvim",
         "portal-escape": "portal-escape",
+        "private-overlay": "private-overlay",
         "pwndbg": "pwndbg",
         "rose-pine-hyprcursor": "rose-pine-hyprcursor",
         "spicetify-nix": "spicetify-nix"

@@ -64,6 +64,10 @@ At the end of that script there should be an `exec` command that references the 
 Now take the bwrap command and replace the path to the original script with the absolute path of your modified script and execute it.
 You are now in the same environment.
 
+> `sudo nixos-rebuild ...` fails to pull a git repo via ssh, but my ssh key works normally otherwise, what do I do?
+
+Run `sudo -E nixos-rebuild ...` once instead, that way the `SSH_AUTH_SOCK` environment variable will be passed through correctly and the git pull via ssh works correctly.
+
 ## Packages
 - [sddm-astronaut-theme](https://github.com/Keyitdev/sddm-astronaut-theme) (a series of SDDM themes by [KeyitDev](https://github.com/Keyitdev); self packaged)
 - [utiltool](https://github.com/Computerdores/utiltool) (a collection of utilities written for this flake)

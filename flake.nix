@@ -32,9 +32,10 @@
             url = "github:Computerdores/portal-escape";
             inputs.nixpkgs.follows = "nixpkgs";
         };
+        private-overlay.url = "git+ssh://git@github.com/Computerdores/nixos-private.git";
     };
 
-    outputs = inputs@{ self, nixpkgs, home-manager, ... }:
+    outputs = inputs@{ self, nixpkgs, home-manager, private-overlay, ... }:
     let
         lib = import ./lib.nix (nixpkgs.lib.extend (_: _: home-manager.lib));
         system = "x86_64-linux";
@@ -51,6 +52,7 @@
                 ./hosts/${path}/configuration.nix
                 ./common/modules
                 home-manager.nixosModules.home-manager
+                private-overlay.nixosModules.default
                 {
                     home-manager = {
                         useGlobalPkgs = true;
@@ -58,6 +60,7 @@
                         extraSpecialArgs = specialArgs;
                         users.jann.imports = [
                             ./hosts/${path}/home.nix
+                            private-overlay.homeManagerModules.default
                         ];
                     };
                 }
