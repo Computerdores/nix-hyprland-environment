@@ -120,6 +120,9 @@ args@{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, system, username, ...
         inputs.pwndbg.packages.${system}.default
         hyprshot
         bluetuith
+        discord
+        zip
+        unzip
         (import ../../common/derivations/sleep-inhibit.nix args)
         (lib.gtkEnablePortals pkgs pkgs.localsend)
     ];

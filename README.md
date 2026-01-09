@@ -14,9 +14,7 @@
 - pywal16?
 - sddm virtual keyboard doesn't do anything
 - localsend: sending from laptop to phone is broken in weird way (tries to connect to NAS IP for some fkn reason)
-- util function for disabling GTK shit
 - make plymouth-figlet derivation into module that adds theme package to `boot.plymouth.themePackages` and configures derivation when `boot.plymouth.theme == "figlet"`
-- ghidra: window rule to auto tile certain windows
 - ghidra: fix debugger
 - nwg-displays?
 - nix profiles?
@@ -27,6 +25,7 @@
 - matugen for material-you color gen / theming
 - themed luks unlock (wait required; see `common/core/plymouth.nix`)
 - nix-run helper: provide all nixpkgs as options in dmenu chooser (wait/work required; wofi is too slow)
+- remove ckb-next workaround (wait required; see `host/laptopA315/configuration.nix`)
 
 ### Software
 - calculator
@@ -34,7 +33,6 @@
 - Telegram Desktop
 - KDE Connect
 - KDE Wallet
-- zip/unzip
 
 ## FAQ
 > The `nixos-rebuild` complains that home-manager couldn't start and that certain files should be removed or the backup file extension set, but it doesn't say which files are the problem. How do I find those files?
