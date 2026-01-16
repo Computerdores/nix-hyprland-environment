@@ -1,6 +1,8 @@
 { pkgs, ... }:
 
-{
+let
+    wayland = false; # enabling wayland currently leads to a bug when logging in too early
+in {
     sddmAstronautTheme = {
         enable = true;
         subtheme = "astronaut";
@@ -13,8 +15,9 @@
 
     services.displayManager.sddm = {
         enable = true;
-        wayland.enable = true;
+        wayland.enable = wayland;
         package = pkgs.kdePackages.sddm;
         theme = "astronaut";
     };
+    services.xserver.enable = !wayland;
 }
