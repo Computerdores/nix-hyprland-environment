@@ -141,6 +141,7 @@ in {
         discord
         zip
         unzip
+        dig
         (import ../../common/derivations/sleep-inhibit.nix args)
         (lib.gtkEnablePortals pkgs pkgs.localsend)
     ];
