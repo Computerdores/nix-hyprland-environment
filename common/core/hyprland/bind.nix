@@ -4,7 +4,7 @@
     "$mainMod, Q, exec, $terminal"
     "$mainMod, C, killactive"
     "$mainMod, L, exec, hyprlock --immediate"
-    "$mainMod, M, exec, uwsm stop"
+    "$mainMod, M, exit"
     "$mainMod, E, exec, $fileManager"
     "$mainMod, V, togglefloating"
     "$mainMod, R, exec, $menu"

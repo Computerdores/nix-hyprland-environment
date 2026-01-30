@@ -19,12 +19,12 @@ in {
         package = hyprland-pkgs.hyprland;
         portalPackage = hyprland-pkgs.xdg-desktop-portal-hyprland;
         xwayland.enable = true;   
-        systemd.enable = false;
+        systemd.enable = true;
 
         settings = lib.recursiveUpdate {
-            "$terminal" = "uwsm app -- kitty";
-            "$fileManager" = "uwsm app -T -- yazi";
-            "$menu" = "uwsm app -- wofi --show drun";
+            "$terminal" = "kitty";
+            "$fileManager" = "$terminal yazi";
+            "$menu" = "wofi --show drun";
             "$mainMod" = "SUPER";
 
             exec-once    = import ./exec-once.nix;

@@ -99,7 +99,6 @@ in {
 
     programs.hyprland = {
         enable = true;
-        withUWSM = true;
         xwayland.enable = true;
         package = hyprland-pkgs.hyprland;
         portalPackage = hyprland-pkgs.xdg-desktop-portal-hyprland;
