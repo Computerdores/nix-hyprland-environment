@@ -40,10 +40,6 @@
                         state_on = "warning";
                     }
                     {
-                        block = "backlight";
-                        minimum = 0;
-                    }
-                    {
                         block = "cpu";
                         format = " $icon  $utilization ";
                     }
@@ -54,13 +50,6 @@
                         format_alt = " ^icon_net_down $speed_down.eng(prefix:K) ^icon_net_up $speed_up.eng(prefix:K) ";
                     }
                     { block = "sound"; }  # todo
-                    {
-                        block = "battery";
-                        full_format         = " $icon $percentage ";
-                        charging_format     = " $icon $percentage ";
-                        not_charging_format = " $icon $percentage ";
-                        empty_format        = " $icon $percentage ";
-                    }
                     {
                         block = "time";
                         timezone = "Europe/Berlin";

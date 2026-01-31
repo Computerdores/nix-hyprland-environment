@@ -10,7 +10,6 @@
         ../../common/core/hyprlock.nix
         ../../common/core/hyprpaper.nix
         ../../common/core/i3bar-river
-        ./core/i3status-rust.nix
         ../../common/core/wofi
         ../../common/core/hypridle.nix
         ../../common/core/dunst.nix
@@ -22,6 +21,7 @@
         ../../common/programs/yazi.nix
         ../../common/programs/bash
         ../../common/programs/fastfetch.nix
+        ./i3status-rust.nix
         ./spicetify.nix
     ];
     home = {
