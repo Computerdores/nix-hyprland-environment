@@ -3,7 +3,7 @@ args@{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, system, username, ...
 {
     imports = [
         ./hardware-configuration.nix
-        ./nvidia.nix
+        ./intel.nix
         ../../common/programs/nmtui-themed.nix
         ../../common/core/sddm.nix
     ];
@@ -82,7 +82,6 @@ args@{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, system, username, ...
 
     programs.hyprland = {
         enable = true;
-        withUWSM = true;
         xwayland.enable = true;
         package = hyprland-pkgs.hyprland;
         portalPackage = hyprland-pkgs.xdg-desktop-portal-hyprland;

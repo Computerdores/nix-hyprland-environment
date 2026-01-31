@@ -4,8 +4,8 @@
         (import ../../common/core/hyprland {
             overrides = {
                 monitor = [
-                    "DP-3,preferred,0x0,1"
-                    "HDMI-A-1,preferred,auto-right,1"
+                    "HDMI-A-2,preferred,0x0,1"
+                    "HDMI-A-3,preferred,auto-right,1"
                     ",preferred,auto-left,1"
                 ];
                 cursor.no_hardware_cursors = 1;

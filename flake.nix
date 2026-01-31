@@ -46,21 +46,21 @@
             username = "jann";
         };
         fullArgs = specialArgs // { pkgs = import nixpkgs { inherit system; }; };
-        mkSystem = path: nixpkgs.lib.nixosSystem {
+        mkSystem = host: nixpkgs.lib.nixosSystem {
             inherit system specialArgs;
             modules = [
-                ./hosts/${path}/configuration.nix
+                ./hosts/${host}/configuration.nix
                 ./common/modules
                 home-manager.nixosModules.home-manager
-                private-overlay.nixosModules.default
+                private-overlay.nixosModules."${host}"
                 {
                     home-manager = {
                         useGlobalPkgs = true;
                         useUserPackages = true;
                         extraSpecialArgs = specialArgs;
                         users.jann.imports = [
-                            ./hosts/${path}/home.nix
-                            private-overlay.homeManagerModules.default
+                            ./hosts/${host}/home.nix
+                            private-overlay.homeManagerModules."${host}"
                         ];
                     };
                 }
