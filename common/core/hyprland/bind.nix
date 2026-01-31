@@ -18,6 +18,10 @@
     "$mainMod, right, movefocus, r"
     "$mainMod, up, movefocus, u"
     "$mainMod, down, movefocus, d"
+    "$mainMod, h, movefocus, l"
+    "$mainMod, l, movefocus, r"
+    "$mainMod, k, movefocus, u"
+    "$mainMod, j, movefocus, d"
 
     # Switch workspaces with mainMod + [0-9]
     "$mainMod, 1, workspace, r~1"
@@ -50,4 +54,12 @@
     # Scroll through workspaces with mainMod + Scroll
     "$mainMod, mouse_down, workspace, e+1"
     "$mainMod, mouse_up, workspace, e-1"
+
+    # Media Keys
+    ", XF86AudioPlay,  exec, playerctl play-pause"
+    ", XF86AudioPause, exec, playerctl play-pause"
+    ", XF86AudioNext,  exec, playerctl next"
+    ", XF86AudioPrev,  exec, playerctl previous"
+    ", XF86AudioStop,  exec, playerctl stop"
+    ", XF86AudioMute,  exec, playerctl pause" # should be mute, but doesn't work
 ]

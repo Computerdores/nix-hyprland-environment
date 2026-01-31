@@ -123,6 +123,7 @@ args@{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, system, username, ...
         zip
         unzip
         dig
+        playerctl
         (import ../../common/derivations/sleep-inhibit.nix args)
         (lib.gtkEnablePortals pkgs pkgs.localsend)
     ];

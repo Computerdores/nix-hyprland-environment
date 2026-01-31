@@ -141,6 +141,7 @@ in {
         zip
         unzip
         dig
+        playerctl
         (import ../../common/derivations/sleep-inhibit.nix args)
         (lib.gtkEnablePortals pkgs pkgs.localsend)
     ];
