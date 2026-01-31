@@ -21,8 +21,8 @@
         ../../common/programs/yazi.nix
         ../../common/programs/bash
         ../../common/programs/fastfetch.nix
+        ../../common/programs/spicetify.nix
         ./i3status-rust.nix
-        ./spicetify.nix
     ];
     home = {
         packages = with pkgs; [
