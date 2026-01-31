@@ -1,6 +1,6 @@
 let
-    dir = "/etc/nixos/common/wg-quick";
-    names = ["cyberklub" "crypto-vpn" "edge"];
+    dir = "/etc/nixos/hosts/tower/wg-quick";
+    names = [];
 in builtins.listToAttrs (map (name: {
     name = name;
     value = {

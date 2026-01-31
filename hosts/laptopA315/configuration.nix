@@ -44,7 +44,7 @@ in {
                 source = "${portal-escape}/bin/portal-escape";
             }];
         };
-        wg-quick.interfaces = import (flakeDir + "/common/wg-quick");
+        wg-quick.interfaces = import ./wg-quick;
     };
 
     # area info

@@ -27,7 +27,7 @@ args@{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, system, username, ...
     networking = {
         hostName = "tower";
         networkmanager.enable = true;
-        wg-quick.interfaces = import (flakeDir + "/common/wg-quick");
+        wg-quick.interfaces = import ./wg-quick;
     };
 
     # area info
