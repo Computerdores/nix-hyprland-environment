@@ -8,7 +8,7 @@ let
 in {
     xdg.desktopEntries.utils = {
         name = "Utils";
-        exec = "uwsm app -- ${utils}/utils.sh";
+        exec = "${utils}/utils.sh";
         categories = [ "Application" ];
         settings = {
             Path = "${utils}";

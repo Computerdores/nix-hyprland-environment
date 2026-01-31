@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-uwsm stop
+hyprctl dispatch exit
