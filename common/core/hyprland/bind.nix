@@ -3,7 +3,7 @@
     # general binds
     "$mainMod, Q, exec, $terminal"
     "$mainMod, C, killactive"
-    "$mainMod, L, exec, hyprlock --immediate"
+    "$mainMod, B, exec, hyprlock --immediate"
     "$mainMod, M, exit"
     "$mainMod, E, exec, $fileManager"
     "$mainMod, V, togglefloating"
@@ -18,10 +18,10 @@
     "$mainMod, right, movefocus, r"
     "$mainMod, up, movefocus, u"
     "$mainMod, down, movefocus, d"
-    "$mainMod, h, movefocus, l"
-    "$mainMod, l, movefocus, r"
-    "$mainMod, k, movefocus, u"
-    "$mainMod, j, movefocus, d"
+    "$mainMod, H, movefocus, l"
+    "$mainMod, L, movefocus, r"
+    "$mainMod, K, movefocus, u"
+    "$mainMod, J, movefocus, d"
 
     # Switch workspaces with mainMod + [0-9]
     "$mainMod, 1, workspace, r~1"
