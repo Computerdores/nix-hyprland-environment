@@ -8,11 +8,6 @@ args@{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, system, username, ...
         ../../common/core/sddm.nix
     ];
 
-    swapDevices = [{
-       device = "/var/lib/swapfile";
-       size = 8*1024;
-    }];
-
     hardware.ckb-next.enable = true;
     hardware.ckb-next.package = pkgs.ckb-next.overrideAttrs (old: {
         cmakeFlags = (old.cmakeFlags or [ ]) ++ [ "-DUSE_DBUS_MENU=0" ];
@@ -142,6 +137,22 @@ args@{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, system, username, ...
     programs.ghidra = {
         enable = true;
         gdb = true;
+    };
+
+    fileSystems."/mnt/win/c" = {
+        device = "/dev/disk/by-uuid/2C08BD3A08BD03BC";
+        fsType = "ntfs";
+        options = [
+            "nofail"
+        ];
+    };
+
+    fileSystems."/mnt/win/d" = {
+        device = "/dev/disk/by-uuid/4036615436614BCA";
+        fsType = "ntfs";
+        options = [
+            "nofail"
+        ];
     };
 
     # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
