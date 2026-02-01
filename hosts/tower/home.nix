@@ -3,6 +3,10 @@
     imports = [
         (import ../../common/core/hyprland {
             overrideFunc = old: old // {
+                exec-once = old.exec-once ++ [
+                    # App Autostart
+                    "[monitor HDMI-A-3] thunderbird"
+                ];
                 monitor = [
                     "HDMI-A-2,preferred,0x0,1"
                     "HDMI-A-3,preferred,auto-right,1"
