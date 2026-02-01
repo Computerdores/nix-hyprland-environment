@@ -1,9 +1,9 @@
 lib: {
-    overrides = lib.mkOption {
-        type = lib.types.attrs;
+    overrideFunc = lib.mkOption {
+        type = lib.types.functionTo lib.types.attrs;
         default = {};
         description = ''
-            Override values for the hyprland settings.
+            Override function for the hyprland settings - takes one parameter: old, returns new.
             See HM Option: `wayland.windowManager.hyprland.settings`.
         '';
     };

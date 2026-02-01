@@ -2,7 +2,7 @@
 {
     imports = [
         (import ../../common/core/hyprland {
-            overrides = {
+            overrideFunc = old: old // {
                 monitor = [
                     "HDMI-A-2,preferred,0x0,1"
                     "HDMI-A-3,preferred,auto-right,1"

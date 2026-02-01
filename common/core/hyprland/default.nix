@@ -21,7 +21,7 @@ in {
         xwayland.enable = true;   
         systemd.enable = true;
 
-        settings = lib.recursiveUpdate {
+        settings = extra_args.overrideFunc {
             "$terminal" = "kitty";
             "$fileManager" = "$terminal yazi";
             "$menu" = "wofi --show drun";
@@ -45,6 +45,6 @@ in {
             windowrule   = import ./windowrule.nix;
             bind         = import ./bind.nix args;
             bindm        = import ./bindm.nix;
-        } extra_args.overrides;
+        };
     };
 }
