@@ -144,6 +144,8 @@ in {
         playerctl
         (import ../../common/derivations/sleep-inhibit.nix args)
         (lib.gtkEnablePortals pkgs pkgs.localsend)
+        telegram-desktop
+        signal-desktop
     ];
 
     fonts.packages = with pkgs; [

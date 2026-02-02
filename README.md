@@ -30,8 +30,6 @@
 
 ### Software
 - calculator
-- Signal Desktop
-- Telegram Desktop
 - KDE Wallet
 
 ## FAQ
