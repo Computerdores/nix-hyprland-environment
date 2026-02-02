@@ -32,7 +32,6 @@
 - calculator
 - Signal Desktop
 - Telegram Desktop
-- KDE Connect
 - KDE Wallet
 
 ## FAQ

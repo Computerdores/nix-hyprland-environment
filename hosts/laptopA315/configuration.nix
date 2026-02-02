@@ -162,6 +162,8 @@ in {
         gdb = true;
     };
 
+    programs.kdeconnect.enable = true;
+
     # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
     system.stateVersion = "24.05"; # don't touch
 }
