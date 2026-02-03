@@ -5,7 +5,8 @@
             overrideFunc = old: old // {
                 exec-once = old.exec-once ++ [
                     # App Autostart
-                    "[monitor HDMI-A-3] thunderbird"
+                    "[monitor HDMI-A-2; workspace 1] thunderbird"
+                    "[monitor HDMI-A-3; workspace 11] discord"
                 ];
                 monitorv2 = [
                     {

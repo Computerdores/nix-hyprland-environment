@@ -10,7 +10,7 @@
     "$mainMod, R, exec, $menu"
     "$mainMod, T, exec, ${lib.openDesktopEntryCommand config.xdg.desktopEntries.utils}"
     "$mainMod, P, pseudo"           # dwindle
-    "$mainMod, J, togglesplit"      # dwindle
+    "$mainMod, N, togglesplit"      # dwindle
     "$mainMod, Y, exec, hyprshot -m region"
 
     # Move focus with mainMod + arrow keys
