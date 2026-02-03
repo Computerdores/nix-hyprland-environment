@@ -7,10 +7,25 @@
                     # App Autostart
                     "[monitor HDMI-A-3] thunderbird"
                 ];
-                monitor = [
-                    "HDMI-A-2,preferred,0x0,1"
-                    "HDMI-A-3,preferred,auto-right,1"
-                    ",preferred,auto-left,1"
+                monitorv2 = [
+                    {
+                        output = "HDMI-A-2";
+                        mode = "1920x1080@58";      # 58Hz is to make sure the "Broadcast RGB" property defaults to "Full" to avoid washed out colors on Intel ARC
+                        position = "0x0";
+                        scale = "1";
+                    }
+                    {
+                        output = "HDMI-A-3";
+                        mode = "1920x1080@58";      # 58Hz is to make sure the "Broadcast RGB" property defaults to "Full" to avoid washed out colors on Intel ARC
+                        position = "auto-right";
+                        scale = "1";
+                    }
+                    {
+                        output = "";
+                        mode = "preferred";
+                        position = "auto-left";
+                        scale = "1";
+                    }
                 ];
                 cursor.no_hardware_cursors = 1;
             };
