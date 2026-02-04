@@ -21,6 +21,7 @@ args@{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, system, username, ...
 
     # networking
     networking = {
+        # firewall.enable = false;
         hostName = "tower";
         networkmanager.enable = true;
         wg-quick.interfaces = import ./wg-quick;
@@ -142,6 +143,11 @@ args@{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, system, username, ...
     };
 
     programs.kdeconnect.enable = true;
+
+    programs.ausweisapp = {
+        enable = true;
+        openFirewall = true;
+    };
 
     fileSystems."/mnt/win/c" = {
         device = "/dev/disk/by-uuid/2C08BD3A08BD03BC";
