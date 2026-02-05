@@ -124,6 +124,8 @@ args@{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, system, username, ...
         wiremix
         (import ../../common/derivations/sleep-inhibit.nix args)
         (lib.gtkEnablePortals pkgs pkgs.localsend)
+        telegram-desktop
+        signal-desktop
     ];
 
     fonts.packages = with pkgs; [
