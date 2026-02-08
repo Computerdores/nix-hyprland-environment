@@ -151,6 +151,11 @@ args@{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, system, username, ...
         openFirewall = true;
     };
 
+    programs.steam = {
+        enable = true;
+        localNetworkGameTransfers.openFirewall = true;
+    };
+
     fileSystems."/mnt/win/c" = {
         device = "/dev/disk/by-uuid/2C08BD3A08BD03BC";
         fsType = "ntfs";
