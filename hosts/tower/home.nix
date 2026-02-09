@@ -40,7 +40,6 @@
         ../../common/programs/firefox.nix
         ../../common/programs/vscode.nix
         ../../common/programs/neovim
-        ../../common/programs/clion.nix
         ../../common/programs/yazi.nix
         ../../common/programs/bash
         ../../common/programs/fastfetch.nix
