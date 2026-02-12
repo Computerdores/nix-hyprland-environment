@@ -10,6 +10,7 @@
             mode = "n";
             key = "<leader>t";
             action = "<CMD>NvimTreeFocus<CR>";
+            options.desc = "Focus File Tree";
         }
     ];
 }
