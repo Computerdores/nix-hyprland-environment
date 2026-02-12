@@ -1,6 +1,8 @@
 { pkgs, inputs, ... }:
 
-{
+let
+    hoverOpenDocs = false;
+in {
     imports = [
         inputs.nixvim.homeModules.nixvim
     ];
@@ -48,6 +50,8 @@
 
         # automatically show diagnostics float when hovering
         extraConfigLua = ''
+            HOVER_OPEN_DOCS = ${if hoverOpenDocs then "true" else "false"};
+
             vim.o.updatetime = 250
             vim.api.nvim_create_autocmd("CursorHold", {
                 callback = function()
@@ -57,7 +61,7 @@
 
                     local diagnostics = {};
                     for _, d in ipairs(vim.diagnostic.get(0, { lnum = line })) do
-                        start = d.col or 0
+                        local start = d.col or 0
                         if col >= start and col <= (d.end_col or (start + 1)) then
                             table.insert(diagnostics, d)
                         end
@@ -65,7 +69,7 @@
 
                     if #diagnostics > 0 then
                         vim.diagnostic.open_float(nil);
-                    else
+                    elseif HOVER_OPEN_DOCS then
                         vim.lsp.buf.hover({ border = "rounded", focus = false, focusable = false, max_height=20 })
                     end
                 end
