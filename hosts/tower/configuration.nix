@@ -126,6 +126,7 @@ args@{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, system, username, ...
         (lib.gtkEnablePortals pkgs pkgs.localsend)
         telegram-desktop
         signal-desktop
+        feishin
     ];
 
     fonts.packages = with pkgs; [
