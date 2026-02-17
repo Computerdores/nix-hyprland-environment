@@ -18,6 +18,8 @@
 - ghidra: fix debugger
 - nwg-displays?
 - nix profiles?
+- vault for .ssh instead of individual passwords
+- ssh server on all devices
 
 ### High Effort / Wait Required
 - terminal file picker (one of the [termfilechooser forks](https://github.com/hunkyburrito/xdg-desktop-portal-termfilechooser) maybe)
