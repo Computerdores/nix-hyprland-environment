@@ -20,6 +20,8 @@
 - nix profiles?
 - vault for .ssh instead of individual passwords
 - ssh server on all devices
+- altgr-intl layout?
+- Thunderbird notifications
 
 ### High Effort / Wait Required
 - terminal file picker (one of the [termfilechooser forks](https://github.com/hunkyburrito/xdg-desktop-portal-termfilechooser) maybe)
