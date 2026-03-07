@@ -22,6 +22,8 @@
 - ssh server on all devices
 - altgr-intl layout?
 - Thunderbird notifications
+- Thunderbird sent email duplication
+- wofi: numpad return always selects top-most option
 
 ### High Effort / Wait Required
 - terminal file picker (one of the [termfilechooser forks](https://github.com/hunkyburrito/xdg-desktop-portal-termfilechooser) maybe)
