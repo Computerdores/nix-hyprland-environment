@@ -24,6 +24,7 @@
 - Thunderbird notifications
 - Thunderbird sent email duplication
 - wofi: numpad return always selects top-most option
+- connectability of laptop on home network
 
 ### High Effort / Wait Required
 - terminal file picker (one of the [termfilechooser forks](https://github.com/hunkyburrito/xdg-desktop-portal-termfilechooser) maybe)
