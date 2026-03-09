@@ -36,6 +36,7 @@
         ../../common/core/i3bar-river
         ../../common/core/wofi
         ../../common/core/hypridle.nix
+        ../../common/core/dunst.nix
         ../../common/programs/kitty.nix
         ../../common/programs/firefox.nix
         ../../common/programs/vscode.nix
