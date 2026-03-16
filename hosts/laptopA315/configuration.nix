@@ -8,7 +8,6 @@ in {
         ../../common/programs/nmtui-themed.nix
         ../../common/core/sddm.nix
         ../../common/core/plymouth.nix
-        ../../common/programs/android-studio.nix
         ../../common/programs/thunderbird.nix
         ../../common/programs/wireshark.nix
     ];
@@ -144,7 +143,6 @@ in {
         playerctl
         (import ../../common/derivations/sleep-inhibit.nix args)
         (lib.gtkEnablePortals pkgs pkgs.localsend)
-        telegram-desktop
         signal-desktop
     ];
 
