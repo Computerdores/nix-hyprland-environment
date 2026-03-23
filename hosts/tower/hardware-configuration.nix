@@ -8,7 +8,7 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usb_storage" "usbhid" "sd_mod" "sr_mod" ];
+  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usb_storage" "uas" "usbhid" "sd_mod" "sr_mod" ];
   boot.initrd.kernelModules = [ "dm-snapshot" "cryptd" ];
   boot.initrd.luks.devices."cryptroot".device = "/dev/disk/by-label/nixos-luks";
   boot.kernelModules = [ "kvm-amd" ];

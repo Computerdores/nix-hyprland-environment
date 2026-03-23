@@ -20,7 +20,7 @@
 - nix profiles?
 - vault for .ssh instead of individual passwords
 - ssh server on all devices
-- altgr-intl layout?
+- altgr-intl layout? (compose key)
 - Thunderbird notifications
 - Thunderbird sent email duplication
 - wofi: numpad return always selects top-most option

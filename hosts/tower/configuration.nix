@@ -138,9 +138,9 @@ args@{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, system, username, ...
         enable = true;
         lfs.enable = true;
         config = {
-              init = {
-                  defaultBranch = "main";
-              };
+            init = {
+                defaultBranch = "main";
+            };
         };
     };
 
