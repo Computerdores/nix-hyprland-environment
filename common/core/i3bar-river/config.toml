@@ -10,4 +10,4 @@ tag_urgent_bg = "#cc241d"   # gruvbox-red
 tag_urgent_fg = "#282828"   # gruvbox-bg
 
 [wm.hyprland]
-show_empty = false
+always_show_persistent = false

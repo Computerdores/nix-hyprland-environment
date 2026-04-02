@@ -24,7 +24,7 @@
             inputs.nixpkgs.follows = "nixpkgs";
         };
         i3bar-river = {
-            url = "github:Computerdores/i3bar-river?ref=workspaces-fix";    # TODO: point to master once #47, #48, #49 are merged
+            url = "github:Computerdores/i3bar-river?ref=master";    # TODO: point to upstream once #48, #49, #51, and workspaces-fix-fr are merged
             inputs.nixpkgs.follows = "nixpkgs-unstable";
         };
         spicetify-nix.url = "github:Gerg-L/spicetify-nix";
