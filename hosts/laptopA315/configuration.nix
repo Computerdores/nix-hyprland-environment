@@ -136,7 +136,6 @@ in {
         inputs.pwndbg.packages.${system}.default
         hyprshot
         bluetuith
-        discord
         zip
         unzip
         dig
@@ -144,6 +143,7 @@ in {
         (import ../../common/derivations/sleep-inhibit.nix args)
         (lib.gtkEnablePortals pkgs pkgs.localsend)
         signal-desktop
+        file
     ];
 
     fonts.packages = with pkgs; [

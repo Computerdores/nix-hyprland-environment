@@ -118,7 +118,6 @@ args@{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, system, username, ...
         inputs.pwndbg.packages.${system}.default
         hyprshot
         bluetuith
-        discord
         zip
         unzip
         dig
@@ -128,6 +127,7 @@ args@{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, system, username, ...
         (lib.gtkEnablePortals pkgs pkgs.localsend)
         signal-desktop
         feishin
+        file
     ];
 
     fonts.packages = with pkgs; [
