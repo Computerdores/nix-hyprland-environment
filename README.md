@@ -82,15 +82,16 @@ Run `sudo -E nixos-rebuild ...` once instead, that way the `SSH_AUTH_SOCK` envir
 The Wallpapers at `common/wallpapers/**` are from various people around the web, most notably [Aenami](https://www.artstation.com/aenamiart)
 <details>
 
-|               Path               |                                   Artist                                   |
-|----------------------------------|----------------------------------------------------------------------------|
-| `aenami/*`                       | [Aenami](https://www.artstation.com/aenamiart)                             |
-| `abandoned_satellite_dishes.jpg` | [Isaac Yeram Kim](https://www.artstation.com/isaacyeramkim)                |
-| `escaping_the_well.jpg`          | N/A                                                                        |
-| `fedex_cargo_ship.jpg`           | [Plumm](https://www.humanart.cz/portfolio/Plumm)                           |
-| `ghost_in_the_shell.jpg`         | N/A                                                                        |
-| `the_neon_shallows.png`          | [Leiko](https://www.deviantart.com/leikoi/art/The-Neon-Shallows-823330548) |
-| `the_wormworld_saga_edited.jpg`  | [Daniel Lieske](https://daniellieske.artstation.com/)                      |
+|               Path               |                                                         Credit                                                          |
+|----------------------------------|-------------------------------------------------------------------------------------------------------------------------|
+| `aenami/*`                       | [Aenami](https://www.artstation.com/aenamiart)                                                                          |
+| `abandoned_satellite_dishes.jpg` | [Isaac Yeram Kim](https://www.artstation.com/isaacyeramkim)                                                             |
+| `escaping_the_well.jpg`          | N/A                                                                                                                     |
+| `fedex_cargo_ship.jpg`           | [Plumm](https://www.humanart.cz/portfolio/Plumm)                                                                        |
+| `ghost_in_the_shell.jpg`         | N/A                                                                                                                     |
+| `the_neon_shallows.png`          | [Leiko](https://www.deviantart.com/leikoi/art/The-Neon-Shallows-823330548)                                              |
+| `the_wormworld_saga_edited.jpg`  | [Daniel Lieske](https://daniellieske.artstation.com/)                                                                   |
+| `a_new_view_of_the_moon.jpg`     | [NASA's "A New View of the Moon" (Cropped to 16x9)](https://www.nasa.gov/image-detail/amf-art002e009287/)               |
 
 If you know the artist for one of the wallpapers where it says "N/A", please let me know!
 </details>

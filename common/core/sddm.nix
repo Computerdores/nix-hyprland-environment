@@ -7,7 +7,7 @@ in {
         enable = true;
         subtheme = "astronaut";
         themeOverrides = {
-            Background = "${../wallpapers/escaping_the_well.jpg}";
+            Background = "${../wallpapers/a_new_view_of_the_moon.jpg}";
             PartialBlur = "false";
             WarningColor = "#ffffff";
         };
