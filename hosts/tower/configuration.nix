@@ -63,6 +63,13 @@ args@{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, system, username, ...
         uid = 1000;
     };
 
+    services.printing.enable = true;
+    services.avahi = {
+        enable = true;
+        nssmdns4 = true;
+        openFirewall = true;
+    };
+
     services.tailscale = {
         enable = true;
     };
