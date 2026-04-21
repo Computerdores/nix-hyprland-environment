@@ -35,7 +35,7 @@
         private-overlay.url = "git+ssh://git@github.com/Computerdores/nixos-private.git";
     };
 
-    outputs = inputs@{ self, nixpkgs, home-manager, private-overlay, ... }:
+    outputs = inputs@{ self, nixpkgs, home-manager, private-overlay, nixpkgs-unstable, ... }:
     let
         lib = import ./lib.nix (nixpkgs.lib.extend (_: _: home-manager.lib));
         system = "x86_64-linux";
@@ -44,6 +44,7 @@
             flakeDir = ./.;
             hyprland-pkgs = inputs.hyprland.packages.${system};
             username = "jann";
+            pkgsUnstable = import nixpkgs-unstable { inherit system; config.allowUnfree = true; };
         };
         fullArgs = specialArgs // { pkgs = import nixpkgs { inherit system; }; };
         mkSystem = host: nixpkgs.lib.nixosSystem {
