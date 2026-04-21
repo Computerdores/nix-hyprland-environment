@@ -10,6 +10,7 @@ in {
         ../../common/core/plymouth.nix
         ../../common/programs/thunderbird.nix
         ../../common/programs/wireshark.nix
+        ../../common/programs/nix-ld.nix
     ];
 
     swapDevices = [{

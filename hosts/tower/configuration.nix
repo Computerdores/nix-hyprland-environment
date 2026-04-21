@@ -7,6 +7,7 @@ args@{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, system, username, ...
         ../../common/programs/thunderbird.nix
         ../../common/programs/nmtui-themed.nix
         ../../common/core/sddm.nix
+        ../../common/programs/nix-ld.nix
     ];
     # TODO: remove the following once the default kernel version boots again
     boot.kernelPackages = pkgs.linuxPackages_6_18; # 6.12.76 and 6.12.78 don't boot and this was the oldest, newer version
