@@ -2,6 +2,6 @@
 {
     programs.vscode = {
         enable = true;
-        package = pkgsUnstable.vscode;
+        package = pkgsUnstable.vscode.fhsWithPackages (ps: with ps; [ zstd libusb1 ]);
     };
 }
