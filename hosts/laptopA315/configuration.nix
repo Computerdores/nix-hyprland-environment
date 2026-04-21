@@ -11,6 +11,7 @@ in {
         ../../common/programs/thunderbird.nix
         ../../common/programs/wireshark.nix
         ../../common/programs/nix-ld.nix
+        ../../common/rpi-udev.nix
     ];
 
     swapDevices = [{
