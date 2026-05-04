@@ -18,13 +18,12 @@
 - ghidra: fix debugger
 - nwg-displays?
 - nix profiles?
-- vault for .ssh instead of individual passwords
+- vault for .ssh instead of individual passwords (gocryptfs)
 - ssh server on all devices
 - altgr-intl layout? (compose key)
 - Thunderbird notifications
 - Thunderbird sent email duplication
 - wofi: numpad return always selects top-most option
-- gocryptfs for ssh keys
 
 ### High Effort / Wait Required
 - terminal file picker (one of the [termfilechooser forks](https://github.com/hunkyburrito/xdg-desktop-portal-termfilechooser) maybe)
@@ -70,6 +69,10 @@ You are now in the same environment.
 > `sudo nixos-rebuild ...` fails to pull a git repo via ssh, but my ssh key works normally otherwise, what do I do?
 
 Run `sudo -E nixos-rebuild ...` once instead, that way the `SSH_AUTH_SOCK` environment variable will be passed through correctly and the git pull via ssh works correctly.
+
+> Connecting to this device from devices on a network doesn't work if a wg-quick VPN to the same network is configured.
+
+Not quite sure on the details of why this happens, but adding the following as a `PreUp` directive in the vpn `.conf` should fix it: `! ip addr | grep -P '192\.168\.188\.\d+/24'` (the regex must match any IP your device might get on that network).
 
 ## Packages
 - [sddm-astronaut-theme](https://github.com/Keyitdev/sddm-astronaut-theme) (a series of SDDM themes by [KeyitDev](https://github.com/Keyitdev); self packaged)
