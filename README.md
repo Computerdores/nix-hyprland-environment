@@ -8,7 +8,6 @@
 ## ToDo
 - yazi: gruvbox
 - fix backlight control for external monitors
-- fn keys
 - nvim full IDE
 - nvim: investigate lazy git plugin
 - pywal16?

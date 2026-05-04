@@ -69,6 +69,10 @@ in {
         layout = "de";
         variant = "nodeadkeys";
     };
+    services.udev.extraHwdb = ''
+        evdev:input:b0011v0001p0001
+         KEYBOARD_KEY_71=mute
+    '';
 
     console.keyMap = "de";
 

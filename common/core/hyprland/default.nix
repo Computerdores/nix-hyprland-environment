@@ -47,4 +47,7 @@ in {
             bindm        = import ./bindm.nix;
         };
     };
+    home.packages = with pkgs; [
+        brightnessctl
+    ];
 }
