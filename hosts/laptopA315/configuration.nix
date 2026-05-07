@@ -150,6 +150,7 @@ in {
         (lib.gtkEnablePortals pkgs pkgs.localsend)
         signal-desktop
         file
+        python3
     ];
 
     fonts.packages = with pkgs; [

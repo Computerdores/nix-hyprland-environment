@@ -136,6 +136,7 @@ args@{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, system, username, ...
         signal-desktop
         feishin
         file
+        python3
     ];
 
     fonts.packages = with pkgs; [
