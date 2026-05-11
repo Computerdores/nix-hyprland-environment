@@ -18,6 +18,7 @@ in {
             ./plugins/treesitter.nix
             ./plugins/cmp.nix
             ./plugins/rustaceanvim.nix
+            ./plugins/lsp.nix
         ];
 
         enable = true;
