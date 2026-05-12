@@ -151,6 +151,7 @@ in {
         signal-desktop
         file
         python3
+        wiremix
     ];
 
     fonts.packages = with pkgs; [
