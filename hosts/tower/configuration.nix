@@ -4,9 +4,9 @@ args@{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, system, username, ...
     imports = [
         ./hardware-configuration.nix
         ./intel.nix
+        ../../common/core/sddm.nix
         ../../common/programs/thunderbird.nix
         ../../common/programs/nmtui-themed.nix
-        ../../common/core/sddm.nix
         ../../common/programs/nix-ld.nix
     ];
     # TODO: remove the following once the default kernel version boots again
@@ -144,6 +144,11 @@ args@{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, system, username, ...
         noto-fonts
         nerd-fonts.jetbrains-mono
     ];
+
+    programs.binary-ninja = {
+        enable = true;
+        package = pkgs.binary-ninja-personal-wayland;
+    };
 
     programs.git = {
         enable = true;

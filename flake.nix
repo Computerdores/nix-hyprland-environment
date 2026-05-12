@@ -33,9 +33,13 @@
             inputs.nixpkgs.follows = "nixpkgs";
         };
         private-overlay.url = "git+ssh://git@github.com/Computerdores/nixos-private.git";
+        binaryninja = {
+            url = "github:jchv/nix-binary-ninja";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
     };
 
-    outputs = inputs@{ self, nixpkgs, home-manager, private-overlay, nixpkgs-unstable, ... }:
+    outputs = inputs@{ self, nixpkgs, home-manager, private-overlay, nixpkgs-unstable, binaryninja, ... }:
     let
         lib = import ./lib.nix (nixpkgs.lib.extend (_: _: home-manager.lib));
         system = "x86_64-linux";
@@ -54,6 +58,8 @@
                 ./common/modules
                 home-manager.nixosModules.home-manager
                 private-overlay.nixosModules."${host}"
+                binaryninja.nixosModules.binaryninja
+
                 {
                     home-manager = {
                         useGlobalPkgs = true;
