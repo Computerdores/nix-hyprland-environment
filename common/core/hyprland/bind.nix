@@ -11,7 +11,7 @@
     "$mainMod, T, exec, ${lib.openDesktopEntryCommand config.xdg.desktopEntries.utils}"
     "$mainMod, P, pseudo"           # dwindle
     "$mainMod, N, layoutmsg, togglesplit"      # dwindle
-    "$mainMod, Y, exec, hyprshot -m region"
+    "$mainMod, Y, exec, hyprshot -o ~/pictures -m region"
     ", XF86MonBrightnessDown, exec, brightnessctl s 5%-"
     ", XF86MonBrightnessUp, exec, brightnessctl s +5%"
     ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
