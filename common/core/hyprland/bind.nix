@@ -18,6 +18,9 @@
     ", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
     ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
 
+    # Global Hotkeys
+    ", F24, pass, class:discord"
+
     # Move focus with mainMod + arrow keys
     "$mainMod, left, movefocus, l"
     "$mainMod, right, movefocus, r"
