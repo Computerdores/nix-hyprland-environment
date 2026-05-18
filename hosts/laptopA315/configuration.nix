@@ -11,6 +11,7 @@ in {
         ../../common/programs/thunderbird.nix
         ../../common/programs/wireshark.nix
         ../../common/programs/nix-ld.nix
+        ../../common/programs/sleep-inhibit.nix
         ../../common/rpi-udev.nix
     ];
 
@@ -146,7 +147,6 @@ in {
         unzip
         dig
         playerctl
-        (import ../../common/derivations/sleep-inhibit.nix args)
         (lib.gtkEnablePortals pkgs pkgs.localsend)
         signal-desktop
         file
