@@ -45,6 +45,7 @@ in {
             windowrule   = import ./windowrule.nix;
             bind         = import ./bind.nix args;
             bindm        = import ./bindm.nix;
+            bindl        = import ./bindl.nix;
         };
     };
     home.packages = with pkgs; [

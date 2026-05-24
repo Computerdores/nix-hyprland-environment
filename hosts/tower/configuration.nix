@@ -9,7 +9,9 @@ args@{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, system, username, ...
         ../../common/programs/nmtui-themed.nix
         ../../common/programs/nix-ld.nix
         ../../common/programs/sleep-inhibit.nix
+        ../../common/programs/audio.nix
     ];
+
     # TODO: remove the following once the default kernel version boots again
     boot.kernelPackages = pkgs.linuxPackages_6_18; # 6.12.76 and 6.12.78 don't boot and this was the oldest, newer version
 
@@ -130,8 +132,6 @@ args@{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, system, username, ...
         zip
         unzip
         dig
-        playerctl
-        wiremix
         (lib.gtkEnablePortals pkgs pkgs.localsend)
         signal-desktop
         feishin

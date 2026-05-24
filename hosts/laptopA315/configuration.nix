@@ -12,6 +12,7 @@ in {
         ../../common/programs/wireshark.nix
         ../../common/programs/nix-ld.nix
         ../../common/programs/sleep-inhibit.nix
+        ../../common/programs/audio.nix
         ../../common/rpi-udev.nix
     ];
 
@@ -146,12 +147,10 @@ in {
         zip
         unzip
         dig
-        playerctl
         (lib.gtkEnablePortals pkgs pkgs.localsend)
         signal-desktop
         file
         python3
-        wiremix
         libqalculate
     ];
 

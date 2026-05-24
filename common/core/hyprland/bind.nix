@@ -14,9 +14,6 @@
     "$mainMod, Y, exec, hyprshot -o ~/pictures -m region"
     ", XF86MonBrightnessDown, exec, brightnessctl s 5%-"
     ", XF86MonBrightnessUp, exec, brightnessctl s +5%"
-    ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
-    ", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
-    ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
 
     # Global Hotkeys
     ", F24, pass, class:discord"
@@ -62,12 +59,4 @@
     # Scroll through workspaces with mainMod + Scroll
     "$mainMod, mouse_down, workspace, e+1"
     "$mainMod, mouse_up, workspace, e-1"
-
-    # Media Keys
-    ", XF86AudioPlay,  exec, playerctl play-pause"
-    ", XF86AudioPause, exec, playerctl play-pause"
-    ", XF86AudioNext,  exec, playerctl next"
-    ", XF86AudioPrev,  exec, playerctl previous"
-    ", XF86AudioStop,  exec, playerctl stop"
-    ", XF86AudioMute,  exec, playerctl pause" # should be mute, but doesn't work
 ]
