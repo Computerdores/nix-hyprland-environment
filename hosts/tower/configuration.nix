@@ -137,6 +137,7 @@ args@{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, system, username, ...
         feishin
         file
         python3
+        libqalculate
         (prismlauncher.override {})
     ];
 

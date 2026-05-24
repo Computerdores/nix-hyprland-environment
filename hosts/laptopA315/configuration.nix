@@ -152,6 +152,7 @@ in {
         file
         python3
         wiremix
+        libqalculate
     ];
 
     fonts.packages = with pkgs; [
