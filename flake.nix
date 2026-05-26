@@ -24,7 +24,7 @@
             inputs.nixpkgs.follows = "nixpkgs";
         };
         i3bar-river = {
-            url = "github:Computerdores/i3bar-river?ref=master";    # TODO: point to upstream once #48, #49, #51, and workspaces-fix-fr are merged
+            url = "github:Computerdores/i3bar-river?ref=master"; # TODO: point to upstream once #48, #49, #51, and workspaces-fix-fr are merged
             inputs.nixpkgs.follows = "nixpkgs-unstable";
         };
         spicetify-nix.url = "github:Gerg-L/spicetify-nix";
@@ -39,42 +39,50 @@
         };
     };
 
-    outputs = inputs@{ self, nixpkgs, home-manager, private-overlay, nixpkgs-unstable, binaryninja, ... }:
-    let
-        lib = import ./lib.nix (nixpkgs.lib.extend (_: _: home-manager.lib));
-        system = "x86_64-linux";
-        specialArgs = {
-            inherit inputs self lib system;
-            flakeDir = ./.;
-            hyprland-pkgs = inputs.hyprland.packages.${system};
-            username = "jann";
-            pkgsUnstable = import nixpkgs-unstable { inherit system; config.allowUnfree = true; };
-        };
-        fullArgs = specialArgs // { pkgs = import nixpkgs { inherit system; }; };
-        mkSystem = host: nixpkgs.lib.nixosSystem {
-            inherit system specialArgs;
-            modules = [
-                ./hosts/${host}/configuration.nix
-                ./common/modules
-                home-manager.nixosModules.home-manager
-                private-overlay.nixosModules."${host}"
-                binaryninja.nixosModules.binaryninja
+    outputs =
+        inputs@{ self, nixpkgs, home-manager, private-overlay, nixpkgs-unstable, binaryninja, ... }:
+        let
+            lib = import ./lib.nix (nixpkgs.lib.extend (_: _: home-manager.lib));
+            system = "x86_64-linux";
+            specialArgs = {
+                inherit inputs self lib system;
+                flakeDir = ./.;
+                hyprland-pkgs = inputs.hyprland.packages.${system};
+                username = "jann";
+                pkgsUnstable = import nixpkgs-unstable {
+                    inherit system;
+                    config.allowUnfree = true;
+                };
+            };
+            fullArgs = specialArgs // {
+                pkgs = import nixpkgs { inherit system; };
+            };
+            mkSystem = host: nixpkgs.lib.nixosSystem {
+                inherit system specialArgs;
+                modules = [
+                    ./hosts/${host}/configuration.nix
+                    ./common/modules
+                    home-manager.nixosModules.home-manager
+                    private-overlay.nixosModules."${host}"
+                    binaryninja.nixosModules.binaryninja
 
-                {
-                    home-manager = {
-                        useGlobalPkgs = true;
-                        useUserPackages = true;
-                        extraSpecialArgs = specialArgs;
-                        users.jann.imports = [
-                            ./hosts/${host}/home.nix
-                            private-overlay.homeManagerModules."${host}"
-                        ];
-                    };
-                }
-            ];
-        };
-    in {
-        nixosConfigurations.laptopA315 = mkSystem "laptopA315";
-        nixosConfigurations.tower = mkSystem "tower";
-    } // (import ./shells fullArgs);
+                    {
+                        home-manager = {
+                            useGlobalPkgs = true;
+                            useUserPackages = true;
+                            extraSpecialArgs = specialArgs;
+                            users.jann.imports = [
+                                ./hosts/${host}/home.nix
+                                private-overlay.homeManagerModules."${host}"
+                            ];
+                        };
+                    }
+                ];
+            };
+        in
+        {
+            nixosConfigurations.laptopA315 = mkSystem "laptopA315";
+            nixosConfigurations.tower = mkSystem "tower";
+        }
+        // (import ./shells fullArgs);
 }

@@ -9,8 +9,8 @@
     "$mainMod, V, togglefloating"
     "$mainMod, R, exec, $menu"
     "$mainMod, T, exec, ${lib.openDesktopEntryCommand config.xdg.desktopEntries.utils}"
-    "$mainMod, P, pseudo"           # dwindle
-    "$mainMod, N, layoutmsg, togglesplit"      # dwindle
+    "$mainMod, P, pseudo" # dwindle
+    "$mainMod, N, layoutmsg, togglesplit" # dwindle
     "$mainMod, Y, exec, hyprshot -o ~/pictures -m region"
     ", XF86MonBrightnessDown, exec, brightnessctl s 5%-"
     ", XF86MonBrightnessUp, exec, brightnessctl s +5%"

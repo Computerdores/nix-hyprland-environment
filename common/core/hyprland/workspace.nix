@@ -3,7 +3,8 @@ let
     i = import ../../invisible_characters.nix;
     i0 = (builtins.elemAt i 0);
     i1 = (builtins.elemAt i 1);
-in [
+in
+[
     "w[tv1], gapsout:0, gapsin:0"
      ("1, monitor:0, defaultName:" + i0 +  "1, persistent:true, default:true")
      ("2, monitor:0, defaultName:" + i0 +  "2, persistent:true")

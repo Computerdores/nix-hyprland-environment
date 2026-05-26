@@ -2,13 +2,17 @@
 
 let
     font = "${pkgs.dejavu_fonts}/share/fonts/truetype/DejaVuSansMono.ttf";
-in pkgs.stdenv.mkDerivation rec {
+in
+pkgs.stdenv.mkDerivation rec {
     pname = "plymouth-figlet-theme";
     version = "1.0";
 
     src = ./.;
 
-    nativeBuildInputs = with pkgs; [ imagemagick figlet ];
+    nativeBuildInputs = with pkgs; [
+        imagemagick
+        figlet
+    ];
 
     buildPhase = ''
         figlet -f slant "${message}" > text.txt

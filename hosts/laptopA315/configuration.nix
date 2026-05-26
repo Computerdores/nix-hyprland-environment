@@ -2,7 +2,8 @@ args@{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, system, username, ...
 
 let
     portal-escape = inputs.portal-escape.packages.${system}.default;
-in {
+in
+{
     imports = [
         ./hardware-configuration.nix
         ../../common/programs/nmtui-themed.nix
@@ -16,10 +17,12 @@ in {
         ../../common/rpi-udev.nix
     ];
 
-    swapDevices = [{
-       device = "/var/lib/swapfile";
-       size = 16*1024;
-    }];
+    swapDevices = [
+        {
+            device = "/var/lib/swapfile";
+            size = 16 * 1024;
+        }
+    ];
 
     virtualisation.docker.enable = true;
 
@@ -42,10 +45,12 @@ in {
                 uri = "http://detectportal.firefox.com/canonical.html";
                 response = ''<meta http-equiv="refresh" content="0;url=https://support.mozilla.org/kb/captive-portal"/>'';
             };
-            dispatcherScripts = [{
-                type = "basic";
-                source = "${portal-escape}/bin/portal-escape";
-            }];
+            dispatcherScripts = [
+                {
+                    type = "basic";
+                    source = "${portal-escape}/bin/portal-escape";
+                }
+            ];
         };
         wg-quick.interfaces = import ./wg-quick;
         extraHosts = ''
@@ -83,11 +88,15 @@ in {
     console.keyMap = "de";
 
     # users
-    users.groups.nixos-config = {};
+    users.groups.nixos-config = { };
     users.users."${username}" = {
         isNormalUser = true;
         description = "Jann Stute";
-        extraGroups = [ "networkmanager" "wheel" "nixos-config" ]; # wheel is for enabling sudo
+        extraGroups = [
+            "networkmanager"
+            "wheel"
+            "nixos-config"
+        ]; # wheel is for enabling sudo
         initialPassword = "1";
         uid = 1000;
     };
@@ -102,8 +111,8 @@ in {
         settings.PasswordAuthentication = false;
     };
 
-    security.pam.services.hyprlock = {};
-    programs.hyprlock= {
+    security.pam.services.hyprlock = { };
+    programs.hyprlock = {
         enable = true;
         package = pkgs.hyprlock;
     };
@@ -117,9 +126,12 @@ in {
 
     nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
     nix.settings = {
-        experimental-features = [ "nix-command" "flakes" ];
-        substituters = ["https://hyprland.cachix.org"];
-        trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
+        experimental-features = [
+            "nix-command"
+            "flakes"
+        ];
+        substituters = [ "https://hyprland.cachix.org" ];
+        trusted-public-keys = [ "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" ];
     };
 
     nixpkgs.config.allowUnfree = true;
@@ -127,11 +139,12 @@ in {
     # adds a list of installed system packages at /etc/current-system-packages
     # from https://www.reddit.com/r/NixOS/comments/fsummx/comment/kt9fb74/
     environment.etc."current-system-packages".text =
-    let
-        packages = builtins.map (p: "${p.name}") config.environment.systemPackages;
-        sortedUnique = builtins.sort builtins.lessThan (pkgs.lib.lists.unique packages);
-        formatted = builtins.concatStringsSep "\n" sortedUnique;
-    in formatted;
+        let
+            packages = builtins.map (p: "${p.name}") config.environment.systemPackages;
+            sortedUnique = builtins.sort builtins.lessThan (pkgs.lib.lists.unique packages);
+            formatted = builtins.concatStringsSep "\n" sortedUnique;
+        in
+        formatted;
 
     environment.variables = {
         WP = "/etc/nixos/common/wallpapers";
@@ -168,9 +181,9 @@ in {
         enable = true;
         lfs.enable = true;
         config = {
-              init = {
-                  defaultBranch = "main";
-              };
+            init = {
+                defaultBranch = "main";
+            };
         };
     };
 

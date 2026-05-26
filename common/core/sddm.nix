@@ -2,7 +2,8 @@
 
 let
     wayland = false; # enabling wayland currently leads to a bug when logging in too early
-in {
+in
+{
     sddmAstronautTheme = {
         enable = true;
         subtheme = "astronaut";

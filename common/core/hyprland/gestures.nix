@@ -1,4 +1,4 @@
 # see https://wiki.hyprland.org/Configuring/Variables for more
 {
-    gesture = ["3, horizontal, workspace"];
+    gesture = [ "3, horizontal, workspace" ];
 }

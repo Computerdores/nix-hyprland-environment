@@ -2,7 +2,8 @@
 
 let
     hoverOpenDocs = false;
-in {
+in
+{
     imports = [
         inputs.nixvim.homeModules.nixvim
     ];

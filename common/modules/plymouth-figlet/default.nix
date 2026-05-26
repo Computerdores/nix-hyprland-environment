@@ -1,12 +1,16 @@
 args@{ config, lib, pkgs, ... }:
 
 let
-    cfg = config.boot.plymouth.figlet or {};
-    themePackage = import ./derivation.nix (args // {
-        message = cfg.message;
-        show_logo = cfg.show_logo;
-    });
-in {
+    cfg = config.boot.plymouth.figlet or { };
+    themePackage = import ./derivation.nix (
+        args
+        // {
+            message = cfg.message;
+            show_logo = cfg.show_logo;
+        }
+    );
+in
+{
     options.boot.plymouth.figlet = {
         message = lib.mkOption {
             type = lib.types.str;

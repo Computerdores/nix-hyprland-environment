@@ -2,7 +2,8 @@ extra_args':
 args@{ lib, pkgs, config, hyprland-pkgs, ... }:
 let
     extra_args = lib.applySchema (import ./schema.nix lib) extra_args';
-in {
+in
+{
     xdg.portal = {
         enable = true;
         extraPortals = [
@@ -10,15 +11,16 @@ in {
             config.wayland.windowManager.hyprland.portalPackage
         ];
         configPackages = [ config.wayland.windowManager.hyprland.package ];
-        config.hyprland = {
-            default = [ "hyprland" "kde" ];
-        };
+        config.hyprland.default = [
+            "hyprland"
+            "kde"
+        ];
     };
     wayland.windowManager.hyprland = {
         enable = true;
         package = hyprland-pkgs.hyprland;
         portalPackage = hyprland-pkgs.xdg-desktop-portal-hyprland;
-        xwayland.enable = true;   
+        xwayland.enable = true;
         systemd.enable = true;
 
         settings = extra_args.overrideFunc {

@@ -1,8 +1,11 @@
 # see also: https://github.com/xhos/nixdots/blob/main/derivs/sddm-astronaut-theme.nix
 { pkgs, lib, theme ? "astronaut", themeOverrides ? null, ... }:
 let
-    overwriteConfig = (pkgs.formats.ini {}).generate "${theme}.conf.user" { General = themeOverrides; };
-in pkgs.stdenv.mkDerivation rec {
+    overwriteConfig = (pkgs.formats.ini { }).generate "${theme}.conf.user" {
+        General = themeOverrides;
+    };
+in
+pkgs.stdenv.mkDerivation rec {
     pname = "sddm-astronaut-theme";
     version = "11c0bf6147bbea466ce2e2b0559e9a9abdbcc7c3";
     dontBuild = true;

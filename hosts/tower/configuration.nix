@@ -62,11 +62,15 @@ args@{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, system, username, ...
     console.keyMap = "de";
 
     # users
-    users.groups.nixos-config = {};
+    users.groups.nixos-config = { };
     users.users."${username}" = {
         isNormalUser = true;
         description = "Jann Stute";
-        extraGroups = [ "networkmanager" "wheel" "nixos-config" ]; # wheel is for enabling sudo
+        extraGroups = [
+            "networkmanager"
+            "wheel"
+            "nixos-config"
+        ]; # wheel is for enabling sudo
         initialPassword = "1";
         uid = 1000;
     };
@@ -88,8 +92,8 @@ args@{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, system, username, ...
         settings.PasswordAuthentication = false;
     };
 
-    security.pam.services.hyprlock = {};
-    programs.hyprlock= {
+    security.pam.services.hyprlock = { };
+    programs.hyprlock = {
         enable = true;
         package = pkgs.hyprlock;
     };
@@ -102,9 +106,12 @@ args@{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, system, username, ...
     };
 
     nix.settings = {
-        experimental-features = [ "nix-command" "flakes" ];
-        substituters = ["https://hyprland.cachix.org"];
-        trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
+        experimental-features = [
+            "nix-command"
+            "flakes"
+        ];
+        substituters = [ "https://hyprland.cachix.org" ];
+        trusted-public-keys = [ "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" ];
     };
 
     nixpkgs.config.allowUnfree = true;
@@ -112,11 +119,12 @@ args@{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, system, username, ...
     # adds a list of installed system packages at /etc/current-system-packages
     # from https://www.reddit.com/r/NixOS/comments/fsummx/comment/kt9fb74/
     environment.etc."current-system-packages".text =
-    let
-        packages = builtins.map (p: "${p.name}") config.environment.systemPackages;
-        sortedUnique = builtins.sort builtins.lessThan (pkgs.lib.lists.unique packages);
-        formatted = builtins.concatStringsSep "\n" sortedUnique;
-    in formatted;
+        let
+            packages = builtins.map (p: "${p.name}") config.environment.systemPackages;
+            sortedUnique = builtins.sort builtins.lessThan (pkgs.lib.lists.unique packages);
+            formatted = builtins.concatStringsSep "\n" sortedUnique;
+        in
+        formatted;
 
     environment.variables = {
         WP = "/etc/nixos/common/wallpapers";
@@ -142,7 +150,7 @@ args@{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, system, username, ...
         file
         python3
         libqalculate
-        (prismlauncher.override {})
+        (prismlauncher.override { })
     ];
 
     fonts.packages = with pkgs; [

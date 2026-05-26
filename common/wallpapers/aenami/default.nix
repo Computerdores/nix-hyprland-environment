@@ -1,5 +1,5 @@
 let
-  dir = "/etc/nixos/common/wallpapers/aenami"; 
+    dir = "/etc/nixos/common/wallpapers/aenami";
 in
 [
     "${dir}/aenami_at_last.jpg"

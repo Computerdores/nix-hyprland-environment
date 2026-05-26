@@ -49,7 +49,7 @@
                         format = " $icon {$ssid|Wired Connection} ";
                         format_alt = " ^icon_net_down $speed_down.eng(prefix:K) ^icon_net_up $speed_up.eng(prefix:K) ";
                     }
-                    { block = "sound"; }  # todo
+                    { block = "sound"; } # todo
                     {
                         block = "time";
                         timezone = "Europe/Berlin";

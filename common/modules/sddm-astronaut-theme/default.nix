@@ -1,12 +1,16 @@
 args@{ config, lib, pkgs, ... }:
 
 let
-    cfg = config.sddmAstronautTheme or {};
-    sddm-astronaut-theme = import ./derivation.nix (args // {
-        theme = cfg.subtheme;
-        themeOverrides = cfg.themeOverrides;
-    });
-in {
+    cfg = config.sddmAstronautTheme or { };
+    sddm-astronaut-theme = import ./derivation.nix (
+        args
+        // {
+            theme = cfg.subtheme;
+            themeOverrides = cfg.themeOverrides;
+        }
+    );
+in
+{
     options.sddmAstronautTheme = {
         enable = lib.mkEnableOption "sddm astronaut theme";
         subtheme = lib.mkOption {
@@ -16,7 +20,7 @@ in {
         };
         themeOverrides = lib.mkOption {
             type = lib.types.attrsOf lib.types.str;
-            default = {};
+            default = { };
             description = "Overrides for options specified in the selected theme.conf.";
         };
     };

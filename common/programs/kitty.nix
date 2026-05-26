@@ -1,4 +1,5 @@
-{ ... }: {
+{ ... }:
+{
     programs.kitty = {
         enable = true;
         themeFile = "gruvbox-dark-hard";
@@ -7,7 +8,7 @@
             allow_remote_control = "socket";
             background_opacity = "0.8";
             listen_on = "tcp:localhost:0";
-            clipboard_control = "write-clipboard write-primary";    # disallow read because of nvim
+            clipboard_control = "write-clipboard write-primary"; # disallow read because of nvim
         };
     };
 }

@@ -1,9 +1,10 @@
 with builtins;
 
 let
-  dir = "/etc/nixos/common/wallpapers";
+    dir = "/etc/nixos/common/wallpapers";
 in
-import ./aenami ++ [
+import ./aenami
+++ [
     "${dir}/abandoned_satellite_dishes.jpg"
     "${dir}/escaping_the_well.jpg"
     "${dir}/fedex_cargo_ship.jpg"

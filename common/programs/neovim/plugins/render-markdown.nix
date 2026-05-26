@@ -7,7 +7,9 @@
             link = {
                 enabled = true;
             };
-            quote = { repeat_linebreak = true; };
+            quote = {
+                repeat_linebreak = true;
+            };
             win_options = {
                 showbreak = {
                     default = "";
@@ -21,7 +23,7 @@
                     default = "";
                     rendered = "";
                 };
-            }; 
+            };
             latex = {
                 enable = false;
             };

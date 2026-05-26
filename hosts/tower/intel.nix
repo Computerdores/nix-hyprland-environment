@@ -2,7 +2,7 @@
 { config, lib, pkgs, ... }:
 
 {
-    services.xserver.videoDrivers = ["modesetting"];
+    services.xserver.videoDrivers = [ "modesetting" ];
     hardware.graphics = {
         enable = true;
         extraPackages = with pkgs; [

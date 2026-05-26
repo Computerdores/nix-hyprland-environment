@@ -1,7 +1,7 @@
 # see https://wiki.hyprland.org/Configuring/Animations for more
 {
     enabled = "yes";
-    
+
     bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
 
     animation = [
