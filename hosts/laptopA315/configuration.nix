@@ -48,6 +48,10 @@ in {
             }];
         };
         wg-quick.interfaces = import ./wg-quick;
+        extraHosts = ''
+            192.168.188.159 edge
+            192.168.188.47  tower
+        '';
     };
 
     # area info

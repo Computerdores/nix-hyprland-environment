@@ -31,6 +31,10 @@ args@{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, system, username, ...
         hostName = "tower";
         networkmanager.enable = true;
         wg-quick.interfaces = import ./wg-quick;
+        extraHosts = ''
+            192.168.188.159 edge
+            192.168.188.49  laptopA315
+        '';
     };
 
     # area info
