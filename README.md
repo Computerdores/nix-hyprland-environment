@@ -19,10 +19,13 @@
 - nix profiles?
 - vault for .ssh instead of individual passwords (gocryptfs)
 - ssh server on all devices
+  - wol on tower?
+  - hostnames in extraHosts
 - Thunderbird notifications
 - Thunderbird sent email duplication
 - wofi: numpad return always selects top-most option
 - consider ssh connection multiplexing
+- hyprshutdown for graceful exit
 
 ### High Effort / Wait Required
 - terminal file picker (one of the [termfilechooser forks](https://github.com/hunkyburrito/xdg-desktop-portal-termfilechooser) maybe)
