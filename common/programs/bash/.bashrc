@@ -2,7 +2,6 @@ function go-nix-config() {
     cd /etc/nixos
 }
 
-alias ssh="kitten ssh"
 alias open=xdg-open
 alias q=exit
 alias v=nvim
