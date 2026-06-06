@@ -36,6 +36,8 @@ in
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
 
+    boot.kernelModules = [ "cdc_acm" ];
+
     # networking
     networking = {
         hostName = "laptopA315";
