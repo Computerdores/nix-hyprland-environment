@@ -25,8 +25,6 @@
 - Thunderbird sent email duplication
 - wofi: numpad return always selects top-most option
 - consider ssh connection multiplexing
-- hyprshutdown for graceful exit
-- qt apps don't run with root
 
 ### High Effort / Wait Required
 - terminal file picker (one of the [termfilechooser forks](https://github.com/hunkyburrito/xdg-desktop-portal-termfilechooser) maybe)
@@ -75,7 +73,7 @@ Not quite sure on the details of why this happens, but adding the following as a
 
 ## Packages
 - [sddm-astronaut-theme](https://github.com/Keyitdev/sddm-astronaut-theme) (a series of SDDM themes by [KeyitDev](https://github.com/Keyitdev); self packaged)
-- [utiltool](https://github.com/Computerdores/utiltool) (a collection of utilities written for this flake)
+- [i3bar-river](https://github.com/Computerdores/i3bar-river) (i3bar compatible; forked because of inactive maintainer)
 
 ## Credits
 - various posts on [r/unixporn](https://www.reddit.com/r/unixporn/) for great amounts of inspiration
