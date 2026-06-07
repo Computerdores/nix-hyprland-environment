@@ -1,7 +1,8 @@
-{ pkgs, username, ... }:
+{ pkgs, username, config, ... }:
 {
     programs.firefox = {
         enable = true;
+        configPath = "${config.xdg.configHome}/mozilla/firefox";
         profiles."${username}" = {
             id = 0;
             name = username;

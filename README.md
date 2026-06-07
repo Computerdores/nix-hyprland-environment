@@ -8,7 +8,6 @@
 ## ToDo
 - yazi: gruvbox
 - fix backlight control for external monitors
-- nvim full IDE
 - nvim: investigate lazy git plugin
 - pywal16?
 - sddm virtual keyboard doesn't do anything
@@ -25,6 +24,7 @@
 - Thunderbird sent email duplication
 - wofi: numpad return always selects top-most option
 - consider ssh connection multiplexing
+- thunderbird xdg base dirs
 
 ### High Effort / Wait Required
 - terminal file picker (one of the [termfilechooser forks](https://github.com/hunkyburrito/xdg-desktop-portal-termfilechooser) maybe)
