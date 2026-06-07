@@ -103,6 +103,11 @@ in
         uid = 1000;
     };
 
+    # fix qt apps under sudo
+    security.sudo.extraConfig = ''
+        Defaults env_keep += "WAYLAND_DISPLAY XDG_RUNTIME_DIR DISPLAY XAUTHORITY"
+    '';
+
     services.tailscale = {
         enable = true;
     };

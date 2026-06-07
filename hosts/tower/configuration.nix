@@ -75,6 +75,11 @@ args@{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, system, username, ...
         uid = 1000;
     };
 
+    # fix qt apps under sudo
+    security.sudo.extraConfig = ''
+        Defaults env_keep += "WAYLAND_DISPLAY XDG_RUNTIME_DIR DISPLAY XAUTHORITY"
+    '';
+
     services.printing.enable = true;
     services.avahi = {
         enable = true;
