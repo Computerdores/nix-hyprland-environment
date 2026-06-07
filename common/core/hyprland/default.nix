@@ -49,11 +49,7 @@ in
             -- Autostart
             hl.on("hyprland.start", function ()
               hl.exec_cmd("i3bar-river")
-              hl.exec_cmd("hyprctl dispatch workspace 2")
-              hl.exec_cmd("hyprctl dispatch workspace 1")
               hl.exec_cmd("ckb-next -b")
-              hl.exec_cmd("hyprctl dispatch workspace 11")
-              hl.exec_cmd("hyprctl dispatch workspace 1")
               ${extra_args.extraOnStart}
             end)
         '';

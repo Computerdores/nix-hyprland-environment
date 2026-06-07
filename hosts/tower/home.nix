@@ -3,8 +3,8 @@
     imports = [
         (import ../../common/core/hyprland {
             extraOnStart = ''
-                hl.dsp.exec_cmd("thunderbird", { monitor = "HDMI-A-2", workspace = "1" });
-                hl.dsp.exec_cmd("discord", { monitor = "HDMI-A-3", workspace = "11" });
+                hl.exec_cmd("thunderbird", { monitor = "HDMI-A-2", workspace = "1" });
+                hl.exec_cmd("discord", { monitor = "HDMI-A-3", workspace = "11" });
             '';
             monitors = [
                 {
