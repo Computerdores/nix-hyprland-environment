@@ -6,7 +6,7 @@ local menu        = "wofi --show drun"
 hl.bind("SUPER + Q",             hl.dsp.exec_cmd(terminal))
 hl.bind("SUPER + C",             hl.dsp.window.close())
 hl.bind("SUPER + B",             hl.dsp.exec_cmd("hyprlock"))
-hl.bind("SUPER + M",             hl.dsp.exec_cmd("hyprshutdown"))
+hl.bind("SUPER + M",             hl.dsp.exec_cmd("pkill -TERM firefox; hyprshutdown"))
 hl.bind("SUPER + E",             hl.dsp.exec_cmd(fileManager))
 hl.bind("SUPER + V",             hl.dsp.window.float())
 hl.bind("SUPER + R",             hl.dsp.exec_cmd(menu))
