@@ -23,6 +23,8 @@ in
         ];
 
         enable = true;
+        nixpkgs.config.allowUnfree = true;
+
         defaultEditor = true;
         viAlias = true;
         vimAlias = true;

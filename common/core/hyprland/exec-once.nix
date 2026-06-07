@@ -1,8 +1,0 @@
-[
-    "i3bar-river"
-    "hyprctl dispatch workspace 2"
-    "hyprctl dispatch workspace 1"
-    "ckb-next -b"
-    "hyprctl dispatch workspace 11"
-    "hyprctl dispatch workspace 1"
-]

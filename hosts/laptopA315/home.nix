@@ -2,15 +2,20 @@
 {
     imports = [
         (import ../../common/core/hyprland {
-            overrideFunc =
-                old:
-                old
-                // {
-                    monitor = [
-                        "eDP-1,preferred,0x0,1"
-                        ",preferred,auto-right,1"
-                    ];
-                };
+            monitors = [
+                {
+                    output = "eDP-1";
+                    mode = "preferred";
+                    position = "0x0";
+                    scale = "1";
+                }
+                {
+                    output = "";
+                    mode = "preferred";
+                    position = "auto-right";
+                    scale = "1";
+                }
+            ];
         })
         ../../common/core/hyprlock.nix
         ../../common/core/hyprpaper.nix

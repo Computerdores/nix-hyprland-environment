@@ -5,9 +5,7 @@
         settings = {
             general = {
                 ignore_empty_input = true;
-                grace = 300;
                 hide_cursor = true;
-                no_fade_in = false;
             };
             background = {
                 path = "screenshot";

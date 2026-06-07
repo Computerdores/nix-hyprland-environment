@@ -19,38 +19,47 @@ in
     wayland.windowManager.hyprland = {
         enable = true;
         package = hyprland-pkgs.hyprland;
+        configType = "lua";
         portalPackage = hyprland-pkgs.xdg-desktop-portal-hyprland;
         xwayland.enable = true;
         systemd.enable = true;
 
         settings = extra_args.overrideFunc {
-            "$terminal" = "kitty";
-            "$fileManager" = "$terminal yazi";
-            "$menu" = "wofi --show drun";
-            "$mainMod" = "SUPER";
+            config = {
+                decoration   = import ./decoration.nix;
+                input        = import ./input.nix;
+                general      = import ./general.nix;
+                misc         = import ./misc.nix;
 
-            exec-once    = import ./exec-once.nix;
-            env          = import ./env.nix;
-            input        = import ./input.nix;
-            device       = import ./device.nix;
-            general      = import ./general.nix;
-            decoration   = import ./decoration.nix;
-            animations   = import ./animations.nix;
+                dwindle.preserve_split = true;
+            };
 
-            # layouts
-            dwindle      = import ./dwindle.nix;
-            master       = import ./master.nix;
+            device         = import ./device.nix;
+            gesture      = import ./gestures.nix;
 
-            gestures     = import ./gestures.nix;
-            misc         = import ./misc.nix;
-            workspace    = import ./workspace.nix;
-            windowrule   = import ./windowrule.nix;
-            bind         = import ./bind.nix args;
-            bindm        = import ./bindm.nix;
-            bindl        = import ./bindl.nix;
+            workspace_rule = import ./workspace_rule.nix;
+            window_rule    = import ./window_rule.nix;
+
+            monitor = extra_args.monitors;
         };
+
+        extraConfig = builtins.readFile ./config.lua + ''
+            hl.bind("SUPER + T", hl.dsp.exec_cmd("${lib.openDesktopEntryCommand config.xdg.desktopEntries.utils}"))
+
+            -- Autostart
+            hl.on("hyprland.start", function ()
+              hl.exec_cmd("i3bar-river")
+              hl.exec_cmd("hyprctl dispatch workspace 2")
+              hl.exec_cmd("hyprctl dispatch workspace 1")
+              hl.exec_cmd("ckb-next -b")
+              hl.exec_cmd("hyprctl dispatch workspace 11")
+              hl.exec_cmd("hyprctl dispatch workspace 1")
+              ${extra_args.extraOnStart}
+            end)
+        '';
     };
     home.packages = with pkgs; [
         brightnessctl
+        hyprshutdown
     ];
 }

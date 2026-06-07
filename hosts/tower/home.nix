@@ -2,36 +2,35 @@
 {
     imports = [
         (import ../../common/core/hyprland {
+            extraOnStart = ''
+                hl.dsp.exec_cmd("thunderbird", { monitor = "HDMI-A-2", workspace = "1" });
+                hl.dsp.exec_cmd("discord", { monitor = "HDMI-A-3", workspace = "11" });
+            '';
+            monitors = [
+                {
+                    output = "HDMI-A-2";
+                    mode = "1920x1080@58"; # 58Hz is to make sure the "Broadcast RGB" property defaults to "Full" to avoid washed out colors on Intel ARC
+                    position = "0x0";
+                    scale = "1";
+                }
+                {
+                    output = "HDMI-A-3";
+                    mode = "1920x1080@58"; # 58Hz is to make sure the "Broadcast RGB" property defaults to "Full" to avoid washed out colors on Intel ARC
+                    position = "auto-right";
+                    scale = "1";
+                }
+                {
+                    output = "";
+                    mode = "preferred";
+                    position = "auto-left";
+                    scale = "1";
+                }
+            ];
             overrideFunc =
                 old:
                 old
                 // {
-                    exec-once = old.exec-once ++ [
-                        # App Autostart
-                        "[monitor HDMI-A-2; workspace 1] thunderbird"
-                        "[monitor HDMI-A-3; workspace 11] discord"
-                    ];
-                    monitorv2 = [
-                        {
-                            output = "HDMI-A-2";
-                            mode = "1920x1080@58"; # 58Hz is to make sure the "Broadcast RGB" property defaults to "Full" to avoid washed out colors on Intel ARC
-                            position = "0x0";
-                            scale = "1";
-                        }
-                        {
-                            output = "HDMI-A-3";
-                            mode = "1920x1080@58"; # 58Hz is to make sure the "Broadcast RGB" property defaults to "Full" to avoid washed out colors on Intel ARC
-                            position = "auto-right";
-                            scale = "1";
-                        }
-                        {
-                            output = "";
-                            mode = "preferred";
-                            position = "auto-left";
-                            scale = "1";
-                        }
-                    ];
-                    cursor.no_hardware_cursors = 1;
+                    config.cursor.no_hardware_cursors = 1;
                 };
         })
         ../../common/core/hyprlock.nix
