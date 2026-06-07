@@ -27,9 +27,6 @@ in
     virtualisation.docker.enable = true;
 
     hardware.ckb-next.enable = true;
-    hardware.ckb-next.package = pkgs.ckb-next.overrideAttrs (old: {
-        cmakeFlags = (old.cmakeFlags or [ ]) ++ [ "-DUSE_DBUS_MENU=0" ];
-    }); # workaround for https://github.com/NixOS/nixpkgs/issues/444209
     hardware.bluetooth.enable = true;
 
     # systemd-boot

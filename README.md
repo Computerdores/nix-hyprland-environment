@@ -32,7 +32,6 @@
 - matugen for material-you color gen / theming
 - themed luks unlock (wait required; see `common/core/plymouth.nix`)
 - nix-run helper: provide all nixpkgs as options in dmenu chooser (wait/work required; wofi is too slow)
-- remove ckb-next workaround (wait required; see `host/laptopA315/configuration.nix`)
 - switch SDDM back to wayland once stable
 
 ## FAQ
