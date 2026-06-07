@@ -30,7 +30,6 @@
 - terminal file picker (one of the [termfilechooser forks](https://github.com/hunkyburrito/xdg-desktop-portal-termfilechooser) maybe)
 - tray icons in bar
 - matugen for material-you color gen / theming
-- themed luks unlock (wait required; see `common/core/plymouth.nix`)
 - nix-run helper: provide all nixpkgs as options in dmenu chooser (wait/work required; wofi is too slow)
 - switch SDDM back to wayland once stable
 

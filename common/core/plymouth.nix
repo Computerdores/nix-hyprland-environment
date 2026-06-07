@@ -13,7 +13,6 @@ args@{ pkgs, ... }:
             theme = "figlet";
         };
 
-        # initrd.systemd.enable = true; # needed for graphical luks unlock - currently somewhat broken
         kernelParams = [
             "splash"
         ];
