@@ -26,12 +26,6 @@
                     scale = "1";
                 }
             ];
-            overrideFunc =
-                old:
-                old
-                // {
-                    config.cursor.no_hardware_cursors = 1;
-                };
         })
         ../../common/core/hyprlock.nix
         ../../common/core/hyprpaper.nix
