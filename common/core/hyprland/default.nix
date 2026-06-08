@@ -38,7 +38,7 @@ in
             gesture      = import ./gestures.nix;
 
             workspace_rule = import ./workspace_rule.nix;
-            window_rule    = import ./window_rule.nix;
+            window_rule    = (import ./window_rule.nix) ++ extra_args.windowRules;
 
             monitor = extra_args.monitors;
         };

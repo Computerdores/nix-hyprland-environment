@@ -11,9 +11,7 @@ lib: {
         type = lib.types.str;
         default = "";
         example = ''hl.exec_cmd("echo hello world");'';
-        description = ''
-            Extra lua code to call on hyprland.start event.
-        '';
+        description = "Extra lua code to call on hyprland.start event.";
     };
     monitors = lib.mkOption {
         type = lib.types.listOf lib.types.attrs;
@@ -27,6 +25,18 @@ lib: {
                     scale = "1";
                 }
             ];
+        '';
+    };
+    windowRules = lib.mkOption {
+        type = lib.types.listOf lib.types.attrs;
+        default = [];
+        example = ''
+            [
+                {
+                    match.class = "discord";
+                    workspace = "11";
+                }
+            ]
         '';
     };
 }

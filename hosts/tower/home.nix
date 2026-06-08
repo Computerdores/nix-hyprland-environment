@@ -26,6 +26,12 @@
                     scale = "1";
                 }
             ];
+            windowRules = [
+                {
+                    match.class = "discord";
+                    workspace = "11";
+                }
+            ];
         })
         ../../common/core/hyprlock.nix
         ../../common/core/hyprpaper.nix
