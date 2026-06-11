@@ -46,6 +46,7 @@
                 "widget.use-xdg-desktop-portal.file-picker" = 1; # 1 = true; 2 = false
                 "privacy.globalprivacycontrol.enabled" = true;
                 "security.default_personal_cert" = "Select Automatically";
+                "pdfjs.defaultZoomValue" = "page-fit";
             };
         };
     };
