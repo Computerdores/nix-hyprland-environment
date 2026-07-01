@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# have to user choose one or more files
 function file-chooser-multi() {
     pwd=$(pwd)
     idir="$1"
@@ -19,17 +20,20 @@ function file-chooser-multi() {
     echo "$output"
 }
 
+# have the user choose one file
 function file-chooser-single() {
     file-chooser-multi $@ | head -n 1
 }
 
+# usage: contained <e> [<0>...<n>]
+# return 0 if any argument "0"..."n" is equal to argument "e"
 function contained {
     target=$1
     shift
     for candidate in "$@"; do
         if [[ "$candidate" == "$target" ]]; then
-            return 1
+            return 0
         fi
     done
-    return 0
+    return 1
 }
