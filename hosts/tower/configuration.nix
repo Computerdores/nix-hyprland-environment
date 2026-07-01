@@ -27,7 +27,10 @@ args@{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, system, username, ...
 
     # networking
     networking = {
-        # firewall.enable = false;
+        firewall = {
+            # enable = false;
+            allowedTCPPorts = [ 1337 ];
+        };
         hostName = "tower";
         networkmanager.enable = true;
         wg-quick.interfaces = import ./wg-quick;
