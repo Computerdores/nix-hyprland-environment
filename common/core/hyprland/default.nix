@@ -50,6 +50,7 @@ in
             hl.on("hyprland.start", function ()
               hl.exec_cmd("i3bar-river")
               hl.exec_cmd("ckb-next -b")
+              hl.exec_cmd("wl-clip-persist --clipboard both")
               ${extra_args.extraOnStart}
             end)
         '';
@@ -57,5 +58,6 @@ in
     home.packages = with pkgs; [
         brightnessctl
         hyprshutdown
+        wl-clip-persist
     ];
 }
