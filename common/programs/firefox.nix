@@ -47,6 +47,7 @@
                 "privacy.globalprivacycontrol.enabled" = true;
                 "security.default_personal_cert" = "Select Automatically";
                 "pdfjs.defaultZoomValue" = "page-fit";
+                "browser.tabs.inTitlebar" = 0; # don't treat the tab bar as client side window decoration
             };
         };
     };
