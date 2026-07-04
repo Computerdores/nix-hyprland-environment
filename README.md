@@ -25,6 +25,7 @@
 - wofi: numpad return always selects top-most option
 - consider ssh connection multiplexing
 - thunderbird xdg base dirs
+- firefox: profile independent config via policies with status "locked"?
 
 ### High Effort / Wait Required
 - terminal file picker (one of the [termfilechooser forks](https://github.com/hunkyburrito/xdg-desktop-portal-termfilechooser) maybe)
