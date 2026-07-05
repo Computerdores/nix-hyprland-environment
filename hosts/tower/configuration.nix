@@ -12,9 +12,6 @@ args@{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, system, username, ...
         ../../common/programs/audio.nix
     ];
 
-    # TODO: remove the following once the default kernel version boots again
-    boot.kernelPackages = pkgs.linuxPackages_6_18; # 6.12.76 and 6.12.78 don't boot and this was the oldest, newer version
-
     hardware.ckb-next.enable = true;
     hardware.ckb-next.package = pkgs.ckb-next.overrideAttrs (old: {
         cmakeFlags = (old.cmakeFlags or [ ]) ++ [ "-DUSE_DBUS_MENU=0" ];
