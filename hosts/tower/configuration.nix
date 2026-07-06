@@ -1,6 +1,11 @@
 args@{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, system, username, ... }:
 
-{
+let
+    user = config.users.users."${username}";
+    uid = user.uid;
+    gid = config.users.groups."${user.group}".gid;
+    tostr = builtins.toString;
+in {
     imports = [
         ./hardware-configuration.nix
         ./intel.nix
@@ -201,6 +206,10 @@ args@{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, system, username, ...
         fsType = "ntfs";
         options = [
             "nofail"
+            "uid=${tostr uid}"
+            "gid=${tostr gid}"
+            "fmask=177" # rw-------
+            "dmask=077" # rwx------
         ];
     };
 
@@ -209,6 +218,10 @@ args@{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, system, username, ...
         fsType = "ntfs";
         options = [
             "nofail"
+            "uid=${tostr uid}"
+            "gid=${tostr gid}"
+            "fmask=177" # rw-------
+            "dmask=077" # rwx------
         ];
     };
 
