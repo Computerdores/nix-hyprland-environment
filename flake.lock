@@ -498,11 +498,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1780858404,
-        "narHash": "sha256-+Nkl/egUwF37p8J4qEMwg3sFSlUTX2qGFwAcFV9SO+c=",
+        "lastModified": 1783713146,
+        "narHash": "sha256-f4dE+MaadVihy30O4khVaIJ9uuXY3L8IfDMNIcvEIm0=",
         "owner": "Computerdores",
         "repo": "i3bar-river",
-        "rev": "47c8cf90d4bc36e9ad092e3974d7992afc80f8af",
+        "rev": "60424e53e6268de1e7172c8cd1f34333faa76f78",
         "type": "github"
       },
       "original": {
