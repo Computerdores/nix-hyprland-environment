@@ -1,8 +1,43 @@
 { pkgs, username, config, ... }:
-{
+let
+    mkPrefs = prefs: builtins.mapAttrs (key: value: { Value = value; Status = "locked"; }) prefs;
+    mkExts = exts: builtins.mapAttrs (key: value: value // {
+        install_url = "https://addons.mozilla.org/firefox/downloads/latest/${key}/latest.xpi";
+    }) exts;
+in {
     programs.firefox = {
         enable = true;
         configPath = "${config.xdg.configHome}/mozilla/firefox";
+        policies = {
+            Preferences = mkPrefs {
+                "browser.backspace_action" = 0;
+                "browser.search.isUS" = false;
+                "browser.tabs.closeWindowWithLastTab" = false;
+                "browser.tabs.inTitlebar" = 0; # don't treat the tab bar as client side window decoration
+                "pdfjs.defaultZoomValue" = "page-fit";
+                "privacy.globalprivacycontrol.enabled" = true;
+                "security.default_personal_cert" = "Select Automatically";
+                "widget.use-xdg-desktop-portal.file-picker" = 1; # 1 = true; 2 = false
+            };
+            Homepage = {
+                URL = "about:home";
+                StartPage = "previous-session"; # TODO: this isn't locked for some reason
+                Locked = true;
+            };
+            PasswordManagerEnabled = false;
+            PrimaryPassword = false;
+            AutofillAddressEnabled = false;
+            AutofillCreditCardEnabled = false;
+            ExtensionSettings = mkExts {
+                "de-DE@dictionaries.addons.mozilla.org" = {
+                    installation_mode = "force_installed";
+                };
+                "uBlock0@raymondhill.net" = {
+                    installation_mode = "force_installed";
+                    private_browsing = true;
+                };
+            };
+        };
         profiles."${username}" = {
             id = 0;
             name = username;
@@ -35,19 +70,6 @@
                     updateInterval = 24 * 60 * 60 * 1000;
                     definedAliases = [ "@nw" ];
                 };
-            };
-            settings = {
-                "browserRestoreSession" = true;
-                "browser.startup.homepage" = "about:home";
-                "signon.rememberSignons" = false;
-                "browser.search.isUS" = false;
-                "browser.backspace_action" = 0;
-                "browser.tabs.closeWindowWithLastTab" = false;
-                "widget.use-xdg-desktop-portal.file-picker" = 1; # 1 = true; 2 = false
-                "privacy.globalprivacycontrol.enabled" = true;
-                "security.default_personal_cert" = "Select Automatically";
-                "pdfjs.defaultZoomValue" = "page-fit";
-                "browser.tabs.inTitlebar" = 0; # don't treat the tab bar as client side window decoration
             };
         };
     };
