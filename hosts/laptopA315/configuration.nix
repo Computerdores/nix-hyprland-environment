@@ -15,6 +15,7 @@ in
         ../../common/programs/sleep-inhibit.nix
         ../../common/programs/audio.nix
         ../../common/rpi-udev.nix
+        ../../common/core/nix.nix
     ];
 
     swapDevices = [
@@ -129,16 +130,6 @@ in
     };
 
     nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
-    nix.settings = {
-        experimental-features = [
-            "nix-command"
-            "flakes"
-        ];
-        substituters = [ "https://hyprland.cachix.org" ];
-        trusted-public-keys = [ "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" ];
-    };
-
-    nixpkgs.config.allowUnfree = true;
 
     # adds a list of installed system packages at /etc/current-system-packages
     # from https://www.reddit.com/r/NixOS/comments/fsummx/comment/kt9fb74/
