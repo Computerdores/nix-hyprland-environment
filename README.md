@@ -24,7 +24,6 @@
 - Thunderbird sent email duplication
 - wofi: numpad return always selects top-most option
 - consider ssh connection multiplexing
-- thunderbird xdg base dirs
 
 ### High Effort / Wait Required
 - terminal file picker (one of the [termfilechooser forks](https://github.com/hunkyburrito/xdg-desktop-portal-termfilechooser) maybe)
@@ -32,6 +31,9 @@
 - matugen for material-you color gen / theming
 - nix-run helper: provide all nixpkgs as options in dmenu chooser (wait/work required; wofi is too slow)
 - switch SDDM back to wayland once stable
+- empty `thunderbird` dir keeps spawning: https://bugzilla.mozilla.org/show_bug.cgi?id=2007074
+- thunderbird xdg base dirs: https://bugzilla.mozilla.org/show_bug.cgi?id=735285
+- firefox xdg base dirs: https://bugzilla.mozilla.org/show_bug.cgi?id=2005167
 
 ## FAQ
 > The `nixos-rebuild` complains that home-manager couldn't start and that certain files should be removed or the backup file extension set, but it doesn't say which files are the problem. How do I find those files?
