@@ -48,6 +48,7 @@
                 flakeDir = ./.;
                 hyprland-pkgs = inputs.hyprland.packages.${system};
                 username = "jann";
+                nixpkgs-version = lib.fileContents "${nixpkgs}/.version";
                 pkgsUnstable = import nixpkgs-unstable {
                     inherit system;
                     config.allowUnfree = true;

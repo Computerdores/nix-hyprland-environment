@@ -1,4 +1,4 @@
-{ pkgs, username, config, ... }:
+{ pkgs, username, config, nixpkgs-version, ... }:
 let
     mkPrefs = prefs: builtins.mapAttrs (key: value: { Value = value; Status = "locked"; }) prefs;
     mkExts = exts: builtins.mapAttrs (key: value: value // {
@@ -57,7 +57,7 @@ in {
                 "Home Manager Options" = {
                     urls = [
                         {
-                            template = "https://home-manager-options.extranix.com/?query={searchTerms}&release=release-25.05";
+                            template = "https://home-manager-options.extranix.com/?query={searchTerms}&release=release-${nixpkgs-version}";
                         }
                     ];
                     icon = "https://home-manager-options.extranix.com/images/favicon.png";
