@@ -12,6 +12,7 @@ in {
             Preferences = mkPrefs {
                 "browser.backspace_action" = 0;
                 "browser.search.isUS" = false;
+                "browser.startup.page" = 3; # enable session restore
                 "browser.tabs.closeWindowWithLastTab" = false;
                 "browser.tabs.inTitlebar" = 0; # don't treat the tab bar as client side window decoration
                 "pdfjs.defaultZoomValue" = "page-fit";
@@ -21,7 +22,6 @@ in {
             };
             Homepage = {
                 URL = "about:home";
-                StartPage = "previous-session"; # TODO: this isn't locked for some reason
                 Locked = true;
             };
             PasswordManagerEnabled = false;
