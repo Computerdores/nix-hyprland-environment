@@ -43,7 +43,7 @@
         let
             lib = import ./lib.nix (nixpkgs.lib.extend (_: _: home-manager.lib));
             system = "x86_64-linux";
-            specialArgs = {
+            specialArgs_ = {
                 inherit inputs self lib system;
                 flakeDir = ./.;
                 hyprland-pkgs = inputs.hyprland.packages.${system};
@@ -54,10 +54,12 @@
                     config.allowUnfree = true;
                 };
             };
-            fullArgs = specialArgs // {
+            fullArgs = specialArgs_ // {
                 pkgs = import nixpkgs { inherit system; };
             };
-            mkSystem = host: nixpkgs.lib.nixosSystem {
+            mkSystem = host: let
+                specialArgs = specialArgs_ // { inherit host; };
+            in nixpkgs.lib.nixosSystem {
                 inherit system specialArgs;
                 modules = [
                     ./hosts/${host}/configuration.nix

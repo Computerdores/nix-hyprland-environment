@@ -34,6 +34,7 @@
 - empty `thunderbird` dir keeps spawning: https://bugzilla.mozilla.org/show_bug.cgi?id=2007074
 - thunderbird xdg base dirs: https://bugzilla.mozilla.org/show_bug.cgi?id=735285
 - firefox xdg base dirs: https://bugzilla.mozilla.org/show_bug.cgi?id=2005167
+- hyprland workspace rules default property bug (https://github.com/hyprwm/Hyprland/discussions/15014); also noted in workspace rules
 
 ## FAQ
 > The `nixos-rebuild` complains that home-manager couldn't start and that certain files should be removed or the backup file extension set, but it doesn't say which files are the problem. How do I find those files?
