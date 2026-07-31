@@ -32,7 +32,7 @@ in {
     networking = {
         firewall = {
             # enable = false;
-            allowedTCPPorts = [ 1337 ];
+            allowedTCPPorts = [ 8000 1337 ];
         };
         hostName = "tower";
         networkmanager.enable = true;

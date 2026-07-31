@@ -38,6 +38,10 @@ in
 
     # networking
     networking = {
+        firewall = {
+            # enable = false;
+            allowedTCPPorts = [ 8000 1337 ];
+        };
         hostName = "laptopA315";
         networkmanager = {
             enable = true;
