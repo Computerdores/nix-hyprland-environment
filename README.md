@@ -13,7 +13,9 @@
 - sddm virtual keyboard doesn't do anything
 - localsend: sending from laptop to phone is broken in weird way (tries to connect to NAS IP for some fkn reason)
 - make plymouth-figlet derivation into module that adds theme package to `boot.plymouth.themePackages` and configures derivation when `boot.plymouth.theme == "figlet"`
-- ghidra: fix debugger
+- ghidra
+  - working debugger
+  - swift setup (having `swift` as a dep in a devshell works for now)
 - nwg-displays?
 - nix profiles?
 - vault for .ssh instead of individual passwords (gocryptfs)
