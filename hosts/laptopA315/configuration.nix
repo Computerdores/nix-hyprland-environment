@@ -176,6 +176,11 @@ in
         nerd-fonts.jetbrains-mono
     ];
 
+    programs.binary-ninja = {
+        enable = true;
+        package = pkgs.binary-ninja-personal-wayland;
+    };
+
     programs.git = {
         enable = true;
         lfs.enable = true;
