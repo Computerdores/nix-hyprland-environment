@@ -76,10 +76,18 @@ in {
             "networkmanager"
             "wheel"
             "nixos-config"
+            "libvirtd"
         ]; # wheel is for enabling sudo
         initialPassword = "1";
         uid = 1000;
     };
+
+    # virtualisation
+    virtualisation = {
+        libvirtd.enable = true;
+        spiceUSBRedirection.enable = true;
+    };
+    programs.virt-manager.enable = true;
 
     # fix qt apps under sudo
     security.sudo.extraConfig = ''
@@ -151,6 +159,7 @@ in {
         python3
         libqalculate
         (prismlauncher.override { })
+        passt  # needed for virtualisation
     ];
 
     fonts.packages = with pkgs; [
