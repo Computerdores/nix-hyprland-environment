@@ -476,11 +476,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1783713146,
-        "narHash": "sha256-f4dE+MaadVihy30O4khVaIJ9uuXY3L8IfDMNIcvEIm0=",
+        "lastModified": 1786296819,
+        "narHash": "sha256-Fi1s0WLxzDvlzXnluXEameyU7ArggY4SF7U+oE6bbcw=",
         "owner": "Computerdores",
         "repo": "i3bar-river",
-        "rev": "60424e53e6268de1e7172c8cd1f34333faa76f78",
+        "rev": "72edbacced800467e59539396ed011eb63142e4a",
         "type": "github"
       },
       "original": {
@@ -781,11 +781,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1752288212,
-        "narHash": "sha256-f2PMqtf61mWAM11QoIfGv3hjD2AsJrij4FCzftepuaE=",
+        "lastModified": 1786247265,
+        "narHash": "sha256-cVTcTqAhzSNMOVddtBhFpuv+Vx6/SgrhgZWJiI61H24=",
         "owner": "oxalica",
         "repo": "rust-overlay",
-        "rev": "678296525a4cce249c608749b171d0b2ceb8b2ff",
+        "rev": "6df7076ea0f5697e3242719a4c71211f00411cf5",
         "type": "github"
       },
       "original": {
