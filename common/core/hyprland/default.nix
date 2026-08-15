@@ -51,6 +51,7 @@ in
               hl.exec_cmd("i3bar-river")
               hl.exec_cmd("ckb-next -b")
               hl.exec_cmd("wl-clip-persist --clipboard both")
+              hl.exec_cmd("ksecretd")
               ${extra_args.extraOnStart}
             end)
         '';
@@ -59,5 +60,6 @@ in
         brightnessctl
         hyprshutdown
         wl-clip-persist
+        kdePackages.kwallet
     ];
 }
