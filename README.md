@@ -26,6 +26,8 @@
 - Thunderbird sent email duplication
 - wofi: numpad return always selects top-most option
 - consider ssh connection multiplexing
+- ksecretd: fix interaction with feishin/test generally
+- build/find service for markdown fuse mount of webdav notes
 
 ### High Effort / Wait Required
 - terminal file picker (one of the [termfilechooser forks](https://github.com/hunkyburrito/xdg-desktop-portal-termfilechooser) maybe)
