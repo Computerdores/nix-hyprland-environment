@@ -101,10 +101,6 @@ in {
         openFirewall = true;
     };
 
-    services.tailscale = {
-        enable = true;
-    };
-
     programs.ssh.startAgent = true;
     services.openssh = {
         enable = true;

@@ -110,10 +110,6 @@ in
         Defaults env_keep += "WAYLAND_DISPLAY XDG_RUNTIME_DIR DISPLAY XAUTHORITY"
     '';
 
-    services.tailscale = {
-        enable = true;
-    };
-
     programs.ssh.startAgent = true;
     services.openssh = {
         enable = true;
