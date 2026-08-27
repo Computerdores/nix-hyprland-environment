@@ -14,6 +14,7 @@ in
         ../../common/programs/nix-ld.nix
         ../../common/programs/sleep-inhibit.nix
         ../../common/programs/audio.nix
+        ../../common/programs/kwallet.nix
         ../../common/rpi-udev.nix
         ../../common/core/nix.nix
     ];

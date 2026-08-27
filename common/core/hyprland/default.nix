@@ -51,7 +51,7 @@ in
               hl.exec_cmd("i3bar-river")
               hl.exec_cmd("ckb-next -b")
               hl.exec_cmd("wl-clip-persist --clipboard both")
-              hl.exec_cmd("ksecretd")
+              hl.exec_cmd("${pkgs.kdePackages.kwallet-pam}/libexec/pam_kwallet_init") -- WAYLAND_DISPLAY and PAM_KWALLET5_LOGIN don't get set properly, thus can't use systemd service here
               ${extra_args.extraOnStart}
             end)
         '';
@@ -60,6 +60,5 @@ in
         brightnessctl
         hyprshutdown
         wl-clip-persist
-        kdePackages.kwallet
     ];
 }
