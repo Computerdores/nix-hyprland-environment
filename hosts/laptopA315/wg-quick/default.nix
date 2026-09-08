@@ -2,7 +2,6 @@ let
     dir = "/etc/nixos/hosts/laptopA315/wg-quick";
     names = [
         "cyberklub-admin"
-        "crypto-vpn"
         "edge"
     ];
 in
