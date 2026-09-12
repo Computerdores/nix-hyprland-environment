@@ -41,11 +41,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1785631830,
-        "narHash": "sha256-d+/BLWg/8mn/l7dS6Un5ExFd8DPQps3/h0dW65OkMpA=",
+        "lastModified": 1789219904,
+        "narHash": "sha256-EpJ2Pun6wJkhf8shnNe9BqJEHMQBsfOoOQWjeuNGIUw=",
         "owner": "jchv",
         "repo": "nix-binary-ninja",
-        "rev": "7f14e71bd71dae6759bf28d0fd0697a716bff1fb",
+        "rev": "140c24261911bcd14838c9d33d9445f0194f60c5",
         "type": "github"
       },
       "original": {
