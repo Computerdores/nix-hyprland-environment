@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
-loginctl lock-session
+source ./lib.sh
+
+lock-session

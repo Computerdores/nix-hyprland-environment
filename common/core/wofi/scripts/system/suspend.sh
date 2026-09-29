@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
-env > /tmp/script-env.txt
-touch /tmp/test
+source ./lib.sh
+
+lock-session
 systemctl suspend

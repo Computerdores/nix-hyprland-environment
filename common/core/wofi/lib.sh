@@ -37,3 +37,7 @@ function contained {
     done
     return 1
 }
+
+function lock-session() {
+    pidof hyprlock || hyprlock &
+}
