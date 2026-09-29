@@ -31,6 +31,7 @@
 - vim bindings for everything?
 - bitwarden client for hyprland
 - portal escape notifications
+- imperative management of wg
 
 ### High Effort / Wait Required
 - terminal file picker (one of the [termfilechooser forks](https://github.com/hunkyburrito/xdg-desktop-portal-termfilechooser) maybe)
