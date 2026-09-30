@@ -7,7 +7,7 @@ function pick_script() {
         # list directories as `dirname/`
         find "$1" -mindepth 1 -maxdepth 1 -type d -printf "%f/\n"
         # list .sh files without the suffix
-        find "$1" -maxdepth 1 -name '*.sh' -type f -executable -printf "%f\n" | sed "s/.sh//"
+        find "$1" -maxdepth 1 -name '*.sh' -type f -executable -printf "%f\n" | sed "s/\.sh$//"
     } | wofi -d)
 
     if [[ -z "$selection" ]]; then
