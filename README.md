@@ -79,7 +79,13 @@ Run `sudo -E nixos-rebuild ...` once instead, that way the `SSH_AUTH_SOCK` envir
 
 > Connecting to this device from devices on a network doesn't work if a wg-quick VPN to the same network is configured.
 
-Not quite sure on the details of why this happens, but adding the following as a `PreUp` directive in the vpn `.conf` should fix it: `! ip addr | grep -P '192\.168\.188\.\d+/24'` (the regex must match any IP your device might get on that network).
+This has something to do with the way the VPN is setup.
+I haven't investigated a more convenient fix, but disabling the wg-quick unit / taking down the VPN using `wg` fixes it temporarily.
+
+> How do I delete an old generation?
+
+First, you can list the existing generations using `nixos-rebuild list-generations`.
+After picking the index(es) of the generation(s) you to delete, you can run: `sudo nix-env --profile /nix/var/nix/profiles/system --delete-generations <idx0> <idx1> ...`.
 
 ## Packages
 - [sddm-astronaut-theme](https://github.com/Keyitdev/sddm-astronaut-theme) (a series of SDDM themes by [KeyitDev](https://github.com/Keyitdev); self packaged)
