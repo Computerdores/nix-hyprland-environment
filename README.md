@@ -28,7 +28,6 @@
 - vim bindings for everything?
 - bitwarden client for hyprland
 - portal escape notifications
-- imperative management of wg
 - replace wofi (with fuzzel?)
 
 ### High Effort / Wait Required
@@ -83,6 +82,12 @@ I haven't investigated a more convenient fix, but disabling the wg-quick unit / 
 
 First, you can list the existing generations using `nixos-rebuild list-generations`.
 After picking the index(es) of the generation(s) you to delete, you can run: `sudo nix-env --profile /nix/var/nix/profiles/system --delete-generations <idx0> <idx1> ...`.
+
+> Where do you store your wireguard configs?
+
+I store them in `/etc/wireguard`.
+There is no particular reason to choose this location other than convention.
+Also, I would recommend access permissions of `r--------`, because these files contain secret key material.
 
 ## Packages
 - [sddm-astronaut-theme](https://github.com/Keyitdev/sddm-astronaut-theme) (a series of SDDM themes by [KeyitDev](https://github.com/Keyitdev); self packaged)

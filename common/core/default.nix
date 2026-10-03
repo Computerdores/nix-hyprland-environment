@@ -1,4 +1,4 @@
-{ inputs, lib, pkgs, system, username, ... }:
+{ inputs, lib, pkgs, system, host, username, ... }:
 
 {
     imports = [
@@ -21,6 +21,7 @@
 
     # networking
     networking = {
+        hostName = host;
         networkmanager.enable = true;
         firewall = {
             allowedTCPPorts = [ 8000 1337 ];
@@ -111,7 +112,7 @@
         signal-desktop
         python3
         file
-        libqalculate
+        wireguard-tools
     ];
 
     fonts.packages = with pkgs; [

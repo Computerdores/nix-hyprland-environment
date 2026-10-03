@@ -27,7 +27,6 @@ in
 
     # networking
     networking = {
-        hostName = "laptopA315";
         networkmanager = {
             settings.connectivity = {
                 uri = "http://detectportal.firefox.com/canonical.html";
@@ -40,7 +39,6 @@ in
                 }
             ];
         };
-        wg-quick.interfaces = import ./wg-quick;
     };
 
     services.udev.extraHwdb = ''

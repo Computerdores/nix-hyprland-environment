@@ -17,12 +17,6 @@ in {
         cmakeFlags = (old.cmakeFlags or [ ]) ++ [ "-DUSE_DBUS_MENU=0" ];
     }); # workaround for https://github.com/NixOS/nixpkgs/issues/444209
 
-    # networking
-    networking = {
-        hostName = "tower";
-        wg-quick.interfaces = import ./wg-quick;
-    };
-
     users.users."${username}".extraGroups = [ "libvirtd" ];
 
     # virtualisation
