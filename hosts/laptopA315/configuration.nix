@@ -6,6 +6,7 @@ in
 {
     imports = [
         ./hardware-configuration.nix
+        ../../common/core/ssh-luks-unlock.nix
         ../../common/programs/nmtui-themed.nix
         ../../common/core/sddm.nix
         ../../common/core/plymouth.nix
