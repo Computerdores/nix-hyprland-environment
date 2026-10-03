@@ -35,6 +35,7 @@ in {
         firewall = {
             # enable = false;
             allowedTCPPorts = [ 8000 1337 ];
+            allowedUDPPorts = [ 9 ];
         };
         hostName = "tower";
         networkmanager.enable = true;
@@ -43,6 +44,7 @@ in {
             192.168.188.159 edge
             192.168.188.49  laptopA315
         '';
+        interfaces.enp34s0.wakeOnLan.enable = true;  # also requires UDP port 9 exception for firewall
     };
 
     # area info

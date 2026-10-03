@@ -7,6 +7,7 @@
             message = "systemd required in initrd";
         }
     ];
+    # See: https://wiki.nixos.org/wiki/Remote_disk_unlocking
     boot.initrd = {
         availableKernelModules = [ "r8169" ]; # support for network card
         systemd = {
