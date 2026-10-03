@@ -104,6 +104,9 @@ in
         ]; # wheel is for enabling sudo
         initialPassword = "1";
         uid = 1000;
+        openssh.authorizedKeys.keys = [
+            "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMRMNRuoiANZpFGcgzVdYvwfpNF839KRyeLVzJA0s5jQ jann@tower"
+        ];
     };
 
     # fix qt apps under sudo

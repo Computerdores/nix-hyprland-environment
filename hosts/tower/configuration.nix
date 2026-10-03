@@ -9,6 +9,7 @@ in {
     imports = [
         ./hardware-configuration.nix
         ./intel.nix
+        ../../common/core/ssh-luks-unlock.nix
         ../../common/core/sddm.nix
         ../../common/programs/thunderbird.nix
         ../../common/programs/nmtui-themed.nix
@@ -81,6 +82,9 @@ in {
         ]; # wheel is for enabling sudo
         initialPassword = "1";
         uid = 1000;
+        openssh.authorizedKeys.keys = [
+            "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMRMNRuoiANZpFGcgzVdYvwfpNF839KRyeLVzJA0s5jQ jann@tower"
+        ];
     };
 
     # virtualisation
