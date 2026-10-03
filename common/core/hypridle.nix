@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }:
+{ pkgs, ... }:
 
 let
     brightness_cmd = "${pkgs.brightnessctl}/bin/brightnessctl";

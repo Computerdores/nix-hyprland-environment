@@ -1,6 +1,6 @@
-# See: https://wiki.nixos.org/wiki/Intel_Graphics
-{ config, lib, pkgs, ... }:
+{ pkgs, ... }:
 
+# See: https://wiki.nixos.org/wiki/Intel_Graphics
 {
     services.xserver.videoDrivers = [ "modesetting" ];
     hardware.graphics = {

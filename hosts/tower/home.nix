@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, username, ... }:
+{ pkgs, username, ... }:
 {
     imports = [
         (import ../../common/core/hyprland {
