@@ -74,7 +74,8 @@
         initialPassword = "1";
         uid = 1000;
         openssh.authorizedKeys.keys = [
-            "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMRMNRuoiANZpFGcgzVdYvwfpNF839KRyeLVzJA0s5jQ jann@tower"
+            "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMRMNRuoiANZpFGcgzVdYvwfpNF839KRyeLVzJA0s5jQ jann@laptopA315"
+            "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGNElZg5Rl4XVE5YOc6BBLAjSbzG1pMpS+slOgTbcjbe jann@tower"
         ];
     };
 
