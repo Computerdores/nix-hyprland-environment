@@ -1,4 +1,4 @@
-args@{ inputs, config, lib, pkgs, hyprland-pkgs, flakeDir, system, username, ... }:
+args@{ inputs, pkgs, hyprland-pkgs, system, ... }:
 
 let
     portal-escape = inputs.portal-escape.packages.${system}.default;
@@ -6,18 +6,10 @@ in
 {
     imports = [
         ./hardware-configuration.nix
-        ../../common/core/ssh-luks-unlock.nix
-        ../../common/programs/nmtui-themed.nix
-        ../../common/core/sddm.nix
+        ../../common/core
         ../../common/core/plymouth.nix
-        ../../common/programs/thunderbird.nix
         ../../common/programs/wireshark.nix
-        ../../common/programs/nix-ld.nix
-        ../../common/programs/sleep-inhibit.nix
-        ../../common/programs/audio.nix
-        ../../common/programs/kwallet.nix
-        ../../common/rpi-udev.nix
-        ../../common/core/nix.nix
+        ../../common/udev.nix
     ];
 
     swapDevices = [
@@ -30,23 +22,13 @@ in
     virtualisation.docker.enable = true;
 
     hardware.ckb-next.enable = true;
-    hardware.bluetooth.enable = true;
-
-    # systemd-boot
-    boot.loader.systemd-boot.enable = true;
-    boot.loader.efi.canTouchEfiVariables = true;
 
     boot.kernelModules = [ "cdc_acm" ];
 
     # networking
     networking = {
-        firewall = {
-            # enable = false;
-            allowedTCPPorts = [ 8000 1337 ];
-        };
         hostName = "laptopA315";
         networkmanager = {
-            enable = true;
             settings.connectivity = {
                 uri = "http://detectportal.firefox.com/canonical.html";
                 response = ''<meta http-equiv="refresh" content="0;url=https://support.mozilla.org/kb/captive-portal"/>'';
@@ -59,67 +41,12 @@ in
             ];
         };
         wg-quick.interfaces = import ./wg-quick;
-        extraHosts = ''
-            192.168.188.159 edge
-            192.168.188.47  tower
-        '';
     };
 
-    # area info
-    time.timeZone = "Europe/Berlin";
-    i18n = {
-        defaultLocale = "en_GB.UTF-8";
-        extraLocaleSettings = {
-            LC_ADDRESS = "de_DE.UTF-8";
-            LC_IDENTIFICATION = "de_DE.UTF-8";
-            LC_MEASUREMENT = "de_DE.UTF-8";
-            LC_MONETARY = "de_DE.UTF-8";
-            LC_NAME = "de_DE.UTF-8";
-            LC_NUMERIC = "de_DE.UTF-8";
-            LC_PAPER = "de_DE.UTF-8";
-            LC_TELEPHONE = "de_DE.UTF-8";
-            LC_TIME = "de_DE.UTF-8";
-        };
-    };
-
-    services.xserver.xkb = {
-        layout = "de";
-        variant = "nodeadkeys";
-    };
     services.udev.extraHwdb = ''
         evdev:input:b0011v0001p0001
          KEYBOARD_KEY_71=mute
     '';
-
-    console.keyMap = "de";
-
-    # users
-    users.groups.nixos-config = { };
-    users.users."${username}" = {
-        isNormalUser = true;
-        description = "Jann Stute";
-        extraGroups = [
-            "networkmanager"
-            "wheel"
-            "nixos-config"
-        ]; # wheel is for enabling sudo
-        initialPassword = "1";
-        uid = 1000;
-        openssh.authorizedKeys.keys = [
-            "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMRMNRuoiANZpFGcgzVdYvwfpNF839KRyeLVzJA0s5jQ jann@tower"
-        ];
-    };
-
-    # fix qt apps under sudo
-    security.sudo.extraConfig = ''
-        Defaults env_keep += "WAYLAND_DISPLAY XDG_RUNTIME_DIR DISPLAY XAUTHORITY"
-    '';
-
-    programs.ssh.startAgent = true;
-    services.openssh = {
-        enable = true;
-        settings.PasswordAuthentication = false;
-    };
 
     security.pam.services.hyprlock = { };
     programs.hyprlock = {
@@ -136,68 +63,9 @@ in
 
     nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
 
-    # adds a list of installed system packages at /etc/current-system-packages
-    # from https://www.reddit.com/r/NixOS/comments/fsummx/comment/kt9fb74/
-    environment.etc."current-system-packages".text =
-        let
-            packages = builtins.map (p: "${p.name}") config.environment.systemPackages;
-            sortedUnique = builtins.sort builtins.lessThan (pkgs.lib.lists.unique packages);
-            formatted = builtins.concatStringsSep "\n" sortedUnique;
-        in
-        formatted;
-
-    environment.variables = {
-        WP = "/etc/nixos/common/wallpapers";
-    };
-
     # other software
     environment.systemPackages = with pkgs; [
-        inputs.rose-pine-hyprcursor.packages.${system}.default
-        rose-pine-cursor
-        tldr
-        tree
-        btop
-        fastfetch
-        inputs.pwndbg.packages.${system}.default
-        hyprshot
-        bluetuith
-        zip
-        unzip
-        dig
-        (lib.gtkEnablePortals pkgs pkgs.localsend)
-        signal-desktop
-        file
-        python3
-        libqalculate
     ];
-
-    fonts.packages = with pkgs; [
-        font-awesome
-        noto-fonts
-        nerd-fonts.jetbrains-mono
-    ];
-
-    programs.binary-ninja = {
-        enable = true;
-        package = pkgs.binary-ninja-personal-wayland;
-    };
-
-    programs.git = {
-        enable = true;
-        lfs.enable = true;
-        config = {
-            init = {
-                defaultBranch = "main";
-            };
-        };
-    };
-
-    programs.ghidra = {
-        enable = true;
-        gdb = true;
-    };
-
-    programs.kdeconnect.enable = true;
 
     # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
     system.stateVersion = "24.05"; # don't touch
