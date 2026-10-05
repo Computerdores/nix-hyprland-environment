@@ -6,7 +6,7 @@ in
 {
     imports = [
         ./hardware-configuration.nix
-        ../../common/core
+        ../../common/core/configuration.nix
         ../../common/core/plymouth.nix
         ../../common/programs/wireshark.nix
         ../../common/udev.nix

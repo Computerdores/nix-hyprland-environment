@@ -9,7 +9,7 @@ in {
     imports = [
         ./hardware-configuration.nix
         ./intel.nix
-        ../../common/core
+        ../../common/core/configuration.nix
     ];
 
     hardware.ckb-next.enable = true;
