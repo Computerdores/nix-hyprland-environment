@@ -649,11 +649,11 @@
     },
     "private-overlay": {
       "locked": {
-        "lastModified": 1783722391,
-        "narHash": "sha256-4nTt1n7hebkLvfMa3KDpx0EZ+XzcpRf/entRIPRTOy0=",
+        "lastModified": 1791193392,
+        "narHash": "sha256-mgywxnF+t7XzAtpszJh1fjTZNgWbomLxN8GC+r85uRE=",
         "ref": "refs/heads/main",
-        "rev": "6110b379b163b0f88f20214ca848ae78bb30a366",
-        "revCount": 5,
+        "rev": "582750cdfb65fb6e6489bf52cdfb9beaebf91ca0",
+        "revCount": 6,
         "type": "git",
         "url": "ssh://git@github.com/Computerdores/nixos-private.git"
       },

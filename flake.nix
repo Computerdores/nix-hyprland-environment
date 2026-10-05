@@ -85,6 +85,7 @@
         {
             nixosConfigurations.laptopA315 = mkSystem "laptopA315";
             nixosConfigurations.tower = mkSystem "tower";
+            nixosConfigurations.laptopX360 = mkSystem "laptopX360";
         }
         // (import ./shells fullArgs);
 }
