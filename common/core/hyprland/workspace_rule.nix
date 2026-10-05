@@ -1,7 +1,11 @@
 # https://wiki.hypr.land/Configuring/Workspace-Rules/
 { host, ... }:
 let
-    m0 = if host == "laptopA315" then "eDP-1" else (if host == "tower" then "HDMI-A-2" else "0"); # TODO: this is a workaround, remove once https://github.com/hyprwm/Hyprland/discussions/15014 is fixed; also see readme
+    m0 = {
+        "laptopA315" = "eDP-1";
+        "tower" = "HDMI-A-2";
+        "laptopX360" = "eDP-1";
+    }."${host}" or "0";
     m1 = "1";
 in [
     {
