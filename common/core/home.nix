@@ -4,7 +4,7 @@
         ../../common/core/hyprlock.nix
         ../../common/core/hyprpaper.nix
         ../../common/core/i3bar-river
-        ../../common/core/wofi
+        ../../common/core/fuzzel
         ../../common/core/hypridle.nix
         ../../common/core/dunst.nix
         ../../common/programs/kitty.nix

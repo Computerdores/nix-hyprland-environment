@@ -21,20 +21,18 @@
 - vault for .ssh instead of individual passwords (gocryptfs)
 - Thunderbird notifications
 - Thunderbird sent email duplication
-- wofi: numpad return always selects top-most option
 - consider ssh connection multiplexing
 - ksecretd: fix interaction with feishin/test generally
 - build/find service for markdown fuse mount of webdav notes
 - vim bindings for everything?
 - bitwarden client for hyprland
 - portal escape notifications
-- replace wofi (with fuzzel?)
+- nix-run helper: provide all nixpkgs as options in dmenu chooser
 
 ### High Effort / Wait Required
 - terminal file picker (one of the [termfilechooser forks](https://github.com/hunkyburrito/xdg-desktop-portal-termfilechooser) maybe)
 - tray icons in bar
 - matugen for material-you color gen / theming
-- nix-run helper: provide all nixpkgs as options in dmenu chooser (wait/work required; wofi is too slow)
 - switch SDDM back to wayland once stable
 - empty `thunderbird` dir keeps spawning: https://bugzilla.mozilla.org/show_bug.cgi?id=2007074
 - thunderbird xdg base dirs: https://bugzilla.mozilla.org/show_bug.cgi?id=735285

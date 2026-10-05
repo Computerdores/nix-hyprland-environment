@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-exec &>> /tmp/wofi-utils-$(date +%Y%m%d_%H%M%S).log
+# exec &>> /tmp/fuzzel-utils-$(date +%Y%m%d_%H%M%S).log
 
 function pick_script() {
     selection=$({
@@ -8,7 +8,7 @@ function pick_script() {
         find "$1" -mindepth 1 -maxdepth 1 -type d -printf "%f/\n"
         # list .sh files without the suffix
         find "$1" -maxdepth 1 -name '*.sh' -type f -executable -printf "%f\n" | sed "s/\.sh$//"
-    } | wofi -d)
+    } | fuzzel --dmenu)
 
     if [[ -z "$selection" ]]; then
         echo nothing selected

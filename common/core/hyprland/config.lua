@@ -1,6 +1,6 @@
 local terminal    = "kitty"
 local fileManager = terminal .. " yazi"
-local menu        = "wofi --show drun"
+local menu        = "fuzzel"
 
 -- general binds
 hl.bind("SUPER + Q",             hl.dsp.exec_cmd(terminal))
