@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, host, ... }:
 let
     utils = pkgs.runCommand "utils" { } ''
         mkdir -p $out
@@ -19,7 +19,7 @@ in
         enable = true;
         settings = {
             main = {
-                font = "JetBrainsMono Nerd Font:size=9";
+                font = "JetBrainsMono Nerd Font:size=${if host == "tower" then "12" else "9"}";
                 show-actions = true;
                 width = 75;
                 horizontal-pad = 15;
