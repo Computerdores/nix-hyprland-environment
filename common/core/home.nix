@@ -10,7 +10,7 @@
         ../../common/programs/kitty.nix
         ../../common/programs/firefox.nix
         ../../common/programs/vscode.nix
-        ../../common/programs/neovim
+        ../../common/programs/nvim
         ../../common/programs/yazi.nix
         ../../common/programs/bash
         ../../common/programs/fastfetch.nix
