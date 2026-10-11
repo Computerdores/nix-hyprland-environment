@@ -104,7 +104,6 @@
         btop
         fastfetch
         inputs.pwndbg.packages.${system}.default
-        hyprshot
         bluetuith
         zip
         unzip

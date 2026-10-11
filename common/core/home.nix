@@ -7,6 +7,8 @@
         ../../common/core/fuzzel
         ../../common/core/hypridle.nix
         ../../common/core/dunst.nix
+        ./hyprshot.nix
+        ./xdg-user-dirs.nix
         ../../common/programs/kitty.nix
         ../../common/programs/firefox.nix
         ../../common/programs/vscode.nix

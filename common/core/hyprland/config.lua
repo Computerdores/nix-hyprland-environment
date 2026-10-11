@@ -12,7 +12,7 @@ hl.bind("SUPER + V",             hl.dsp.window.float())
 hl.bind("SUPER + R",             hl.dsp.exec_cmd(menu))
 hl.bind("SUPER + P",             hl.dsp.window.pseudo()) -- dwindle
 hl.bind("SUPER + N",             hl.dsp.layout("togglesplit")) -- dwindle
-hl.bind("SUPER + Y",             hl.dsp.exec_cmd("hyprshot -o ~/pictures -m region"))
+hl.bind("SUPER + Y",             hl.dsp.exec_cmd("hyprshot -m region"))
 hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl s 5%-"))
 hl.bind("XF86MonBrightnessUp",   hl.dsp.exec_cmd("brightnessctl s +5%"))
 
