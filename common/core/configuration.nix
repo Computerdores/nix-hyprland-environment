@@ -2,15 +2,15 @@
 
 {
     imports = [
-        ../../common/core/ssh-luks-unlock.nix
-        ../../common/core/sddm.nix
-        ../../common/programs/thunderbird.nix
-        ../../common/programs/nmtui-themed.nix
-        ../../common/programs/nix-ld.nix
-        ../../common/programs/sleep-inhibit.nix
-        ../../common/programs/audio.nix
-        ../../common/programs/kwallet.nix
-        ../../common/core/nix.nix
+        ./ssh-luks-unlock.nix
+        ./sddm.nix
+        ./nix.nix
+        ../programs/thunderbird.nix
+        ../programs/nmtui-themed.nix
+        ../programs/nix-ld.nix
+        ../programs/sleep-inhibit.nix
+        ../programs/audio.nix
+        ../programs/kwallet.nix
     ];
 
     hardware.bluetooth.enable = true;
