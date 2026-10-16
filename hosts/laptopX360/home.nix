@@ -14,7 +14,7 @@
                     output = "";
                     mode = "preferred";
                     position = "auto-right";
-                    scale = "1";
+                    scale = "auto";
                 }
             ];
         })
