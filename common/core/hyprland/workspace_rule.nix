@@ -6,7 +6,9 @@ let
         "tower" = "HDMI-A-2";
         "laptopX360" = "eDP-1";
     }."${host}" or "0";
-    m1 = "1";
+    m1 = {
+        "laptopX360" = "DP-1";
+    }."${host}" or "1";
 in [
     {
         workspace = "w[tv1]";
