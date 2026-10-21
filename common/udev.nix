@@ -15,6 +15,11 @@
             SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTR{idVendor}=="21a9", ATTR{idProduct}=="1004", MODE="0666"
             SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTR{idVendor}=="21a9", ATTR{idProduct}=="1005", MODE="0666"
             SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTR{idVendor}=="21a9", ATTR{idProduct}=="1006", MODE="0666"
+
+            # chip whisperer
+            SUBSYSTEMS=="usb", ATTRS{idVendor}=="2b3e", ATTRS{idProduct}=="*",    MODE="0666"
+            SUBSYSTEM=="tty",  ATTRS{idVendor}=="2b3e", ATTRS{idProduct}=="*",    MODE="0666", SYMLINK+="cw_serial%n"
+            SUBSYSTEM=="tty",  ATTRS{idVendor}=="03eb", ATTRS{idProduct}=="6124", MODE="0666", SYMLINK+="cw_bootloader%n"
         '';
     };
 }
