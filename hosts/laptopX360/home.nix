@@ -21,7 +21,7 @@
                     output = "desc:Samsung Electric Company LS27D70xE HK7X701303";
                     mode = "2560x1440@59.95Hz";
                     position = "auto-right";
-                    scale = "1.33";
+                    scale = "1";
                 }
             ];
         })
