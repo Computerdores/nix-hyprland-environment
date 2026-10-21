@@ -16,6 +16,13 @@
                     position = "auto-right";
                     scale = "auto";
                 }
+                # MP Screen
+                {
+                    output = "desc:Samsung Electric Company LS27D70xE HK7X701303";
+                    mode = "2560x1440@59.95Hz";
+                    position = "auto-right";
+                    scale = "1.33";
+                }
             ];
         })
         ./i3status-rust.nix
