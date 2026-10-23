@@ -19,9 +19,9 @@
                 # MP Screen
                 {
                     output = "desc:Samsung Electric Company LS27D70xE HK7X701303";
-                    mode = "2560x1440@59.95Hz";
+                    mode = "3840x2160@60.00Hz";
                     position = "auto-right";
-                    scale = "1";
+                    scale = "auto";
                 }
             ];
         })
