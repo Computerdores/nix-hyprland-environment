@@ -11,7 +11,6 @@
         ./xdg-user-dirs.nix
         ../programs/kitty.nix
         ../programs/firefox.nix
-        ../programs/vscode.nix
         ../programs/nvim
         ../programs/yazi.nix
         ../programs/bash
