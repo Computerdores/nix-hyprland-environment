@@ -16,5 +16,6 @@
         ../programs/bash
         ../programs/fastfetch.nix
         ../programs/spicetify.nix
+        ../programs/signal-desktop.nix
     ];
 }

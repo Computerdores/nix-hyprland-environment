@@ -109,7 +109,6 @@
         unzip
         dig
         (lib.gtkEnablePortals pkgs pkgs.localsend)
-        signal-desktop
         python3
         file
         wireguard-tools
