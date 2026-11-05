@@ -28,6 +28,7 @@
 - bitwarden client for hyprland
 - portal escape notifications
 - nix-run helper: provide all nixpkgs as options in dmenu chooser
+- signal desktop service crashes sometimes
 
 ### High Effort / Wait Required
 - terminal file picker (one of the [termfilechooser forks](https://github.com/hunkyburrito/xdg-desktop-portal-termfilechooser) maybe)
