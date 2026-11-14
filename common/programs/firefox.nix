@@ -36,6 +36,10 @@ in {
                     installation_mode = "force_installed";
                     private_browsing = true;
                 };
+                "{2716322b-c8dc-426d-be59-5d575457ae7f}" = {
+                    # Classic Dark Theme
+                    installation_mode = "force_installed";
+                };
             };
         };
         profiles."${username}" = {
