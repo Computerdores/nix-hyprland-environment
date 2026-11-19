@@ -12,13 +12,6 @@ in
         ../../common/udev.nix
     ];
 
-    swapDevices = [
-        {
-            device = "/var/lib/swapfile";
-            size = 16 * 1024;
-        }
-    ];
-
     virtualisation.docker.enable = true;
 
     hardware.ckb-next.enable = true;
