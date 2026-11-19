@@ -17,6 +17,7 @@ in
     hardware.ckb-next.enable = true;
 
     boot.kernelModules = [ "cdc_acm" ];
+    # boot.loader.systemd-boot.graceful = true;
 
     # networking
     networking = {
