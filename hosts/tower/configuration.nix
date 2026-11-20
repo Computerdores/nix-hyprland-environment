@@ -48,7 +48,6 @@ in {
 
     # other software
     environment.systemPackages = with pkgs; [
-        feishin
         (prismlauncher.override { })
         passt  # needed for virtualisation
     ];

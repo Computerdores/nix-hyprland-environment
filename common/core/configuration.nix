@@ -112,6 +112,7 @@
         python3
         file
         wireguard-tools
+        feishin
     ];
 
     fonts.packages = with pkgs; [
